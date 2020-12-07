@@ -1,2 +1,4 @@
+include ':sp'
+include ':imageloader'
 include ':app'
 rootProject.name = "GISIM"
