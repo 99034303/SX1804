@@ -8,6 +8,10 @@ public abstract class BasePresenter<M extends IModel,V extends IView> implements
     protected M mModel;
     protected V mView;
 
+    public BasePresenter(V mView) {
+        this.mView = mView;
+        createModel();
+    }
 
-
+    protected abstract void createModel();
 }
