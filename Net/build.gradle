@@ -29,4 +29,22 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    //网络框架
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    //日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    //网络请求封装框架
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    //网络请求对象解析器
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    //线程异常任务调度
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+    //异步线程
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //log工具类
+    implementation 'com.blankj:utilcodex:1.29.0'
+//刷新框架
+    implementation 'org.greenrobot:eventbus:3.2.0'
 }
