@@ -1,3 +1,4 @@
+include ':umeng'
 include ':sp'
 include ':imageloader'
 include ':app'
