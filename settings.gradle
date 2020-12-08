@@ -1,3 +1,5 @@
+include ':common'
+include ':view'
 include ':Net'
 include ':MVVM'
 include ':MVP'
