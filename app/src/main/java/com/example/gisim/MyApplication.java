@@ -1,12 +1,23 @@
 package com.example.gisim;
 
 import android.app.Application;
+import android.content.Context;
+import android.os.Build;
+import android.text.TextUtils;
 import android.util.Log;
 
+import androidx.annotation.RequiresApi;
+
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 
 public class MyApplication extends Application {
@@ -15,12 +26,55 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        //初始化Bugly
+//        initBugly();
         //初始化友盟
         initUMeng();
 
 
     }
 
+    //初始化Bugly
+    private void initBugly() {
+        Context context = getApplicationContext();
+        // 获取当前包名
+        String packageName = context.getPackageName();
+        // 获取当前进程名
+        String processName = getProcessName(android.os.Process.myPid());
+        // 设置是否为上报进程
+        CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
+        strategy.setUploadProcess(processName == null || processName.equals(packageName));
+        CrashReport.initCrashReport(getApplicationContext(), "787755ba84", true);
+        Bugly.init(this,"787755ba84",true);
+    }
+
+
+    //初始化Bugly
+    private String getProcessName(int pid) {
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new FileReader("/proc/" + pid + "/cmdline"));
+            String processName = reader.readLine();
+            if (!TextUtils.isEmpty(processName)) {
+                processName = processName.trim();
+            }
+            return processName;
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException exception) {
+                exception.printStackTrace();
+            }
+        }
+        return null;
+    }
+
+
+    //初始化友盟
     private void initUMeng() {
         // 在此处调用基础组件包提供的初始化函数 相应信息可在应用管理 -> 应用信息 中找到 http://message.umeng.com/list/apps
         // 参数一：当前上下文context；

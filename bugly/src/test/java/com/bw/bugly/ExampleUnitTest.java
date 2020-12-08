@@ -1,4 +1,4 @@
-package com.bw.tinker;
+package com.bw.bugly;
 
 import org.junit.Test;
 
