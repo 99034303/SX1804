@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 def version=rootProject.ext.gradleVersion
+def Implementation=rootProject.ext.implementation
+
 android {
     compileSdkVersion version.compileSdkVersion
     buildToolsVersion version.buildToolsVersion
@@ -29,5 +31,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //加载图片依赖
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation Implementation.glide
 }
