@@ -1,4 +1,4 @@
-package com.bw.umeng;
+package com.example.gisim;
 
 import android.app.Application;
 import android.util.Log;
@@ -8,12 +8,20 @@ import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
+
 public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
 
+        //初始化友盟
+        initUMeng();
+
+
+    }
+
+    private void initUMeng() {
         // 在此处调用基础组件包提供的初始化函数 相应信息可在应用管理 -> 应用信息 中找到 http://message.umeng.com/list/apps
         // 参数一：当前上下文context；
         // 参数二：应用申请的Appkey（需替换）；
