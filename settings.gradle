@@ -5,4 +5,8 @@ include ':imageloader'
 include ':app'
 include ':Net'
 include ':MVP'
+include ':umeng'
+include ':tinker'
+include ':log'
+include ':interface'
 rootProject.name = "GISIM"
