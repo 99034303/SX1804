@@ -8,6 +8,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //加载主题
+        setTheme(R.style.AppTheme_);
         setContentView(R.layout.activity_main);
 
     }
