@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+//apply from: 'tinkerpatch.gradle'//step4
 
 def version=rootProject.ext.gradleVersion
 
@@ -14,6 +15,9 @@ android {
         versionName version.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        applicationId "com.example.boying.secondtest"
+        multiDexEnabled true  //step3
     }
 
     buildTypes {
@@ -29,10 +33,17 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':imageloader')
+<<<<<<< HEAD
     implementation project(path: ':interface')
     implementation project(path: ':log')
+=======
+    implementation project(path: ':umeng')
+>>>>>>> 64cbffbcb98737a1623dcd0b9000e51fdf61934f
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    //无需引入tinker的任何库,使用tinkerpatch sdk即可
+    implementation 'com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.2' //step2
+    implementation "com.android.support:multidex:1.0.2"//step2
 }
