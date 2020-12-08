@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         test = (BottomTabLayout) findViewById(R.id.test);
         test.addTab(R.mipmap.hd,8);
+        test.addTab(R.mipmap.ic_launcher,8);
+        test.addTab(R.mipmap.ic_launcher_round,8);
         test.addTab(R.mipmap.hd,8);
-        test.addTab(R.mipmap.hd,8);
-        test.addTab(R.mipmap.hd,8);
-        test.addTab(R.mipmap.hd,8);
+        test.addTab(R.mipmap.ic_launcher,8);
     }
 }
