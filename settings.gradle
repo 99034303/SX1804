@@ -1,3 +1,5 @@
+include ':log'
+include ':interface'
 include ':sp'
 include ':imageloader'
 include ':app'
