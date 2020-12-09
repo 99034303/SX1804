@@ -9,7 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public abstract class BaseFragment extends Fragment implements IFragment {
+import com.example.mvp.presenter.BasePresenter;
+
+public abstract class BaseMVPFragment<P extends BasePresenter> extends Fragment implements IFragment {
+    protected P mPresenter;
     private View mView;
     @Nullable
     @Override
@@ -20,12 +23,16 @@ public abstract class BaseFragment extends Fragment implements IFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        createPresenter();
         bindView();
         initView();
         initData();
     }
 
     protected abstract void bindView();
+
+    protected abstract void createPresenter();
+
 
     protected abstract void initData();
 
