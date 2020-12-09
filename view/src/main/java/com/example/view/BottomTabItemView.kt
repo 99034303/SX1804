@@ -10,11 +10,20 @@ import android.widget.ImageView
 
 @SuppressLint("AppCompatCustomView")
 class BottomTabItemView :ImageView{
+     private var mID:Int=-1
     private val circlePaint=Paint()
     private val textPaint=Paint()
     private var msgCount=-1
     private lateinit var bounds:Rect
     private var values= FloatArray(10)
+
+    fun setMId(id:Int){
+        this.mID=id
+    }
+
+    fun getMId():Int{
+        return mID
+    }
 
     constructor(context: Context?) : super(context){
         init()

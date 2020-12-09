@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         test = (BottomTabLayout) findViewById(R.id.test);
-        test.addTab(R.mipmap.hd, 8);
-        test.addTab(R.mipmap.ic_launcher, 8);
-        test.addTab(R.mipmap.ic_launcher_round, 8);
-        test.addTab(R.mipmap.hd, 8);
-        test.addTab(R.mipmap.ic_launcher, 8);
+        test.addTab(1,R.mipmap.hd, 1);
+        test.addTab(2,R.mipmap.ic_launcher, 2);
+        test.addTab(3,R.mipmap.ic_launcher_round, 3);
+        test.addTab(4,R.mipmap.hd, 4);
+        test.addTab(5,R.mipmap.ic_launcher, 5);
+        test.setOnItemClickListener();
     }
 }
