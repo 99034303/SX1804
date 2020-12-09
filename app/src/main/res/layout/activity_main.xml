@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.example.view.BottomTabLayout
+        android:id="@+id/test"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+</LinearLayout>
 
+<<<<<<< HEAD
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+>>>>>>> d1e85754ba63aa6edbf7cde48da5650312002e6a

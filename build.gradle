@@ -2,6 +2,10 @@
 apply from:"projectManager/manager.gradle"
 
 buildscript {
+    ext.kotlin_version = '1.4.21'
+    ext {
+        kotlin_version = '1.3.72'
+    }
     repositories {
         google()
         jcenter()
@@ -10,7 +14,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
-        classpath 'com.tinkerpatch.sdk:tinkerpatch-gradle-plugin:1.2.2'//step 1
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

@@ -13,12 +13,15 @@
             <option value="$PROJECT_DIR$/MVP" />
             <option value="$PROJECT_DIR$/Net" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bugly" />
+            <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/interface" />
             <option value="$PROJECT_DIR$/log" />
             <option value="$PROJECT_DIR$/sp" />
             <option value="$PROJECT_DIR$/tinker" />
             <option value="$PROJECT_DIR$/umeng" />
+            <option value="$PROJECT_DIR$/view" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
