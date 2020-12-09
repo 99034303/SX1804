@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.example.view.BottomTabItemView;
 import com.example.view.BottomTabLayout;
+import com.wmc.imageloader.ImageUtils;
 
 public class MainActivity extends AppCompatActivity {
     private BottomTabLayout test;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
         test = (BottomTabLayout) findViewById(R.id.test);
         test.addTab(R.mipmap.hd, 8);
@@ -24,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
         test.addTab(R.mipmap.ic_launcher_round, 8);
         test.addTab(R.mipmap.hd, 8);
         test.addTab(R.mipmap.ic_launcher, 8);
+        ImageUtils.getInstance(this)
     }
 }
