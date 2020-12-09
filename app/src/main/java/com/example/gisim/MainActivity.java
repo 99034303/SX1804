@@ -7,9 +7,13 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.example.view.BottomTabItemView;
 import com.example.view.BottomTabLayout;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 
 public class MainActivity extends AppCompatActivity {
     private BottomTabLayout test;
@@ -24,6 +28,5 @@ public class MainActivity extends AppCompatActivity {
         test.addTab(3,R.mipmap.ic_launcher_round, 3);
         test.addTab(4,R.mipmap.hd, 4);
         test.addTab(5,R.mipmap.ic_launcher, 5);
-        test.setOnItemClickListener();
     }
 }
