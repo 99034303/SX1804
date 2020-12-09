@@ -26,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
         test.addTab(R.mipmap.ic_launcher_round, 8);
         test.addTab(R.mipmap.hd, 8);
         test.addTab(R.mipmap.ic_launcher, 8);
-        ImageUtils.getInstance(this)
+
     }
 }
