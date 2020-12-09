@@ -6,9 +6,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-<<<<<<< HEAD
-public class MainActivity extends AppCompatActivity {
-=======
+
+import com.example.view.BottomTabLayout;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -21,15 +20,9 @@ import kotlin.jvm.functions.Function1;
 
 public class MainActivity extends AppCompatActivity {
     private BottomTabLayout test;
->>>>>>> d1e85754ba63aa6edbf7cde48da5650312002e6a
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-        //加载主题
-=======
->>>>>>> d1e85754ba63aa6edbf7cde48da5650312002e6a
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
         test = (BottomTabLayout) findViewById(R.id.test);
