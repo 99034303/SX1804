@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.view.BottomTabItemView;
 import com.example.view.BottomTabLayout;
+import com.wmc.imageloader.ImageUtils;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
         test = (BottomTabLayout) findViewById(R.id.test);
         test.addTab(1,R.mipmap.hd, 1);
