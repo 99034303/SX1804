@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.core.view.children
 import androidx.core.view.marginRight
@@ -13,7 +14,7 @@ import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import kotlin.math.log
 
-class BottomTabLayout :LinearLayout{
+class BottomTabLayout :ViewGroup{
     private var tabs= mutableListOf<BottomTabItemView>()
     private var immediateTabs=mutableListOf<BottomTabItemView>()
     private var itemHorizontalSpac=20
@@ -41,9 +42,7 @@ class BottomTabLayout :LinearLayout{
 
     //初始化
     private fun init(){
-        setWillNotDraw(false)
-        //横向排序
-        orientation= HORIZONTAL
+
     }
 
     fun setOnItemClickListener(onItemClickListener:(Int)->Unit){
@@ -80,36 +79,6 @@ class BottomTabLayout :LinearLayout{
         return false
     }
 
-    //选中后重新排序
-    private fun reSort(clickIndex:Int){
-        var reSortList= mutableListOf<BottomTabItemView>()
-        var tabSize=tabs.size-1
-        //需要重置位置的数量,其他向后直接添加
-        var count=0
-        //根据选中位置对集合重新排序
-        if(clickIndex<selectIndex){
-            count=getResetViewCount(clickIndex)-1
-            for(i in tabSize-count..tabSize ){
-                reSortList.add(tabs.get(i))
-            }
-            for(i in 0 until tabSize-count){
-                reSortList.add(tabs.get(i))
-            }
-            tabs.clear()
-            tabs.addAll(reSortList)
-        }else if(clickIndex>selectIndex){
-            count=getResetViewCount(clickIndex)-1
-            for(i in count+1..tabSize){
-                reSortList.add(tabs.get(i))
-            }
-            for(i in 0..count){
-                reSortList.add(tabs.get(i))
-            }
-            tabs.clear()
-            tabs.addAll(reSortList)
-        }
-    }
-
     //获取需要重新设置位置view的数量(非下标)
     private fun getResetViewCount(clickIndex: Int):Int{
         return if(clickIndex<selectIndex) (selectIndex-clickIndex) else (clickIndex-selectIndex)
@@ -122,64 +91,6 @@ class BottomTabLayout :LinearLayout{
         clonView.setMId(view.getMId())
         clonView.setMsgCount(view.getMsgCount())
         return clonView
-    }
-
-    //执行动画
-    private fun executeAnimationAndReLayout(clickIndex: Int,pxBymm:Int){
-        //衔接准备
-        var count=getResetViewCount(clickIndex)-1
-        var vLeft=0
-        var vRight=0
-        if(pxBymm>0){
-            var lastVRight=tabs.get(tabs.size-1).right
-            //循环添加到临时集合
-            for(i in 0..count){
-                var cloneChild = cloneChild(tabs.get(i))
-                //布局
-                if(i==0){
-                    vLeft=lastVRight+paddingLeft+itemHorizontalSpac
-                }else{
-                    vLeft=vRight+paddingLeft+itemHorizontalSpac
-                }
-                vRight=vLeft+itemWidth
-                cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
-                //添加到集合
-                immediateTabs.add(cloneChild)
-                //添加到容器
-                addView(cloneChild)
-            }
-        }else{
-            var lastViewIndex=tabs.size-1
-            for(i in lastViewIndex downTo lastViewIndex-count){
-                var cloneChild = cloneChild(tabs.get(i))
-                if(i==lastViewIndex){
-                    vRight=tabs.get(0).left-itemHorizontalSpac-paddingLeft
-                }else{
-                    vRight=vLeft-itemHorizontalSpac-paddingLeft
-                }
-                vLeft=vRight-itemWidth
-                cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
-                //添加到集合
-                immediateTabs.add(cloneChild)
-                //添加到容器
-                addView(cloneChild)
-            }
-        }
-        //执行动画
-        doAsync {
-            for(i in 0..50){
-                uiThread {
-                    scrollBy(pxBymm,0)
-                }
-                Thread.sleep(10)
-            }
-            uiThread {
-                reSort(clickIndex)
-                requestLayout()
-                scrollX=0
-                clearImmediateView()
-            }
-        }
     }
 
     //从容器中删除临时view
@@ -246,11 +157,6 @@ class BottomTabLayout :LinearLayout{
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-
-    }
-
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
         if(ev?.action==MotionEvent.ACTION_DOWN){
             checkedIsSelect(ev)
@@ -262,6 +168,8 @@ class BottomTabLayout :LinearLayout{
     private fun checkedIsSelect(ev: MotionEvent?){
         var x=ev?.x!!
         var y=ev?.y!!
+        var needMovePX=0
+        var pxBymm=0
         for(i in 0 until tabs.size){
             var view=tabs.get(i)!!
             //判断是否选中有效范围
@@ -273,16 +181,104 @@ class BottomTabLayout :LinearLayout{
                 }
                 //判断左移还是右移执行后续事件
                 if(i<selectIndex){//右移
-                    var needMovePX=selectedVLeft-view.left
-                    var pxBymm=-(needMovePX/50)
-                    executeAnimationAndReLayout(i,pxBymm)
+                    needMovePX=selectedVLeft-view.left
+                    pxBymm=-(needMovePX/50)
                 }else{
-                    var needMovePX=view.left-selectedVLeft
-                    var pxBymm=needMovePX/50
-                    executeAnimationAndReLayout(i,pxBymm)
+                    needMovePX=view.left-selectedVLeft
+                    pxBymm=needMovePX/50
                 }
+                executeAnimationAndReLayout(i,pxBymm)
                 break
             }
+        }
+    }
+
+    //执行动画
+    private fun executeAnimationAndReLayout(clickIndex: Int,pxBymm:Int){
+        //衔接准备
+        var count=getResetViewCount(clickIndex)-1
+        var vLeft=0
+        var vRight=0
+        if(pxBymm>0){//左移
+            var lastVRight=tabs.get(tabs.size-1).right
+            //循环添加到临时集合
+            for(i in 0..count){
+                var cloneChild = cloneChild(tabs.get(i))
+                //布局
+                if(i==0){
+                    vLeft=lastVRight+paddingLeft+itemHorizontalSpac
+                }else{
+                    vLeft=vRight+paddingLeft+itemHorizontalSpac
+                }
+                vRight=vLeft+itemWidth
+                cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
+                //添加到集合
+                immediateTabs.add(cloneChild)
+                //添加到容器
+                addView(cloneChild)
+            }
+        }else{
+            var lastViewIndex=tabs.size-1
+            for(i in lastViewIndex downTo lastViewIndex-count){
+                var cloneChild = cloneChild(tabs.get(i))
+                if(i==lastViewIndex){
+                    vRight=tabs.get(0).left-itemHorizontalSpac-paddingLeft
+                }else{
+                    vRight=vLeft-itemHorizontalSpac-paddingLeft
+                }
+                vLeft=vRight-itemWidth
+                cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
+                //添加到集合
+                immediateTabs.add(cloneChild)
+                //添加到容器
+                addView(cloneChild)
+            }
+        }
+        //执行动画
+        doAsync {
+            for(i in 0..50){
+                uiThread {
+                    scrollBy(pxBymm,0)
+                }
+                Thread.sleep(10)
+            }
+            //更新ui
+            uiThread {
+                reSort(clickIndex)
+                requestLayout()
+                scrollX=0
+                clearImmediateView()
+            }
+        }
+    }
+
+    //选中后重新排序
+    private fun reSort(clickIndex:Int){
+        var reSortList= mutableListOf<BottomTabItemView>()
+        var tabSize=tabs.size-1
+        //需要重置位置的数量,其他向后直接添加
+        var count=0
+        //根据选中位置对集合重新排序
+        if(clickIndex<selectIndex){
+            count=getResetViewCount(clickIndex)-1
+            for(i in tabSize-count..tabSize ){
+                reSortList.add(tabs.get(i))
+            }
+            for(i in 0 until tabSize-count){
+                reSortList.add(tabs.get(i))
+            }
+            tabs.clear()
+            tabs.addAll(reSortList)
+        }else if(clickIndex>selectIndex){
+            count=getResetViewCount(clickIndex)-1
+            for(i in count+1..tabSize){
+                reSortList.add(tabs.get(i))
+            }
+            for(i in 0..count){
+                reSortList.add(tabs.get(i))
+            }
+            tabs.clear()
+            tabs.addAll(reSortList)
         }
     }
 }
