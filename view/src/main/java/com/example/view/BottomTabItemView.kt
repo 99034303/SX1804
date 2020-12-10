@@ -48,6 +48,10 @@ class BottomTabItemView :ImageView{
         invalidate()
     }
 
+    fun getMsgCount():Int{
+        return this.msgCount
+    }
+
     override fun onDraw(canvas: Canvas?) {
         //重新设置图片的范围
         bounds = drawable.bounds

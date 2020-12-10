@@ -15,6 +15,7 @@ import kotlin.math.log
 
 class BottomTabLayout :LinearLayout{
     private var tabs= mutableListOf<BottomTabItemView>()
+    private var immediateTabs=mutableListOf<BottomTabItemView>()
     private var itemHorizontalSpac=20
     private var itemWidth=0
     private var itemHeight=0;
@@ -25,6 +26,8 @@ class BottomTabLayout :LinearLayout{
     private var selectedVRight=0
     private var isCleck=false
     private var onItemClickListener:((Int)->Unit)?=null
+    private var vTop=0
+    private var vBottom=0
 
     constructor(context: Context?) : super(context){
         init()
@@ -85,7 +88,7 @@ class BottomTabLayout :LinearLayout{
         var count=0
         //根据选中位置对集合重新排序
         if(clickIndex<selectIndex){
-            count=(selectIndex-clickIndex)-1
+            count=getResetViewCount(clickIndex)-1
             for(i in tabSize-count..tabSize ){
                 reSortList.add(tabs.get(i))
             }
@@ -95,7 +98,7 @@ class BottomTabLayout :LinearLayout{
             tabs.clear()
             tabs.addAll(reSortList)
         }else if(clickIndex>selectIndex){
-            count=(clickIndex-selectIndex)-1
+            count=getResetViewCount(clickIndex)-1
             for(i in count+1..tabSize){
                 reSortList.add(tabs.get(i))
             }
@@ -105,6 +108,86 @@ class BottomTabLayout :LinearLayout{
             tabs.clear()
             tabs.addAll(reSortList)
         }
+    }
+
+    //获取需要重新设置位置view的数量(非下标)
+    private fun getResetViewCount(clickIndex: Int):Int{
+        return if(clickIndex<selectIndex) (selectIndex-clickIndex) else (clickIndex-selectIndex)
+    }
+
+    //克隆子控件
+    private fun cloneChild(view: BottomTabItemView):BottomTabItemView{
+        var clonView=BottomTabItemView(context)
+        clonView.setImageDrawable(view.drawable)
+        clonView.setMId(view.getMId())
+        clonView.setMsgCount(view.getMsgCount())
+        return clonView
+    }
+
+    //执行动画
+    private fun executeAnimationAndReLayout(clickIndex: Int,pxBymm:Int){
+        //衔接准备
+        var count=getResetViewCount(clickIndex)-1
+        var vLeft=0
+        var vRight=0
+        if(pxBymm>0){
+            var lastVRight=tabs.get(tabs.size-1).right
+            //循环添加到临时集合
+            for(i in 0..count){
+                var cloneChild = cloneChild(tabs.get(i))
+                //布局
+                if(i==0){
+                    vLeft=lastVRight+paddingLeft+itemHorizontalSpac
+                }else{
+                    vLeft=vRight+paddingLeft+itemHorizontalSpac
+                }
+                vRight=vLeft+itemWidth
+                cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
+                //添加到集合
+                immediateTabs.add(cloneChild)
+                //添加到容器
+                addView(cloneChild)
+            }
+        }else{
+            var lastViewIndex=tabs.size-1
+            for(i in lastViewIndex downTo lastViewIndex-count){
+                var cloneChild = cloneChild(tabs.get(i))
+                if(i==lastViewIndex){
+                    vRight=tabs.get(0).left-itemHorizontalSpac-paddingLeft
+                }else{
+                    vRight=vLeft-itemHorizontalSpac-paddingLeft
+                }
+                vLeft=vRight-itemWidth
+                cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
+                //添加到集合
+                immediateTabs.add(cloneChild)
+                //添加到容器
+                addView(cloneChild)
+            }
+        }
+        //执行动画
+        doAsync {
+            for(i in 0..50){
+                uiThread {
+                    scrollBy(pxBymm,0)
+                }
+                Thread.sleep(10)
+            }
+            uiThread {
+                reSort(clickIndex)
+                requestLayout()
+                scrollX=0
+                clearImmediateView()
+            }
+        }
+    }
+
+    //从容器中删除临时view
+    private fun clearImmediateView(){
+        for(i in immediateTabs){
+            removeView(i)
+        }
+        immediateTabs.clear()
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -128,13 +211,12 @@ class BottomTabLayout :LinearLayout{
     }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        super.onLayout(changed, l, t, r, b)
         if(isNeedCount()){
             //view的左上右下
             var vLeft=0
             var vRight=0
-            var vTop=t+((measuredHeight-itemHeight)/2)
-            var vBottom=vTop+itemHeight
+            vTop=t+((measuredHeight-itemHeight)/2)
+            vBottom=vTop+itemHeight
             //选中item后的view的计数
             var afterSelectedCount=0
             for(i in 0 until tabs.size){
@@ -185,44 +267,20 @@ class BottomTabLayout :LinearLayout{
             //判断是否选中有效范围
             if(x>=view.left&&x<=view.right&&y>=view.top&&y<=view.bottom){
                 isCleck=true
+                //执行外部重写的点击事件
                 if(onItemClickListener!=null){
                     onItemClickListener!!(view.getMId())
                 }
-//                if(i<selectIndex){
-//                    var needMovePX=selectedVLeft-view.left
-//                    var pxBymm=needMovePX/50
-//                    doAsync {
-//                        for(i in 0..50){
-//                            uiThread {
-//                                scrollBy(-pxBymm,0)
-//                            }
-//                            Thread.sleep(10)
-//                        }
-////                        uiThread {
-////                            reSort(i)
-////                            requestLayout()
-////                        }
-//                    }
-//                }else{
-//                    var needMovePX=view.left-selectedVLeft
-//                    var pxBymm=needMovePX/50
-//                    doAsync {
-//                        for(i in 0..50){
-//                            uiThread {
-//                                scrollBy(pxBymm,0)
-//                            }
-//                            Thread.sleep(10)
-//                        }
-////                        reSort(i)
-////                        uiThread {
-////                            reSort(i)
-////                            requestLayout()
-////                        }
-//                    }
-//                }
-                reSort(i)
-                requestLayout()
-//                scrollBy(-100,0)
+                //判断左移还是右移执行后续事件
+                if(i<selectIndex){//右移
+                    var needMovePX=selectedVLeft-view.left
+                    var pxBymm=-(needMovePX/50)
+                    executeAnimationAndReLayout(i,pxBymm)
+                }else{
+                    var needMovePX=view.left-selectedVLeft
+                    var pxBymm=needMovePX/50
+                    executeAnimationAndReLayout(i,pxBymm)
+                }
                 break
             }
         }
