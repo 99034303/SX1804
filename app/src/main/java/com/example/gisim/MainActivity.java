@@ -9,6 +9,7 @@ import android.os.Bundle;
 
 import com.example.view.BottomTabLayout;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.view.BottomTabItemView;

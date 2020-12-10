@@ -1,5 +1,8 @@
 package com.example.view
 
+import android.animation.Animator
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -8,6 +11,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.ScaleAnimation
 import android.widget.LinearLayout
 import androidx.core.view.children
 import androidx.core.view.marginRight
@@ -206,7 +210,7 @@ class BottomTabLayout :ViewGroup{
                     executeAnimationAndReLayout(i,pxBymm)
                 }else if(i>selectIndex){
                     isAnimationStarted=true
-                    needMovePX=view.left-selectedVLeft
+                    needMovePX=view.right-selectedVRight+paddingLeft
                     pxBymm=needMovePX/50
                     executeAnimationAndReLayout(i,pxBymm)
                 }else{
@@ -262,6 +266,10 @@ class BottomTabLayout :ViewGroup{
         doAsync {
             for(i in 0..50){
                 uiThread {
+                    if(i==0){
+                        executeSmallerAnimator()
+                        executelargerAnimation(clickIndex)
+                    }
                     scrollBy(pxBymm,0)
                 }
                 Thread.sleep(10)
@@ -275,6 +283,20 @@ class BottomTabLayout :ViewGroup{
                 isAnimationStarted=false
             }
         }
+    }
+
+    //缩小动画
+    private fun executeSmallerAnimator(){
+        var scaleAnimation=ScaleAnimation(1f,0.5f,1f,0.5f,100f,100f)
+        scaleAnimation.duration=500
+        tabs.get(selectIndex).startAnimation(scaleAnimation)
+    }
+
+    //放大动画
+    private fun executelargerAnimation(clickIndex: Int){
+        var scaleAnimation=ScaleAnimation(1f,1.5f,1f,1.5f,100f,100f)
+        scaleAnimation.duration=500
+        tabs.get(clickIndex).startAnimation(scaleAnimation)
     }
 
     //选中后重新排序
