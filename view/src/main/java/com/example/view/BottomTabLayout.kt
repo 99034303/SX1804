@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
+import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.core.view.children
@@ -25,10 +26,13 @@ class BottomTabLayout :ViewGroup{
     private var selectIndex=0
     private var selectedVLeft=0
     private var selectedVRight=0
-    private var isCleck=false
+    //如果是点击则不重新计算选中view的相关位置
+    private var isClick=false
     private var onItemClickListener:((Int)->Unit)?=null
     private var vTop=0
     private var vBottom=0
+    //避免重复点击
+    private var isAnimationStarted=false
 
     constructor(context: Context?) : super(context){
         init()
@@ -102,7 +106,20 @@ class BottomTabLayout :ViewGroup{
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        var heightMode=MeasureSpec.getMode(heightMeasureSpec)
+        var widthMode=MeasureSpec.getMode(widthMeasureSpec)
+        var heightSize=MeasureSpec.getSize(heightMeasureSpec)
+        var widthSize=MeasureSpec.getSize(widthMeasureSpec)
+        if(heightMode==MeasureSpec.AT_MOST&&widthMode==MeasureSpec.AT_MOST){
+            setMeasuredDimension(LayoutParams.MATCH_PARENT,300)
+        }else if(heightMode==MeasureSpec.AT_MOST){
+            setMeasuredDimension(widthSize,300)
+        }else if(widthMode==MeasureSpec.AT_MOST){
+            setMeasuredDimension(LayoutParams.MATCH_PARENT,heightSize)
+        }else{
+            setMeasuredDimension(widthSize,heightSize)
+        }
+        //如果有标题则计算相关位置
         if(isNeedCount()){
             //计算选中item的宽高
             selectedItemWidth=measuredWidth/tabs.size-itemHorizontalSpac
@@ -111,12 +128,12 @@ class BottomTabLayout :ViewGroup{
             //计算每个子view的宽度/高度
             itemWidth=(measuredWidth-selectedItemWidth)/tabs.size-itemHorizontalSpac
             itemHeight=measuredHeight-(measuredHeight/3)
-            if(!isCleck){
+            if(!isClick){
                 //计算选中view的左上位置
                 selectedVLeft=(selectIndex*itemWidth)+(itemHorizontalSpac*selectIndex)+(paddingLeft*(selectIndex+1))
                 selectedVRight=selectedVLeft+selectedItemWidth
             }else{
-                isCleck=false
+                isClick=false
             }
         }
     }
@@ -158,9 +175,11 @@ class BottomTabLayout :ViewGroup{
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        if(ev?.action==MotionEvent.ACTION_DOWN){
-            checkedIsSelect(ev)
-            return true
+        if(!isAnimationStarted){
+            if(ev?.action==MotionEvent.ACTION_DOWN){
+                checkedIsSelect(ev)
+                return true
+            }
         }
         return false
     }
@@ -174,20 +193,25 @@ class BottomTabLayout :ViewGroup{
             var view=tabs.get(i)!!
             //判断是否选中有效范围
             if(x>=view.left&&x<=view.right&&y>=view.top&&y<=view.bottom){
-                isCleck=true
+                isClick=true
                 //执行外部重写的点击事件
                 if(onItemClickListener!=null){
                     onItemClickListener!!(view.getMId())
                 }
-                //判断左移还是右移执行后续事件
+                //判断左移还是右移执行后续事件(动画),如果选中的是已经被选中的则不做任何事情
                 if(i<selectIndex){//右移
+                    isAnimationStarted=true
                     needMovePX=selectedVLeft-view.left
                     pxBymm=-(needMovePX/50)
-                }else{
+                    executeAnimationAndReLayout(i,pxBymm)
+                }else if(i>selectIndex){
+                    isAnimationStarted=true
                     needMovePX=view.left-selectedVLeft
                     pxBymm=needMovePX/50
+                    executeAnimationAndReLayout(i,pxBymm)
+                }else{
+                    isClick=false
                 }
-                executeAnimationAndReLayout(i,pxBymm)
                 break
             }
         }
@@ -248,6 +272,7 @@ class BottomTabLayout :ViewGroup{
                 requestLayout()
                 scrollX=0
                 clearImmediateView()
+                isAnimationStarted=false
             }
         }
     }

@@ -53,6 +53,7 @@ class BottomTabItemView :ImageView{
     }
 
     override fun onDraw(canvas: Canvas?) {
+        clearCanvas(canvas)
         //重新设置图片的范围
         bounds = drawable.bounds
         resetDrawableBounds()
@@ -98,5 +99,11 @@ class BottomTabItemView :ImageView{
         var textBounds=Rect()
         textPaint.getTextBounds(str,0,str.length,textBounds)
         return textBounds
+    }
+
+    //清理画布
+    private fun clearCanvas(canvas: Canvas?){
+        canvas?.drawColor(Color.WHITE,PorterDuff.Mode.CLEAR)
+        canvas?.drawColor(Color.parseColor("#FAFAFA"))
     }
 }
