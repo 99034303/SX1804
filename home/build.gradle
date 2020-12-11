@@ -1,11 +1,24 @@
-apply plugin: 'com.android.library'
+if(isNeedHomeModel.toBoolean()){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
 
 def version=rootProject.ext.gradleVersion
-def needs=rootProject.ext.implementation
 
 android {
     compileSdkVersion version.compileSdkVersion
     buildToolsVersion version.buildToolsVersion
+
+    sourceSets{
+        main{
+            if(isNeedHomeModel.toBoolean()){
+                manifest.srcFile "src/main/debug/AndroidManifest.xml"
+            }else{
+                manifest.srcFile "src/main/release/AndroidManifest.xml"
+            }
+        }
+    }
 
     defaultConfig {
         minSdkVersion version.minSdkVersion
@@ -26,20 +39,10 @@ android {
 }
 
 dependencies {
-    api needs.json
-    api needs.gson
-    api needs.recyClerView
-    api needs.recyClerViewAdapter
-    api needs.smartRefreshLayout
-    api needs.smartRefreshHeader
-    api needs.flycoTabLayout
-    api needs.banner
-    api needs.dagger
-    api needs.zxing
-    api needs.design
-    api needs.designMaterial
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':common')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
