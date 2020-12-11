@@ -23,7 +23,7 @@ class BottomTabLayout :ViewGroup{
     private var mBackgroundColor=0
     private var tabs= mutableListOf<BottomTabItemView>()
     private var immediateTabs=mutableListOf<BottomTabItemView>()
-    private var itemHorizontalSpac=20
+    private var itemHorizontalSpac=0
     private var itemWidth=0
     private var itemHeight=0;
     private var selectedItemWidth=0;
@@ -56,6 +56,7 @@ class BottomTabLayout :ViewGroup{
 
     //初始化
     private fun init(attrs: AttributeSet?=null){
+        setPadding(20,0,20,0)
         //获取自定义属性
         if(attrs!=null){
             var t=context.obtainStyledAttributes(attrs,R.styleable.BottomTabLayout)
@@ -128,9 +129,9 @@ class BottomTabLayout :ViewGroup{
         var heightSize=MeasureSpec.getSize(heightMeasureSpec)
         var widthSize=MeasureSpec.getSize(widthMeasureSpec)
         if(heightMode==MeasureSpec.AT_MOST&&widthMode==MeasureSpec.AT_MOST){
-            setMeasuredDimension(LayoutParams.MATCH_PARENT,300)
+            setMeasuredDimension(LayoutParams.MATCH_PARENT,250)
         }else if(heightMode==MeasureSpec.AT_MOST){
-            setMeasuredDimension(widthSize,300)
+            setMeasuredDimension(widthSize,250)
         }else if(widthMode==MeasureSpec.AT_MOST){
             setMeasuredDimension(LayoutParams.MATCH_PARENT,heightSize)
         }else{
@@ -138,16 +139,17 @@ class BottomTabLayout :ViewGroup{
         }
         //如果有标题则计算相关位置
         if(isNeedCount()){
+            itemHorizontalSpac=measuredWidth/tabs.size/2
             //计算选中item的宽高
-            selectedItemWidth=measuredWidth/tabs.size-itemHorizontalSpac
-            selectedItemWidth+=selectedItemheight/2
+            selectedItemWidth=(measuredWidth-paddingLeft-paddingRight)/tabs.size
+            selectedItemWidth+=selectedItemWidth/2-itemHorizontalSpac
             selectedItemheight=measuredHeight
             //计算每个子view的宽度/高度
-            itemWidth=(measuredWidth-selectedItemWidth)/tabs.size-itemHorizontalSpac
-            itemHeight=measuredHeight-(measuredHeight/3)
+            itemWidth=selectedItemWidth/2
+            itemHeight=selectedItemheight/2
             if(!isClick){
                 //计算选中view的左上位置
-                selectedVLeft=(selectIndex*itemWidth)+(itemHorizontalSpac*selectIndex)+(paddingLeft*(selectIndex+1))
+                selectedVLeft=(selectIndex*itemWidth)+(itemHorizontalSpac*selectIndex)+paddingLeft
                 selectedVRight=selectedVLeft+selectedItemWidth
             }else{
                 isClick=false
@@ -158,7 +160,7 @@ class BottomTabLayout :ViewGroup{
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
         if(isNeedCount()){
             //view的左上右下
-            var vLeft=0
+            var vLeft=paddingLeft
             var vRight=0
             vTop=t+((measuredHeight-itemHeight)/2)
             vBottom=vTop+itemHeight
@@ -168,8 +170,8 @@ class BottomTabLayout :ViewGroup{
                 //获取子view
                 var view=tabs.get(i)
                 //判断是否统一计算vLeft(因为选中view后的view计算vLeft特殊)
-                if(i<selectIndex){
-                    vLeft+=vRight+paddingLeft
+                if(i>0&&i<selectIndex){
+                    vLeft=vRight+itemHorizontalSpac
                 }
                 //判断是否是选中的item
                 if(i==selectIndex){
@@ -180,9 +182,9 @@ class BottomTabLayout :ViewGroup{
                     view?.layout(vLeft,vTop,vRight,vBottom)
                 }else{//选中view后的view的布局计算
                     if(afterSelectedCount==0){
-                        vLeft=selectedVRight+((afterSelectedCount+1)*itemHorizontalSpac)+(afterSelectedCount*itemWidth)
+                        vLeft=selectedVRight+itemHorizontalSpac
                     }else{
-                        vLeft=vRight+itemHorizontalSpac+paddingLeft
+                        vLeft=vRight+itemHorizontalSpac
                     }
                     vRight=vLeft+itemWidth
                     view?.layout(vLeft,vTop,vRight,vBottom)
@@ -255,9 +257,9 @@ class BottomTabLayout :ViewGroup{
                 var cloneChild = cloneChild(tabs.get(i))
                 //布局
                 if(i==0){
-                    vLeft=lastVRight+paddingLeft+itemHorizontalSpac
+                    vLeft=lastVRight+itemHorizontalSpac
                 }else{
-                    vLeft=vRight+paddingLeft+itemHorizontalSpac
+                    vLeft=vRight+itemHorizontalSpac
                 }
                 vRight=vLeft+itemWidth
                 cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
@@ -271,9 +273,9 @@ class BottomTabLayout :ViewGroup{
             for(i in lastViewIndex downTo lastViewIndex-count){
                 var cloneChild = cloneChild(tabs.get(i))
                 if(i==lastViewIndex){
-                    vRight=tabs.get(0).left-itemHorizontalSpac-paddingLeft
+                    vRight=tabs.get(0).left-itemHorizontalSpac
                 }else{
-                    vRight=vLeft-itemHorizontalSpac-paddingLeft
+                    vRight=vLeft-itemHorizontalSpac
                 }
                 vLeft=vRight-itemWidth
                 cloneChild.layout(vLeft,vTop,vLeft+itemWidth,vTop+itemHeight)
@@ -308,14 +310,14 @@ class BottomTabLayout :ViewGroup{
 
     //缩小动画
     private fun executeSmallerAnimator(){
-        smallerAnimation=ScaleAnimation(1f,0.6f,1f,0.6f,120f,120f)
+        smallerAnimation=ScaleAnimation(1f,0.5f,1f,0.5f, (selectedItemWidth/2).toFloat(), (selectedItemheight/2).toFloat())
         smallerAnimation?.duration=600
         tabs.get(selectIndex).startAnimation(smallerAnimation)
     }
 
     //放大动画
     private fun executelargerAnimation(){
-        largerAnimation=ScaleAnimation(1f,2.2f,1f,2.2f,50f,100f)
+        largerAnimation=ScaleAnimation(1f,1.9f,1f,1.9f, (itemWidth/2).toFloat(), (itemHeight/2).toFloat())
         largerAnimation?.duration=600
         tabs.get(clickIndex).startAnimation(largerAnimation)
     }
