@@ -2,16 +2,9 @@ package com.example.view
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.widget.LinearLayout
-import androidx.core.view.children
-import androidx.core.view.marginRight
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
-import kotlin.math.log
 
 class BottomTabLayout :LinearLayout{
     private var tabs= mutableListOf<BottomTabItemView>()

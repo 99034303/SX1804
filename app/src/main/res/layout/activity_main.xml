@@ -9,11 +9,3 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
 </LinearLayout>
-
-<<<<<<< HEAD
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
->>>>>>> d1e85754ba63aa6edbf7cde48da5650312002e6a
