@@ -1,0 +1,46 @@
+if (isUserCenter.toBoolean())
+    apply plugin: 'com.android.application'
+else
+    apply plugin: 'com.android.library'
+
+def version=rootProject.ext.gradleVersion
+android {
+    compileSdkVersion version.compileSdkVersion
+    buildToolsVersion version.buildToolsVersion
+    defaultConfig {
+        minSdkVersion version.minSdkVersion
+        targetSdkVersion version.targetSdkVersion
+        versionCode version.versionCode
+        versionName version.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets{
+        main{
+            if (isUserCenter.toBoolean())
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            else manifest.srcFile 'src/main/release/AndroidManifest.xml'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':common')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}
