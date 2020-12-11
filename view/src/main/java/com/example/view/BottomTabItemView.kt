@@ -53,7 +53,7 @@ class BottomTabItemView :ImageView{
     }
 
     override fun onDraw(canvas: Canvas?) {
-        clearCanvas(canvas)
+//        clearCanvas(canvas)
         //重新设置图片的范围
         bounds = drawable.bounds
         resetDrawableBounds()
@@ -92,6 +92,7 @@ class BottomTabItemView :ImageView{
     //获取图片高度
     private fun getDrawableHeight():Float{
         return bounds.height()*values[4]
+
     }
 
     //获取字体最小矩形间距

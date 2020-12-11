@@ -20,6 +20,7 @@ import org.jetbrains.anko.uiThread
 import kotlin.math.log
 
 class BottomTabLayout :ViewGroup{
+    private var mBackgroundColor=0
     private var tabs= mutableListOf<BottomTabItemView>()
     private var immediateTabs=mutableListOf<BottomTabItemView>()
     private var itemHorizontalSpac=20
@@ -37,22 +38,32 @@ class BottomTabLayout :ViewGroup{
     private var vBottom=0
     //避免重复点击
     private var isAnimationStarted=false
+    private var smallerAnimation:ScaleAnimation?=null
+    private var largerAnimation:ScaleAnimation?=null
+    private var clickIndex=0
 
     constructor(context: Context?) : super(context){
         init()
     }
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
-        init()
+        init(attrs)
     }
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr){
+        init(attrs)
+    }
 
     //初始化
-    private fun init(){
-
+    private fun init(attrs: AttributeSet?=null){
+        //获取自定义属性
+        if(attrs!=null){
+            var t=context.obtainStyledAttributes(attrs,R.styleable.BottomTabLayout)
+            mBackgroundColor=t.getColor(R.styleable.BottomTabLayout_bottomTabLayoutColor,Color.parseColor("#FAFAFA"))
+        }
     }
 
+    //外部点击事件
     fun setOnItemClickListener(onItemClickListener:(Int)->Unit){
         this.onItemClickListener=onItemClickListener
     }
@@ -62,6 +73,7 @@ class BottomTabLayout :ViewGroup{
         //实例化子view
         var item=BottomTabItemView(context)
         item.setImageResource(resourcesId)
+        item.setBackgroundColor(mBackgroundColor)
         if(unReadMsgCount!=0){
             item.setMsgCount(unReadMsgCount)
         }
@@ -88,17 +100,18 @@ class BottomTabLayout :ViewGroup{
     }
 
     //获取需要重新设置位置view的数量(非下标)
-    private fun getResetViewCount(clickIndex: Int):Int{
+    private fun getResetViewCount():Int{
         return if(clickIndex<selectIndex) (selectIndex-clickIndex) else (clickIndex-selectIndex)
     }
 
     //克隆子控件
     private fun cloneChild(view: BottomTabItemView):BottomTabItemView{
-        var clonView=BottomTabItemView(context)
-        clonView.setImageDrawable(view.drawable)
-        clonView.setMId(view.getMId())
-        clonView.setMsgCount(view.getMsgCount())
-        return clonView
+        var cloneView=BottomTabItemView(context)
+        cloneView.setBackgroundColor(mBackgroundColor)
+        cloneView.setImageDrawable(view.drawable)
+        cloneView.setMId(view.getMId())
+        cloneView.setMsgCount(view.getMsgCount())
+        return cloneView
     }
 
     //从容器中删除临时view
@@ -160,6 +173,7 @@ class BottomTabLayout :ViewGroup{
                 }
                 //判断是否是选中的item
                 if(i==selectIndex){
+                    largerAnimation?.cancel()
                     view?.layout(selectedVLeft,0,selectedVRight,selectedItemheight)
                 }else if(i<selectIndex){//选中view前的view位置计算
                     vRight=vLeft+itemWidth
@@ -173,6 +187,9 @@ class BottomTabLayout :ViewGroup{
                     vRight=vLeft+itemWidth
                     view?.layout(vLeft,vTop,vRight,vBottom)
                     afterSelectedCount++
+                }
+                if(i==clickIndex){
+                    smallerAnimation?.cancel()
                 }
             }
         }
@@ -188,6 +205,7 @@ class BottomTabLayout :ViewGroup{
         return false
     }
 
+    //检查是否选中有效范围
     private fun checkedIsSelect(ev: MotionEvent?){
         var x=ev?.x!!
         var y=ev?.y!!
@@ -202,17 +220,20 @@ class BottomTabLayout :ViewGroup{
                 if(onItemClickListener!=null){
                     onItemClickListener!!(view.getMId())
                 }
-                //判断左移还是右移执行后续事件(动画),如果选中的是已经被选中的则不做任何事情
-                if(i<selectIndex){//右移
-                    isAnimationStarted=true
-                    needMovePX=selectedVLeft-view.left
-                    pxBymm=-(needMovePX/50)
-                    executeAnimationAndReLayout(i,pxBymm)
-                }else if(i>selectIndex){
-                    isAnimationStarted=true
-                    needMovePX=view.right-selectedVRight+paddingLeft
-                    pxBymm=needMovePX/50
-                    executeAnimationAndReLayout(i,pxBymm)
+                //判断是否需要执行动画等后续事件
+                if(i!==selectIndex){
+                    clickIndex=i
+                    //判断左移还是右移执行后续事件(动画),如果选中的是已经被选中的则不做任何事情
+                    if(i<selectIndex){//右移
+                        isAnimationStarted=true
+                        needMovePX=(selectedVRight-(selectedItemWidth/2))-(view.right-(itemWidth/2))
+                        pxBymm=-(needMovePX/50)
+                    }else if(i>selectIndex){
+                        isAnimationStarted=true
+                        needMovePX=(view.right-(itemWidth/2))-(selectedVRight-(selectedItemWidth/2))
+                        pxBymm=needMovePX/50
+                    }
+                    executeAnimationAndReLayout(pxBymm)
                 }else{
                     isClick=false
                 }
@@ -222,9 +243,9 @@ class BottomTabLayout :ViewGroup{
     }
 
     //执行动画
-    private fun executeAnimationAndReLayout(clickIndex: Int,pxBymm:Int){
+    private fun executeAnimationAndReLayout(pxBymm:Int){
         //衔接准备
-        var count=getResetViewCount(clickIndex)-1
+        var count=getResetViewCount()-1
         var vLeft=0
         var vRight=0
         if(pxBymm>0){//左移
@@ -268,7 +289,7 @@ class BottomTabLayout :ViewGroup{
                 uiThread {
                     if(i==0){
                         executeSmallerAnimator()
-                        executelargerAnimation(clickIndex)
+                        executelargerAnimation()
                     }
                     scrollBy(pxBymm,0)
                 }
@@ -276,7 +297,7 @@ class BottomTabLayout :ViewGroup{
             }
             //更新ui
             uiThread {
-                reSort(clickIndex)
+                reSort()
                 requestLayout()
                 scrollX=0
                 clearImmediateView()
@@ -287,27 +308,27 @@ class BottomTabLayout :ViewGroup{
 
     //缩小动画
     private fun executeSmallerAnimator(){
-        var scaleAnimation=ScaleAnimation(1f,0.5f,1f,0.5f,100f,100f)
-        scaleAnimation.duration=500
-        tabs.get(selectIndex).startAnimation(scaleAnimation)
+        smallerAnimation=ScaleAnimation(1f,0.6f,1f,0.6f,120f,120f)
+        smallerAnimation?.duration=600
+        tabs.get(selectIndex).startAnimation(smallerAnimation)
     }
 
     //放大动画
-    private fun executelargerAnimation(clickIndex: Int){
-        var scaleAnimation=ScaleAnimation(1f,1.5f,1f,1.5f,100f,100f)
-        scaleAnimation.duration=500
-        tabs.get(clickIndex).startAnimation(scaleAnimation)
+    private fun executelargerAnimation(){
+        largerAnimation=ScaleAnimation(1f,2.2f,1f,2.2f,50f,100f)
+        largerAnimation?.duration=600
+        tabs.get(clickIndex).startAnimation(largerAnimation)
     }
 
     //选中后重新排序
-    private fun reSort(clickIndex:Int){
+    private fun reSort(){
         var reSortList= mutableListOf<BottomTabItemView>()
         var tabSize=tabs.size-1
         //需要重置位置的数量,其他向后直接添加
         var count=0
         //根据选中位置对集合重新排序
         if(clickIndex<selectIndex){
-            count=getResetViewCount(clickIndex)-1
+            count=getResetViewCount()-1
             for(i in tabSize-count..tabSize ){
                 reSortList.add(tabs.get(i))
             }
@@ -317,7 +338,7 @@ class BottomTabLayout :ViewGroup{
             tabs.clear()
             tabs.addAll(reSortList)
         }else if(clickIndex>selectIndex){
-            count=getResetViewCount(clickIndex)-1
+            count=getResetViewCount()-1
             for(i in count+1..tabSize){
                 reSortList.add(tabs.get(i))
             }
