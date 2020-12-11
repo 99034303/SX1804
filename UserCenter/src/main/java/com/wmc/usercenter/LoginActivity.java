@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.mvp.view.BaseActivity;
 
-public class RegisterActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity {
     @Override
     protected void bindView() {
 
