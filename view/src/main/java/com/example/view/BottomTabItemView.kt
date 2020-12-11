@@ -37,6 +37,7 @@ class BottomTabItemView :ImageView{
 
     //初始化
     private fun init(){
+        scaleType=ScaleType.FIT_XY
         //初始化圆角画笔
         circlePaint.color=Color.RED
         //初始化文本画笔

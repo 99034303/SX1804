@@ -8,6 +8,7 @@
         android:id="@+id/test"
         android:background="@drawable/round_test"
         app:bottomTabLayoutColor="@android:color/holo_blue_light"
-        android:layout_width="350dp"
-        android:layout_height="100dp"/>
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

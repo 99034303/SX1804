@@ -56,11 +56,12 @@ class BottomTabLayout :ViewGroup{
 
     //初始化
     private fun init(attrs: AttributeSet?=null){
-        setPadding(20,0,20,0)
+        setPadding(40,0,40,0)
         //获取自定义属性
         if(attrs!=null){
             var t=context.obtainStyledAttributes(attrs,R.styleable.BottomTabLayout)
             mBackgroundColor=t.getColor(R.styleable.BottomTabLayout_bottomTabLayoutColor,Color.parseColor("#FAFAFA"))
+            t.recycle()
         }
     }
 
@@ -175,8 +176,8 @@ class BottomTabLayout :ViewGroup{
                 }
                 //判断是否是选中的item
                 if(i==selectIndex){
-                    largerAnimation?.cancel()
                     view?.layout(selectedVLeft,0,selectedVRight,selectedItemheight)
+                    largerAnimation?.cancel()
                 }else if(i<selectIndex){//选中view前的view位置计算
                     vRight=vLeft+itemWidth
                     view?.layout(vLeft,vTop,vRight,vBottom)
