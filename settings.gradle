@@ -1,3 +1,4 @@
+include ':UserCenter'
 include ':common'
 include ':view'
 include ':bugly'

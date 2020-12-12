@@ -37,6 +37,7 @@ class BottomTabItemView :ImageView{
 
     //初始化
     private fun init(){
+        scaleType=ScaleType.FIT_XY
         //初始化圆角画笔
         circlePaint.color=Color.RED
         //初始化文本画笔
@@ -46,6 +47,10 @@ class BottomTabItemView :ImageView{
     fun setMsgCount(msgCount:Int){
         this.msgCount=msgCount
         invalidate()
+    }
+
+    fun getMsgCount():Int{
+        return this.msgCount
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -74,6 +79,7 @@ class BottomTabItemView :ImageView{
         }
     }
 
+    //重新设置图片范围
     private fun resetDrawableBounds(){
         bounds.top=bounds.bottom/9
         bounds.right=bounds.right-(bounds.right/9)
@@ -87,6 +93,7 @@ class BottomTabItemView :ImageView{
     //获取图片高度
     private fun getDrawableHeight():Float{
         return bounds.height()*values[4]
+
     }
 
     //获取字体最小矩形间距
