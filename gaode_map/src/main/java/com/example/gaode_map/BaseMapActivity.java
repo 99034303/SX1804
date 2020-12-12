@@ -41,15 +41,9 @@ public abstract class BaseMapActivity extends BaseMVPActivity {
         if (customMapStyleOptions==null){
             customMapStyleOptions = new CustomMapStyleOptions()
                     .setEnable(true)
-<<<<<<< HEAD
                     //利用网络地图的样式id加载自定义样式
                     .setStyleId("81db29be347e356f6cdc6eace17acede");
 //                    //根据本地的离线文件加载自定义样式
-=======
-                    //根据网络地图显示id样式
-                    .setStyleId("81db29be347e356f6cdc6eace17acede");
-//                    //加载本地
->>>>>>> dev
 //                    .setStyleDataPath("/mnt/sdcard/style.data")
 //                    .setStyleExtraPath("/mnt/sdcard/style_extra.data");
         }
