@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mvp.presenter.BasePresenter;
 
-public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity implements IView {
-    protected P mPresenter;
+public abstract class BaseActivity extends AppCompatActivity implements IView {
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

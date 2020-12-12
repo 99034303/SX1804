@@ -1,3 +1,4 @@
+include ':gaode_map'
 include ':sp'
 include ':imageloader'
 include ':app'

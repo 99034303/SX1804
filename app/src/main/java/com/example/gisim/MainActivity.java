@@ -1,14 +1,33 @@
 package com.example.gisim;
 
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.example.gaode_map.BaseMapActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseMapActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getViewId() {
+        return R.id.map;
+    }
+
+    @Override
+    public void createPresenter() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
     }
 }
