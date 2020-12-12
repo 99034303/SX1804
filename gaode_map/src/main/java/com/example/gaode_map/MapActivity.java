@@ -2,28 +2,49 @@ package com.example.gaode_map;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
+import com.amap.api.maps.model.CustomMapStyleOptions;
 
 public class MapActivity extends AppCompatActivity {
     MapView mMapView = null;
     //初始化地图控制器对象
     AMap aMap;
+    CustomMapStyleOptions customMapStyleOptions;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{
+                    "android.permission.WRITE_EXTERNAL_STORAGE",
+                    "android.permission.ACCESS_NETWORK_STATE",
+                    "android.permission.ACCESS_WIFI_STATE",
+                    "android.permission.READ_PHONE_STATE",
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION"
+            }, 100);
+        }
         //获取地图控件引用
         mMapView = (MapView) findViewById(R.id.map);
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
         mMapView.onCreate(savedInstanceState);
         if (aMap == null) {
             aMap = mMapView.getMap();
-            Log.d("wt","1222222");
         }
+        //添加自定义地图的显示样式
+        if (customMapStyleOptions==null){
+            customMapStyleOptions = new CustomMapStyleOptions()
+                    .setEnable(true)
+                    .setStyleDataPath("/mnt/sdcard/style.data")
+                    .setStyleExtraPath("/mnt/sdcard/style_extra.data");
+        }
+        aMap.setCustomMapStyle(customMapStyleOptions);
+
     }
     @Override
     protected void onDestroy() {

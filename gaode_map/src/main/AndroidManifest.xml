@@ -13,10 +13,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application>
         <meta-data android:name="com.amap.api.v2.apikey" android:value="53bb4050ca19f098437aa4b8313b2500">
         </meta-data>
-
     </application>
 
 </manifest>
