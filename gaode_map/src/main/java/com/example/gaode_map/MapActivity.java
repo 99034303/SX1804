@@ -40,8 +40,11 @@ public class MapActivity extends AppCompatActivity {
         if (customMapStyleOptions==null){
             customMapStyleOptions = new CustomMapStyleOptions()
                     .setEnable(true)
-                    .setStyleDataPath("/mnt/sdcard/style.data")
-                    .setStyleExtraPath("/mnt/sdcard/style_extra.data");
+                    //利用网络地图的样式id加载自定义样式
+                    .setStyleId("81db29be347e356f6cdc6eace17acede");
+//                    //根据本地的离线文件加载自定义样式
+//                    .setStyleDataPath("/mnt/sdcard/style.data")
+//                    .setStyleExtraPath("/mnt/sdcard/style_extra.data");
         }
         aMap.setCustomMapStyle(customMapStyleOptions);
 
