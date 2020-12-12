@@ -61,7 +61,7 @@ public class SPUtils {
         }else if (defValue instanceof Long){
             return sharedPreferences.getLong(key, (Long) defValue);
         }else {
-            return null;
+            return "";
         }
     }
 
