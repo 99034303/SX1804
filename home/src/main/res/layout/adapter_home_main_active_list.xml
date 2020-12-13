@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff717078">
+    <View
+        android:id="@+id/view_divider"
+        android:background="@android:color/white"
+        android:layout_width="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="100dp"/>
+    <View
+        android:background="@drawable/round_adapter_active_list"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="7dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+    <TextView
+        android:id="@+id/tv_adapter_home_main_activeList_time"
+        android:layout_toRightOf="@id/view_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@android:color/white"
+        android:text="2019/12/19 16:30:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:background="@android:color/white"
+        android:layout_toRightOf="@id/view_divider"
+        android:layout_marginTop="96dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+</RelativeLayout>

@@ -1,3 +1,4 @@
+include ':home'
 include ':UserCenter'
 include ':common'
 include ':view'
