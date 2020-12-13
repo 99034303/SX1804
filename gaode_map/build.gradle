@@ -48,7 +48,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     api files('libs\\AMap3DMap_7.2.1_AMapNavi_7.2.0_AMapSearch_7.1.0_AMapLocation_4.9.0_20200302.jar')
-    api project(path: ':MVP')
+    implementation project(path: ':MVP')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

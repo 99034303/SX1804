@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 
 def version=rootProject.ext.gradleVersion
+def needs=rootProject.ext.implementation
 
 android {
     compileSdkVersion version.compileSdkVersion
@@ -25,10 +26,21 @@ android {
 }
 
 dependencies {
+    api needs.json
+    api needs.gson
+    api needs.recyClerView
+    api needs.recyClerViewAdapter
+    api needs.smartRefreshLayout
+    api needs.smartRefreshHeader
+    api needs.flycoTabLayout
+    api needs.banner
+    api needs.dagger
+    api needs.zxing
+    api needs.design
+    api needs.designMaterial
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
 }
