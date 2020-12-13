@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.amap.api.maps.MapView
+
+        android:id="@+id/map"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"/>
+    <com.example.home.view.ActiveListView
+        android:id="@+id/view_home_main_activeList"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="300dp"
+        android:layout_width="250dp"
+        android:layout_height="300dp"/>
+</RelativeLayout>

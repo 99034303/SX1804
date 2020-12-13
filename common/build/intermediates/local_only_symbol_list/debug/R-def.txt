@@ -17,9 +17,11 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap img_login
 mipmap img_register
+mipmap last
 mipmap login
 mipmap logo
 mipmap mly
+mipmap next
 mipmap register
 mipmap xz
 string app_name

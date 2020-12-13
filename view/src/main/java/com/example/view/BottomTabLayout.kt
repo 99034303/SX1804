@@ -5,12 +5,15 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.ScaleAnimation
 import android.widget.LinearLayout
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 
 class BottomTabLayout :ViewGroup{
     private var mBackgroundColor=0
@@ -53,7 +56,7 @@ class BottomTabLayout :ViewGroup{
         //获取自定义属性
         if(attrs!=null){
             var t=context.obtainStyledAttributes(attrs,R.styleable.BottomTabLayout)
-            mBackgroundColor=t.getColor(R.styleable.BottomTabLayout_bottomTabLayoutColor,Color.parseColor("#FAFAFA"))
+            mBackgroundColor=t.getColor(R.styleable.BottomTabLayout_bottomTabLayoutColor, Color.parseColor("#FAFAFA"))
             t.recycle()
         }
     }
