@@ -1,5 +1,6 @@
 package com.example.mvp.view;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -15,6 +16,17 @@ public abstract class BaseMVPActivity<P extends BasePresenter> extends AppCompat
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(new String[]{
+                    "android.permission.WRITE_EXTERNAL_STORAGE",
+                    "android.permission.ACCESS_NETWORK_STATE",
+                    "android.permission.ACCESS_WIFI_STATE",
+                    "android.permission.READ_PHONE_STATE",
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_FINE_LOCATION"
+
+            }, 100);
+        }
         createPresenter();
         bindView();
         initView();

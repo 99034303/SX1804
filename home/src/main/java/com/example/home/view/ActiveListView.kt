@@ -66,7 +66,7 @@ class ActiveListView:LinearLayout {
     //隐藏
     private fun hidden(){
         listHomeMainActiveList.visibility=View.GONE
-        var hiddenAnimator=ObjectAnimator.ofFloat(this,"translationX",-550f)
+        var hiddenAnimator=ObjectAnimator.ofFloat(this,"translationX",-470f)
         hiddenAnimator.duration=500
         hiddenAnimator.addListener(object :Animator.AnimatorListener{
             override fun onAnimationRepeat(animation: Animator?) {
@@ -115,5 +115,10 @@ class ActiveListView:LinearLayout {
         })
         showAnimator.start()
         isShow=true
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        view.layoutParams.height=-1
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
 }

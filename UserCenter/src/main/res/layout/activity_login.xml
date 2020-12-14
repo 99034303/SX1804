@@ -6,7 +6,7 @@
     android:id="@+id/login_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/background"
-    tools:context=".LoginActivity">
+    tools:context=".view.LoginActivity">
 
     <ImageView
         android:id="@+id/login_logo"
@@ -20,14 +20,16 @@
         app:layout_constraintVertical_bias="0.973" />
 
     <ImageView
-        android:layout_width="292dp"
-        android:layout_height="277dp"
+        android:id="@+id/imageView"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
         android:src="@mipmap/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.06" />
 
 
 
@@ -75,6 +77,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.578" />
 
+    <CheckBox
+        android:id="@+id/login_remember"
+        android:layout_width="113dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/login_remember"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <CheckBox
+        android:id="@+id/login_auto"
+        android:layout_width="113dp"
+        android:layout_height="32dp"
+        android:background="@mipmap/login_auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.702" />
 
     <ImageView
         android:id="@+id/login_back"
@@ -99,4 +124,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/login_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login_forget"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.782" />
 </androidx.constraintlayout.widget.ConstraintLayout>

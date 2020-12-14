@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/forget_parent"
+    tools:context=".view.ForgetActivity">
+    <ImageView
+        android:id="@+id/forget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="572dp"
+        android:src="@mipmap/forget_title" />
+
+    <EditText
+        android:inputType="phone"
+        android:background="@drawable/forget_edit_true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="226dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="439dp"
+        android:paddingStart="10dp"
+        android:hint="请输入手机号" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="414dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/forget_edit_true"
+        android:hint="请输入新密码"
+        android:paddingStart="10dp" />
+
+    <Button
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="508dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="156dp"
+        android:background="@drawable/forget_finish"
+        android:text="完  成"
+        android:textSize="20sp"
+        android:paddingStart="10dp" />
+
+    <EditText
+        android:inputType="number"
+        android:id="@+id/editText"
+        android:background="@drawable/forget_edit_true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="345dp"
+        android:paddingStart="10dp"
+        android:hint="请输入验证码" />
+
+    <Button
+        android:background="@drawable/forget_yzm"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="275dp"
+        android:layout_marginTop="322dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="345dp"
+        android:text="验证码" />
+
+
+</RelativeLayout>

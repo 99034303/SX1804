@@ -18,20 +18,8 @@ public abstract class BaseMapActivity extends BaseMVPActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(new String[]{
-                    "android.permission.WRITE_EXTERNAL_STORAGE",
-                    "android.permission.ACCESS_NETWORK_STATE",
-                    "android.permission.ACCESS_WIFI_STATE",
-                    "android.permission.READ_PHONE_STATE",
-                    "android.permission.ACCESS_COARSE_LOCATION",
-                    "android.permission.ACCESS_FINE_LOCATION"
-
-            }, 100);
-        }
-        mMapView = findViewById(getViewId());
         //获取地图控件引用
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(getViewId());
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
         mMapView.onCreate(savedInstanceState);
         if (aMap == null) {
