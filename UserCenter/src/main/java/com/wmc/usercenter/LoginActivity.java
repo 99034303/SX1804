@@ -34,7 +34,8 @@ public class LoginActivity extends BaseActivity {
     }
 
     @Override
-    protected void initData() {
+    protected void
+    initData() {
 
     }
 
