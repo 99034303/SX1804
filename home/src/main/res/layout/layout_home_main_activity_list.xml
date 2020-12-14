@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="@drawable/round_home_main_activelist">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="我的活动"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:layout_marginLeft="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/img_hiddenOrShow"
+            android:layout_marginLeft="25dp"
+            android:src="@mipmap/last"
+            android:layout_marginTop="7dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+    <View
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_home_main_activeList"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+</LinearLayout>

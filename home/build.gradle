@@ -3,6 +3,11 @@ if(isNeedHomeModel.toBoolean()){
 }else{
     apply plugin: 'com.android.library'
 }
+<<<<<<< HEAD
+=======
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 
 def version=rootProject.ext.gradleVersion
 
@@ -43,8 +48,22 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':common')
+<<<<<<< HEAD
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+=======
+    implementation project(path: ':gaode_map')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}
+apply plugin: 'kotlin-android'
+repositories {
+    mavenCentral()
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 }

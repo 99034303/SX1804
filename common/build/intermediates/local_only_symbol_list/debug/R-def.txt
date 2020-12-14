@@ -23,12 +23,14 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap img_login
 mipmap img_register
+mipmap last
 mipmap login
 mipmap login_auto
 mipmap login_forget
 mipmap login_remember
 mipmap logo
 mipmap mly
+mipmap next
 mipmap register
 mipmap them
 mipmap xz
