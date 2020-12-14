@@ -12,7 +12,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.alibaba.android.arouter.launcher.ARouter;
+=======
+import com.bw.xmpplibrary.XmppManager;
+>>>>>>> test
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.sp.SPUtils;
@@ -110,7 +114,6 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         loginFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (loginUsername.getText().toString().trim().isEmpty()){
 
                     Toast.makeText(LoginActivity.this, "年轻人不讲武德，用户名有问题啊。", Toast.LENGTH_SHORT).show();

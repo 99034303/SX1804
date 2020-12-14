@@ -1,3 +1,5 @@
+include ':commonlibrary'
+include ':xmpplibrary'
 include ':home'
 include ':UserCenter'
 include ':common'

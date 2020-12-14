@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.wmc.sp.SPUtils;
+import com.wmc.sp.SQLiteManager;
 
 
 public class MyApplication extends Application {
@@ -20,6 +21,8 @@ public class MyApplication extends Application {
         ARouter.init(this);
         //初始化SP
         SPUtils.getInstance("gisim",this);
+        //初始化数据库
+        SQLiteManager.getInstance(this);
     }
 
 

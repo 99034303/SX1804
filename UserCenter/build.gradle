@@ -51,6 +51,9 @@ dependencies {
     implementation project(path: ':MVP')
     implementation project(path: ':Net')
     implementation project(path: ':sp')
+    implementation project(path: ':xmpplibrary')
+
+
     implementation project(path: ':imageloader')
     implementation project(path: ':Net')
     implementation project(path: ':home')

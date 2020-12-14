@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bugly" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/commonlibrary" />
             <option value="$PROJECT_DIR$/gaode_map" />
             <option value="$PROJECT_DIR$/home" />
             <option value="$PROJECT_DIR$/imageloader" />
@@ -25,6 +26,7 @@
             <option value="$PROJECT_DIR$/tinker" />
             <option value="$PROJECT_DIR$/umeng" />
             <option value="$PROJECT_DIR$/view" />
+            <option value="$PROJECT_DIR$/xmpplibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
