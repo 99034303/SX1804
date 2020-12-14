@@ -29,9 +29,8 @@ public abstract class BaseMapActivity extends BaseMVPActivity {
 
             }, 100);
         }
-        mMapView = findViewById(getViewId());
         //获取地图控件引用
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(getViewId());
         //在activity执行onCreate时执行mMapView.onCreate(savedInstanceState)，创建地图
         mMapView.onCreate(savedInstanceState);
         if (aMap == null) {
