@@ -1,10 +1,8 @@
-package com.wmc.usercenter;
+package com.wmc.usercenter.view;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,10 +10,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.mvp.view.BaseActivity;
 import com.example.mvp.view.BaseMVPActivity;
+import com.example.net.BaseEntity;
+import com.wmc.sp.SPUtils;
+import com.wmc.usercenter.R;
+import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.RequestEntity;
+import com.wmc.usercenter.presenter.UserCenterPresenter;
 
-public class LoginActivity extends BaseMVPActivity {
+public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
     private ConstraintLayout loginParent;
     private ImageView loginLogo;
     private ImageView imgRegister;
@@ -45,7 +49,7 @@ public class LoginActivity extends BaseMVPActivity {
 
     @Override
     protected void createPresenter() {
-
+        mPresenter = new UserCenterPresenter(this);
     }
 
     @Override
@@ -91,6 +95,7 @@ public class LoginActivity extends BaseMVPActivity {
             @Override
             public void onClick(View v) {
                 if (loginUsername.getText().toString().trim().isEmpty()){
+
                     Toast.makeText(LoginActivity.this, "年轻人不讲武德，用户名有问题啊。", Toast.LENGTH_SHORT).show();
                 }else if (loginPassword.getText().toString().trim().isEmpty()){
                     Toast.makeText(LoginActivity.this, "去骗去偷袭，密码你确定？", Toast.LENGTH_SHORT).show();
@@ -135,5 +140,27 @@ public class LoginActivity extends BaseMVPActivity {
             Toast.makeText(this, "看不见左上角？？？🤔", Toast.LENGTH_SHORT).show();
         }
         return false;
+    }
+
+
+    @Override
+    public void updateLoginUI(BaseEntity<LoginEntity> baseEntity) {
+        if (baseEntity.getCode() == 0){
+            LoginEntity loginEntity = baseEntity.getData();
+
+            SPUtils spUtils = SPUtils.getInstance("gisim",this);
+            spUtils.put("uid",loginEntity.getId());                         //存入用户id，用于后续的密码修改
+            spUtils.put("username",loginEntity.getPhonenumber());           //存入用户名
+            spUtils.put("token",loginEntity.getToken());                    //存入token值
+
+            showMsg("登录成功");
+        }else if (baseEntity.getCode() == -1){
+            showMsg(baseEntity.getMsg());
+        }
+    }
+
+    @Override
+    public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
+
     }
 }

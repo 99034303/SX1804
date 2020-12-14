@@ -1,5 +1,7 @@
 package com.example.net;
 
+import com.example.net.converter.CustomGsonConverterFactory;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -32,9 +34,9 @@ public class RetrofitFactory {
      */
     private void initRetrofit() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl("http://api.zydeveloper.com:8086")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(CustomGsonConverterFactory.create())
                 .client(createOkHttpClient())
                 .build();
     }
@@ -64,7 +66,11 @@ public class RetrofitFactory {
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
                 Request newRequest = request.newBuilder()
-                        .addHeader("", "")
+                        .addHeader("date", "Sat, 12 Dec 2020 03")
+                        .addHeader("server", "Apache-Coyote/1.1")
+                        .addHeader("transfer-encoding", "chunked")
+                        .addHeader("content-type", "application/json")
+
                         .build();
 
                 return chain.proceed(newRequest);

@@ -3,15 +3,15 @@
     package="com.wmc.usercenter">
     <uses-permission android:name="android.permission.INTERNET"/>
     <application android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ForgetActivity"></activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".view.ForgetActivity"></activity>
+        <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".view.RegisterActivity"></activity>
     </application>
 
 </manifest>

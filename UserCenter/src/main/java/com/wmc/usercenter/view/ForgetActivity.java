@@ -1,4 +1,4 @@
-package com.wmc.usercenter;
+package com.wmc.usercenter.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.wmc.imageloader.ImageUtils;
+import com.wmc.usercenter.R;
 
 public class ForgetActivity extends AppCompatActivity {
     private RelativeLayout forgetParent;

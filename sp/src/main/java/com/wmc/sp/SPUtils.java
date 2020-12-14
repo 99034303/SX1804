@@ -11,8 +11,18 @@ import java.util.Map;
  */
 public class SPUtils {
 
+    private static SPUtils spUtils;
     private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor edit;
+
+
+    public static SPUtils getInstance(String name, Context context){
+        if (spUtils == null){
+            spUtils = new SPUtils(name,context);
+            return spUtils;
+        }
+        return spUtils;
+    }
 
     @SuppressLint("CommitPrefEdits")
     public SPUtils(String name, Context context) {

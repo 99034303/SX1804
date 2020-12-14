@@ -1821,20 +1821,17 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-<<<<<<< HEAD
-drawable forget_edit_false
-drawable forget_edit_true
-drawable forget_finish
-drawable forget_yzm
-=======
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable forget_edit_false
+drawable forget_edit_true
+drawable forget_finish
+drawable forget_yzm
 drawable gray_radius
->>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 drawable ic_back
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
