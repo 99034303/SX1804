@@ -2,6 +2,7 @@ package com.wmc.usercenter;
 
 import android.app.Application;
 import com.wmc.sp.SPUtils;
+import com.wmc.sp.SQLiteManager;
 
 
 public class MyApplication extends Application {
@@ -15,6 +16,8 @@ public class MyApplication extends Application {
 
         //初始化SP
         SPUtils.getInstance("gisim",this);
+        //初始化数据库
+        SQLiteManager.getInstance(this);
     }
 
 

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 import com.example.net.BaseEntity;
+import com.wmc.usercenter.IMManager;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
@@ -16,6 +17,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 public class UserCenterPresenter extends Contract.Presenter {
+    private IMManager imManager;
 
     public UserCenterPresenter(Contract.View mView) {
         super(mView);
@@ -25,6 +27,8 @@ public class UserCenterPresenter extends Contract.Presenter {
     @Override
     protected void createModel() {
         mModel = UserCenterModel.getInstance();
+        //实例IM
+        imManager = IMManager.getInstance();
     }
 
 
@@ -35,6 +39,7 @@ public class UserCenterPresenter extends Contract.Presenter {
     @SuppressLint("CheckResult")
     @Override
     public void login(final RequestEntity loginBody) {
+
         mModel.login(loginBody)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -71,6 +76,7 @@ public class UserCenterPresenter extends Contract.Presenter {
     @SuppressLint("CheckResult")
     @Override
     public void register(RequestEntity register) {
+
         mModel.register(register)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

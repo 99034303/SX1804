@@ -1,12 +1,11 @@
-if (isUserCenter.toBoolean())
-    apply plugin: 'com.android.application'
-else
-    apply plugin: 'com.android.library'
+apply plugin: 'com.android.library'
 
-def version=rootProject.ext.gradleVersion
+def version = rootProject.ext.gradleVersion
+
 android {
     compileSdkVersion version.compileSdkVersion
     buildToolsVersion version.buildToolsVersion
+
     defaultConfig {
         minSdkVersion version.minSdkVersion
         targetSdkVersion version.targetSdkVersion
@@ -23,31 +22,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    sourceSets{
-        main{
-            if (isUserCenter.toBoolean())
-                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            else manifest.srcFile 'src/main/release/AndroidManifest.xml'
-        }
-    }
-
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':common')
-    implementation project(path: ':MVP')
-    implementation project(path: ':Net')
-    implementation project(path: ':sp')
-    implementation project(path: ':xmpplibrary')
-
-
-    implementation project(path: ':imageloader')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    // XMPP通信
+    api 'org.igniterealtime.smack:smack-im:4.2.0'
+    api 'org.igniterealtime.smack:smack-tcp:4.2.0'
+    api 'org.igniterealtime.smack:smack-android-extensions:4.2.0'
+    api 'org.igniterealtime.smack:smack-android:4.2.0'
+    api project(':commonlibrary')
 }
