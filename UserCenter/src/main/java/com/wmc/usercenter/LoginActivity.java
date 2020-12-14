@@ -5,14 +5,17 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mvp.view.BaseActivity;
+import com.example.mvp.view.BaseMVPActivity;
 
-public class LoginActivity extends BaseActivity {
+public class LoginActivity extends BaseMVPActivity {
     private ConstraintLayout loginParent;
     private ImageView loginLogo;
     private ImageView imgRegister;
@@ -20,6 +23,10 @@ public class LoginActivity extends BaseActivity {
     private EditText loginPassword;
     private ImageView loginFinish;
     private ImageView loginBack;
+    private CheckBox loginRemember;
+    private CheckBox loginAuto;
+    private ImageView loginForget;
+
 
     @Override
     protected void bindView() {
@@ -30,6 +37,14 @@ public class LoginActivity extends BaseActivity {
         loginPassword = findViewById(R.id.login_password);
         loginFinish = findViewById(R.id.login_finish);
         loginBack = findViewById(R.id.login_back);
+        loginRemember = findViewById(R.id.login_remember);
+        loginAuto = findViewById(R.id.login_auto);
+        loginForget = findViewById(R.id.login_forget);
+
+    }
+
+    @Override
+    protected void createPresenter() {
 
     }
 
@@ -41,6 +56,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void initView() {
         loginParent.setFocusableInTouchMode(true);
+        //获取焦点
         loginParent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,29 +64,29 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-
+        //退出
         loginBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
+        //注册点我
         imgRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });
-
+        //LOGO
         loginLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loginLogo.setFocusable(true);
-                Toast.makeText(LoginActivity.this, "如有意见反馈，请联系混元太极马掌门。", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "如有意见反馈，请联系浑元形意太极拳掌门人。", Toast.LENGTH_SHORT).show();
             }
         });
-
+        //登录
         loginFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,10 +99,41 @@ public class LoginActivity extends BaseActivity {
                 }
             }
         });
+        //记住密码
+        loginRemember.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        //自动登录
+        loginAuto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (loginAuto.isChecked()){
+                    loginRemember.setChecked(true);
+                }
+            }
+        });
+        //忘记密码
+        loginForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,ForgetActivity.class));
+            }
+        });
     }
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK) {
+            Toast.makeText(this, "看不见左上角？？？🤔", Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 }
