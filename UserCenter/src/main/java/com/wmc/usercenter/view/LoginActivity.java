@@ -7,10 +7,12 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.sp.SPUtils;
@@ -31,10 +33,13 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     private CheckBox loginRemember;
     private CheckBox loginAuto;
     private ImageView loginForget;
-
+    private boolean isRememberPwd=false;
+    private boolean isAutoLogin=false;
+    private SPUtils usersp;
 
     @Override
     protected void bindView() {
+
         loginParent = findViewById(R.id.login_parent);
         loginLogo = findViewById(R.id.login_logo);
         imgRegister = findViewById(R.id.img_register);
@@ -45,6 +50,16 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         loginRemember = findViewById(R.id.login_remember);
         loginAuto = findViewById(R.id.login_auto);
         loginForget = findViewById(R.id.login_forget);
+        usersp = SPUtils.getInstance("user", this);
+        Boolean isAuto = (Boolean) usersp.get("isAuto", false);
+        Boolean isRemember = (Boolean) usersp.get("isRemember", false);
+        if (isAuto){
+            ARouter.getInstance().build("/home/HomeActivity").navigation();
+        }
+        if (isRemember){
+            loginUsername.setText((CharSequence) usersp.get("username",""));
+            loginPassword.setText((CharSequence) usersp.get("password",""));
+        }
 
     }
 
@@ -102,26 +117,28 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
                 }else if (loginPassword.getText().toString().trim().isEmpty()){
                     Toast.makeText(LoginActivity.this, "去骗去偷袭，密码你确定？", Toast.LENGTH_SHORT).show();
                 }else {
-
+                    mPresenter.login(new RequestEntity(loginUsername.getText().toString().trim(),loginPassword.getText().toString().trim()));
                 }
             }
         });
         //记住密码
-        loginRemember.setOnClickListener(new View.OnClickListener() {
+        loginRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                isRememberPwd=isChecked;
             }
         });
         //自动登录
-        loginAuto.setOnClickListener(new View.OnClickListener() {
+        loginAuto.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View v) {
-                if (loginAuto.isChecked()){
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
                     loginRemember.setChecked(true);
                 }
+                isAutoLogin=isChecked;
             }
         });
+
         //忘记密码
         loginForget.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,13 +170,28 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     public void updateLoginUI(BaseEntity<LoginEntity> baseEntity) {
         if (baseEntity.getCode() == 0){
             LoginEntity loginEntity = baseEntity.getData();
-
-            SPUtils spUtils = SPUtils.getInstance("gisim");
-            spUtils.put("uid",loginEntity.getId());                         //存入用户id，用于后续的密码修改
-            spUtils.put("username",loginEntity.getPhonenumber());           //存入用户名
-            spUtils.put("token",loginEntity.getToken());                    //存入token值
-
+            SPUtils spUtils = SPUtils.getInstance("gisim",this);
+            //存入用户id，用于后续的密码修改
+            spUtils.put("uid",loginEntity.getId());
+            //存入用户名
+            spUtils.put("username",loginEntity.getPhonenumber());
+            //存入token值
+            spUtils.put("token",loginEntity.getToken());
             showMsg("登录成功");
+            //判断是否需要记住密码
+            if (isRememberPwd){
+                usersp.put("username",loginUsername.getText().toString().trim());
+                usersp.put("password",loginPassword.getText().toString().trim());
+                usersp.put("isRemember",true);
+            }else {
+                usersp.deleteAll();
+            }
+            if (isAutoLogin){
+                usersp.put("isAuto",true);
+            }else {
+                usersp.put("isAuto",false);
+            }
+            ARouter.getInstance().build("/home/HomeActivity").navigation();
         }else if (baseEntity.getCode() == -1){
             showMsg(baseEntity.getMsg());
         }
