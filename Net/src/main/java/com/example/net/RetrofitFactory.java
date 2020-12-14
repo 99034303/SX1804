@@ -1,6 +1,7 @@
 package com.example.net;
 
 import com.example.net.converter.CustomGsonConverterFactory;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

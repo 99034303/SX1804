@@ -143,6 +143,10 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     }
 
 
+    /**
+     * 登录响应
+     * @param baseEntity
+     */
     @Override
     public void updateLoginUI(BaseEntity<LoginEntity> baseEntity) {
         if (baseEntity.getCode() == 0){

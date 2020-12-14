@@ -2478,7 +2478,6 @@ int mipmap edit_password 0x0
 int mipmap edit_username 0x0
 int mipmap forget_background 0x0
 int mipmap forget_title 0x0
-int mipmap hd 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
 int mipmap img_login 0x0
@@ -2489,11 +2488,9 @@ int mipmap login_auto 0x0
 int mipmap login_forget 0x0
 int mipmap login_remember 0x0
 int mipmap logo 0x0
-int mipmap mly 0x0
 int mipmap next 0x0
 int mipmap register 0x0
 int mipmap them 0x0
-int mipmap xz 0x0
 int plurals mtrl_badge_content_description 0x0
 int raw beep 0x0
 int string abc_action_bar_home_description 0x0

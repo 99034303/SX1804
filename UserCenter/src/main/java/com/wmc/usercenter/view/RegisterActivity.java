@@ -96,11 +96,16 @@ public class RegisterActivity extends BaseActivity implements Contract.View {
         return false;
     }
 
+
     @Override
     public void updateLoginUI(BaseEntity<LoginEntity> baseEntity) {
 
     }
 
+    /**
+     * 注册响应
+     * @param baseEntity
+     */
     @Override
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
 
