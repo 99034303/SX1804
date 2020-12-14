@@ -78,6 +78,7 @@ int attr backgroundTint 0x0
 int attr backgroundTintMode 0x0
 int attr barLength 0x0
 int attr borderlessButtonStyle 0x0
+int attr bottomTabLayoutColor 0x0
 int attr buttonBarButtonStyle 0x0
 int attr buttonBarNegativeButtonStyle 0x0
 int attr buttonBarNeutralButtonStyle 0x0
@@ -604,6 +605,8 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
+int drawable forget_edit 0x0
+int drawable ic_back 0x0
 int drawable ic_launcher_background 0x0
 int drawable ic_launcher_foreground 0x0
 int drawable notification_action_background 0x0
@@ -618,6 +621,7 @@ int drawable notification_template_icon_bg 0x0
 int drawable notification_template_icon_low_bg 0x0
 int drawable notification_tile_bg 0x0
 int drawable notify_panel_notification_icon_bg 0x0
+int drawable round_test 0x0
 int drawable tooltip_frame_dark 0x0
 int drawable tooltip_frame_light 0x0
 int id accessibility_action_clickable_span 0x0
@@ -813,9 +817,26 @@ int layout select_dialog_item_material 0x0
 int layout select_dialog_multichoice_material 0x0
 int layout select_dialog_singlechoice_material 0x0
 int layout support_simple_spinner_dropdown_item 0x0
+int mipmap background 0x0
+int mipmap btn_login 0x0
+int mipmap btn_register 0x0
+int mipmap edit_password 0x0
+int mipmap edit_username 0x0
+int mipmap forget_title 0x0
 int mipmap hd 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
+int mipmap img_login 0x0
+int mipmap img_register 0x0
+int mipmap login 0x0
+int mipmap login_auto 0x0
+int mipmap login_forget 0x0
+int mipmap login_remember 0x0
+int mipmap logo 0x0
+int mipmap mly 0x0
+int mipmap register 0x0
+int mipmap them 0x0
+int mipmap xz 0x0
 int string abc_action_bar_home_description 0x0
 int string abc_action_bar_up_description 0x0
 int string abc_action_menu_overflow_description 0x0
@@ -845,8 +866,10 @@ int string abc_shareactionprovider_share_with_application 0x0
 int string abc_toolbar_collapse_description 0x0
 int string app_name 0x0
 int string hello_blank_fragment 0x0
+int string password 0x0
 int string search_menu_title 0x0
 int string status_bar_notification_info_overflow 0x0
+int string username 0x0
 int style AlertDialog_AppCompat 0x0
 int style AlertDialog_AppCompat_Light 0x0
 int style Animation_AppCompat_Dialog 0x0
@@ -1434,6 +1457,8 @@ int styleable AppCompatTheme_windowFixedWidthMinor 121
 int styleable AppCompatTheme_windowMinWidthMajor 122
 int styleable AppCompatTheme_windowMinWidthMinor 123
 int styleable AppCompatTheme_windowNoTitle 124
+int[] styleable BottomTabLayout { 0x0 }
+int styleable BottomTabLayout_bottomTabLayoutColor 0
 int[] styleable ButtonBarLayout { 0x0 }
 int styleable ButtonBarLayout_allowStacking 0
 int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5 }

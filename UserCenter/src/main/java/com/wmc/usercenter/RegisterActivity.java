@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -83,5 +84,13 @@ public class RegisterActivity extends BaseActivity {
     @Override
     protected int getLayoutId() {
         return R.layout.activity_register;
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK) {
+            Toast.makeText(this, "😒不知道该点谁嘛？？？", Toast.LENGTH_SHORT).show();
+        }
+        return false;
     }
 }
