@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/forget_parent"
-    tools:context=".ForgetActivity">
+    tools:context=".view.ForgetActivity">
     <ImageView
         android:id="@+id/forget_background"
         android:layout_width="match_parent"

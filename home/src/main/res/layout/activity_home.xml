@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-=======
 <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <com.amap.api.maps.MapView
-
         android:id="@+id/map"
-
         android:layout_width="match_parent"
-
         android:layout_height="match_parent"/>
     <com.example.home.view.ActiveListView
         android:id="@+id/view_home_main_activeList"
@@ -22,5 +13,4 @@
         android:layout_marginTop="300dp"
         android:layout_width="200dp"
         android:layout_height="200dp"/>
->>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 </RelativeLayout>

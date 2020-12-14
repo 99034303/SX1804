@@ -1820,20 +1820,17 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
-<<<<<<< HEAD
-int drawable forget_edit_false 0x0
-int drawable forget_edit_true 0x0
-int drawable forget_finish 0x0
-int drawable forget_yzm 0x0
-=======
 int drawable design_bottom_navigation_item_background 0x0
 int drawable design_fab_background 0x0
 int drawable design_ic_visibility 0x0
 int drawable design_ic_visibility_off 0x0
 int drawable design_password_eye 0x0
 int drawable design_snackbar_background 0x0
+int drawable forget_edit_false 0x0
+int drawable forget_edit_true 0x0
+int drawable forget_finish 0x0
+int drawable forget_yzm 0x0
 int drawable gray_radius 0x0
->>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int drawable ic_back 0x0
 int drawable ic_clock_black_24dp 0x0
 int drawable ic_keyboard_black_24dp 0x0
@@ -2481,7 +2478,6 @@ int mipmap edit_password 0x0
 int mipmap edit_username 0x0
 int mipmap forget_background 0x0
 int mipmap forget_title 0x0
-int mipmap hd 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
 int mipmap img_login 0x0
@@ -2492,11 +2488,9 @@ int mipmap login_auto 0x0
 int mipmap login_forget 0x0
 int mipmap login_remember 0x0
 int mipmap logo 0x0
-int mipmap mly 0x0
 int mipmap next 0x0
 int mipmap register 0x0
 int mipmap them 0x0
-int mipmap xz 0x0
 int plurals mtrl_badge_content_description 0x0
 int raw beep 0x0
 int string abc_action_bar_home_description 0x0

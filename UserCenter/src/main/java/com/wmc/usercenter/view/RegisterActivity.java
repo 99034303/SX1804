@@ -1,9 +1,7 @@
-package com.wmc.usercenter;
+package com.wmc.usercenter.view;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -11,8 +9,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mvp.view.BaseActivity;
+import com.example.net.BaseEntity;
+import com.wmc.usercenter.R;
+import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.LoginEntity;
 
-public class RegisterActivity extends BaseActivity {
+public class RegisterActivity extends BaseActivity implements Contract.View {
     private ImageView registerLogo;
     private EditText registerUsername;
     private EditText registerPassword;
@@ -92,5 +94,20 @@ public class RegisterActivity extends BaseActivity {
             Toast.makeText(this, "😒不知道该点谁嘛？？？", Toast.LENGTH_SHORT).show();
         }
         return false;
+    }
+
+
+    @Override
+    public void updateLoginUI(BaseEntity<LoginEntity> baseEntity) {
+
+    }
+
+    /**
+     * 注册响应
+     * @param baseEntity
+     */
+    @Override
+    public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
+
     }
 }
