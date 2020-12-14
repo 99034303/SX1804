@@ -3,6 +3,7 @@ package com.wmc.usercenter.view;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
@@ -94,6 +95,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         loginFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (loginUsername.getText().toString().trim().isEmpty()){
 
                     Toast.makeText(LoginActivity.this, "年轻人不讲武德，用户名有问题啊。", Toast.LENGTH_SHORT).show();
@@ -152,7 +154,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         if (baseEntity.getCode() == 0){
             LoginEntity loginEntity = baseEntity.getData();
 
-            SPUtils spUtils = SPUtils.getInstance("gisim",this);
+            SPUtils spUtils = SPUtils.getInstance("gisim");
             spUtils.put("uid",loginEntity.getId());                         //存入用户id，用于后续的密码修改
             spUtils.put("username",loginEntity.getPhonenumber());           //存入用户名
             spUtils.put("token",loginEntity.getToken());                    //存入token值

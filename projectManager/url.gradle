@@ -1,5 +1,5 @@
 ext{
-    url=[
-
+    urls=[
+            Baseurl : "http://api.zydeveloper.com:8086"
     ]
 }
