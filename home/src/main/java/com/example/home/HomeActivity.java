@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.amap.api.maps.MapView;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
@@ -17,7 +19,10 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author Administrator
+ */
+@Route(path = "/home/HomeActivity")
 public class HomeActivity extends BaseMapActivity {
     private ActiveListView viewHomeMainActiveList;
     private List<String> titles=new ArrayList<>();
@@ -27,6 +32,8 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void bindView() {
+        ARouter.getInstance().inject(this);
+
 
     }
 

@@ -14,7 +14,7 @@ public class SPUtils {
     private static SPUtils spUtils;
     private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor edit;
-
+    private Context context;
 
     public static SPUtils getInstance(String name, Context context){
         if (spUtils == null){
@@ -23,16 +23,15 @@ public class SPUtils {
         }
         return spUtils;
     }
-
-    public static SPUtils getInstance(String name){
-        return spUtils;
-    }
-
     @SuppressLint("CommitPrefEdits")
-    public SPUtils(String name, Context context) {
-        sharedPreferences = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+    private SPUtils(String name, Context context) {
+        if (context!=null){
+            this.context=context.getApplicationContext();
+        }
+        sharedPreferences =  this.context.getSharedPreferences(name, Context.MODE_PRIVATE);
         edit = sharedPreferences.edit();
     }
+
 
     /**
      * 存入数据
