@@ -15,10 +15,12 @@ ext{
             anko:"0.9",
             glide:"4.11.0",
             arouter:"1.4.1",
-            arouterCompiler:"1.2.2"
+            arouterCompiler:"1.2.2",
+            annotationProcessor:"2.23.2"
     ]
 
     implementation=[
+            annotationProcessor:"com.google.dagger:dagger-compiler:$implementationVersion.annotationProcessor",
             json:"com.alibaba:fastjson:$implementationVersion.json",
             gson:"com.google.code.gson:gson:$implementationVersion.gson",
             recyClerView:"com.android.support:recyclerview-v7:$implementationVersion.recyClerView",

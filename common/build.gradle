@@ -37,6 +37,7 @@ dependencies {
     api needs.dagger
     api needs.zxing
     api needs.design
+    api needs.annotationProcessor
     api needs.designMaterial
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'

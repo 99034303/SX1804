@@ -3,6 +3,8 @@ package com.example.mvp.presenter;
 import com.example.mvp.model.IModel;
 import com.example.mvp.view.IView;
 
+import javax.inject.Inject;
+
 //p层抽象类
 public abstract class BasePresenter<M extends IModel,V extends IView> {
     protected M mModel;
