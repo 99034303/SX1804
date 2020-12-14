@@ -1,2 +1,3 @@
 apply from:"projectManager/implementation.gradle"
 apply from:"projectManager/version.gradle"
+apply from:"projectManager/url.gradle"

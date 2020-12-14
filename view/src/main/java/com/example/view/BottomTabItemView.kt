@@ -10,7 +10,7 @@ import android.widget.ImageView
 
 @SuppressLint("AppCompatCustomView")
 class BottomTabItemView :ImageView{
-     private var mID:Int=-1
+    private var mID:Int=-1
     private val circlePaint=Paint()
     private val textPaint=Paint()
     private var msgCount=-1
