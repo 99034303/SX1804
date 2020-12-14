@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.amap.api.maps.MapView;
 import com.example.gaode_map.BaseMapActivity;
@@ -17,6 +19,8 @@ public class HomeActivity extends BaseMapActivity {
     private ActiveListView viewHomeMainActiveList;
     private List<String> titles=new ArrayList<>();
     private ActiveListAdapter activeListAdapter;
+
+    private RecyclerView listHomeMainActiveList;
 
     @Override
     protected void bindView() {
