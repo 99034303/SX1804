@@ -2,6 +2,7 @@ package com.example.net;
 
 import com.example.net.converter.CustomGsonConverterFactory;
 import com.google.gson.Gson;
+import com.wmc.sp.SPUtils;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,6 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitFactory {
 
@@ -26,6 +26,7 @@ public class RetrofitFactory {
     private RetrofitFactory(){
         initRetrofit();
     }
+
     public static RetrofitFactory getInstance(){
         return instance;
     }
@@ -35,7 +36,7 @@ public class RetrofitFactory {
      */
     private void initRetrofit() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://api.zydeveloper.com:8086")
+                .baseUrl(BuildConfig.Baseurl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(CustomGsonConverterFactory.create())
                 .client(createOkHttpClient())
@@ -71,7 +72,7 @@ public class RetrofitFactory {
                         .addHeader("server", "Apache-Coyote/1.1")
                         .addHeader("transfer-encoding", "chunked")
                         .addHeader("content-type", "application/json")
-
+                        .addHeader("token", (String) SPUtils.getInstance("gisim").get("token",""))
                         .build();
 
                 return chain.proceed(newRequest);
@@ -79,6 +80,7 @@ public class RetrofitFactory {
         };
         return interceptor;
     }
+
 
     /**
      * http拦截器

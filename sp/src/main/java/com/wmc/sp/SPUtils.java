@@ -24,6 +24,10 @@ public class SPUtils {
         return spUtils;
     }
 
+    public static SPUtils getInstance(String name){
+        return spUtils;
+    }
+
     @SuppressLint("CommitPrefEdits")
     public SPUtils(String name, Context context) {
         sharedPreferences = context.getSharedPreferences(name, Context.MODE_PRIVATE);
