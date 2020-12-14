@@ -50,8 +50,10 @@ public class RetrofitFactory {
     private OkHttpClient createOkHttpClient() {
         OkHttpClient build = new OkHttpClient.Builder()
                 .connectTimeout(30, TimeUnit.SECONDS)
-                .addNetworkInterceptor(createLogInterceptor())//http拦截器
-                .addInterceptor(createTokenInterceptor())//添加token头信息
+                //http拦截器
+                .addNetworkInterceptor(createLogInterceptor())
+                //添加token头信息
+                .addInterceptor(createTokenInterceptor())
                 .readTimeout(30, TimeUnit.SECONDS)
                 .writeTimeout(30, TimeUnit.SECONDS)
                 .build();
@@ -72,7 +74,7 @@ public class RetrofitFactory {
                         .addHeader("server", "Apache-Coyote/1.1")
                         .addHeader("transfer-encoding", "chunked")
                         .addHeader("content-type", "application/json")
-                        .addHeader("token", (String) SPUtils.getInstance("gisim").get("token",""))
+                        .addHeader("token", (String) SPUtils.getInstance("gisim",null).get("token",""))
                         .build();
 
                 return chain.proceed(newRequest);

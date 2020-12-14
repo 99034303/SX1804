@@ -1,6 +1,8 @@
 package com.wmc.usercenter;
 
 import android.app.Application;
+
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.wmc.sp.SPUtils;
 
 
@@ -12,7 +14,10 @@ public class MyApplication extends Application {
         super.onCreate();
         //初始化友盟
 //        initUMeng();
-
+        //初始化
+        ARouter.init(this);
+        ARouter.openDebug();
+        ARouter.openLog();
         //初始化SP
         SPUtils.getInstance("gisim",this);
     }
