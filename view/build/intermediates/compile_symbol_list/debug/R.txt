@@ -141,6 +141,9 @@ int attr behavior_saveFlags 0x0
 int attr behavior_skipCollapsed 0x0
 int attr borderWidth 0x0
 int attr borderlessButtonStyle 0x0
+<<<<<<< HEAD
+int attr bottomTabLayoutColor 0x0
+=======
 int attr bottomAppBarStyle 0x0
 int attr bottomNavigationStyle 0x0
 int attr bottomSheetDialogTheme 0x0
@@ -158,6 +161,7 @@ int attr boxStrokeErrorColor 0x0
 int attr boxStrokeWidth 0x0
 int attr boxStrokeWidthFocused 0x0
 int attr brightness 0x0
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int attr buttonBarButtonStyle 0x0
 int attr buttonBarNegativeButtonStyle 0x0
 int attr buttonBarNeutralButtonStyle 0x0
@@ -1821,6 +1825,10 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
+<<<<<<< HEAD
+int drawable forget_edit 0x0
+int drawable ic_back 0x0
+=======
 int drawable design_bottom_navigation_item_background 0x0
 int drawable design_fab_background 0x0
 int drawable design_ic_visibility 0x0
@@ -1831,6 +1839,7 @@ int drawable gray_radius 0x0
 int drawable ic_back 0x0
 int drawable ic_clock_black_24dp 0x0
 int drawable ic_keyboard_black_24dp 0x0
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int drawable ic_launcher_background 0x0
 int drawable ic_launcher_foreground 0x0
 int drawable ic_mtrl_checked_circle 0x0
@@ -1871,10 +1880,13 @@ int drawable notification_template_icon_low_bg 0x0
 int drawable notification_tile_bg 0x0
 int drawable notify_panel_notification_icon_bg 0x0
 int drawable round_test 0x0
+<<<<<<< HEAD
+=======
 int drawable sample_footer_loading 0x0
 int drawable sample_footer_loading_progress 0x0
 int drawable scan_light 0x0
 int drawable test_custom_background 0x0
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int drawable tooltip_frame_dark 0x0
 int drawable tooltip_frame_light 0x0
 int drawable white_radius 0x0
@@ -2454,6 +2466,8 @@ int layout select_dialog_singlechoice_material 0x0
 int layout srl_classics_footer 0x0
 int layout srl_classics_header 0x0
 int layout support_simple_spinner_dropdown_item 0x0
+<<<<<<< HEAD
+=======
 int layout test_action_chip 0x0
 int layout test_chip_zero_corner_radius 0x0
 int layout test_design_checkbox 0x0
@@ -2468,16 +2482,32 @@ int layout text_view_with_line_height_from_layout 0x0
 int layout text_view_with_line_height_from_style 0x0
 int layout text_view_with_theme_line_height 0x0
 int layout text_view_without_line_height 0x0
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int mipmap background 0x0
 int mipmap btn_login 0x0
 int mipmap btn_register 0x0
 int mipmap edit_password 0x0
 int mipmap edit_username 0x0
+<<<<<<< HEAD
+int mipmap forget_title 0x0
+=======
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int mipmap hd 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
 int mipmap img_login 0x0
 int mipmap img_register 0x0
+<<<<<<< HEAD
+int mipmap login 0x0
+int mipmap login_auto 0x0
+int mipmap login_forget 0x0
+int mipmap login_remember 0x0
+int mipmap logo 0x0
+int mipmap mly 0x0
+int mipmap register 0x0
+int mipmap them 0x0
+int mipmap xz 0x0
+=======
 int mipmap last 0x0
 int mipmap login 0x0
 int mipmap logo 0x0
@@ -2487,6 +2517,7 @@ int mipmap register 0x0
 int mipmap xz 0x0
 int plurals mtrl_badge_content_description 0x0
 int raw beep 0x0
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int string abc_action_bar_home_description 0x0
 int string abc_action_bar_home_description_format 0x0
 int string abc_action_bar_home_subtitle_description_format 0x0
@@ -2549,6 +2580,9 @@ int string fgh_text_loading 0x0
 int string fgh_text_loading_failed 0x0
 int string fgh_text_loading_finish 0x0
 int string hello_blank_fragment 0x0
+<<<<<<< HEAD
+int string password 0x0
+=======
 int string hide_bottom_view_on_scroll_behavior 0x0
 int string icon_content_description 0x0
 int string item_view_role_description 0x0
@@ -2611,6 +2645,7 @@ int string path_password_eye 0x0
 int string path_password_eye_mask_strike_through 0x0
 int string path_password_eye_mask_visible 0x0
 int string path_password_strike_through 0x0
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int string search_menu_title 0x0
 int string srl_component_falsify 0x0
 int string srl_content_empty 0x0
@@ -3628,6 +3663,8 @@ int styleable AppCompatTheme_windowFixedWidthMinor 121
 int styleable AppCompatTheme_windowMinWidthMajor 122
 int styleable AppCompatTheme_windowMinWidthMinor 123
 int styleable AppCompatTheme_windowNoTitle 124
+<<<<<<< HEAD
+=======
 int[] styleable Badge { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable Badge_backgroundColor 0
 int styleable Badge_badgeGravity 1
@@ -3699,6 +3736,7 @@ int styleable BottomSheetBehavior_Layout_behavior_skipCollapsed 9
 int styleable BottomSheetBehavior_Layout_gestureInsetBottomIgnored 10
 int styleable BottomSheetBehavior_Layout_shapeAppearance 11
 int styleable BottomSheetBehavior_Layout_shapeAppearanceOverlay 12
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e
 int[] styleable BottomTabLayout { 0x0 }
 int styleable BottomTabLayout_bottomTabLayoutColor 0
 int[] styleable ButtonBarLayout { 0x0 }

@@ -1,5 +1,19 @@
 package com.example.home;
 
+<<<<<<< HEAD
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class HomeActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+    }
+}
+=======
 import android.os.Bundle;
 import android.view.KeyEvent;
 
@@ -67,3 +81,4 @@ public class HomeActivity extends BaseMapActivity {
         titles.add("");
     }
 }
+>>>>>>> ffd7ac4089265451389e487f27a141178e2f0f4e

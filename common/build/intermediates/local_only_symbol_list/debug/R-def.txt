@@ -3,6 +3,10 @@ local
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+drawable forget_edit_false
+drawable forget_edit_true
+drawable forget_finish
+drawable forget_yzm
 drawable ic_back
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -12,6 +16,8 @@ mipmap btn_login
 mipmap btn_register
 mipmap edit_password
 mipmap edit_username
+mipmap forget_background
+mipmap forget_title
 mipmap hd
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -19,10 +25,14 @@ mipmap img_login
 mipmap img_register
 mipmap last
 mipmap login
+mipmap login_auto
+mipmap login_forget
+mipmap login_remember
 mipmap logo
 mipmap mly
 mipmap next
 mipmap register
+mipmap them
 mipmap xz
 string app_name
 string hello_blank_fragment
