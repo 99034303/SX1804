@@ -15,9 +15,9 @@ public class MyApplication extends Application {
         //初始化友盟
 //        initUMeng();
         //初始化
-        ARouter.init(this);
         ARouter.openDebug();
         ARouter.openLog();
+        ARouter.init(this);
         //初始化SP
         SPUtils.getInstance("gisim",this);
     }
