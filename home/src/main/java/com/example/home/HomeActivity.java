@@ -1,6 +1,7 @@
 package com.example.home;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import com.amap.api.maps.MapView;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;

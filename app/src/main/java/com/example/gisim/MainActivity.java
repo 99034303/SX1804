@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
         test = (BottomTabLayout) findViewById(R.id.test);
-        test.addTab(1,R.mipmap.hd,12);
-        test.addTab(2,R.mipmap.mly, 0);
-        test.addTab(3,R.mipmap.xz, 30);
-        test.addTab(4,R.mipmap.hd, 0);
+        test.addTab(1,R.mipmap.ic_launcher,12);
+        test.addTab(2,R.mipmap.ic_launcher_round, 0);
+        test.addTab(3,R.mipmap.ic_launcher_round, 30);
+        test.addTab(4,R.mipmap.ic_launcher, 0);
         test.addTab(5,R.mipmap.ic_launcher, 78);
         test.setOnItemClickListener(new Function1<Integer, Unit>() {
             @Override
