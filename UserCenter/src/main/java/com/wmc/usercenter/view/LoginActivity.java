@@ -1,7 +1,6 @@
 package com.wmc.usercenter.view;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -11,12 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-<<<<<<< HEAD
 import com.alibaba.android.arouter.launcher.ARouter;
-=======
 import com.bw.xmpplibrary.XmppManager;
->>>>>>> test
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.sp.SPUtils;
