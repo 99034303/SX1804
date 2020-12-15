@@ -1,7 +1,5 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< HEAD
-<<<<<<< HEAD
 ADDED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
@@ -37,55 +35,3 @@ INJECTED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml
 		INJECTED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml
 		ADDED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml
 		INJECTED from D:\1804ASX1\SX1804\bugly\src\main\AndroidManifest.xml
-=======
-ADDED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-=======
-ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
->>>>>>> 34e90b26031ed7de00fa097e74768401efef421b
-	package
-		ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:2:5-27
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-	android:versionName
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-	android:versionCode
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:1-5:12
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml:1:11-69
-uses-sdk
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-	android:minSdkVersion
-<<<<<<< HEAD
-		INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml
-		ADDED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml
-		INJECTED from D:\bawei\GitHub\SX1804\bugly\src\main\AndroidManifest.xml
->>>>>>> be3265cd461323a756f3401205086df7e8edbdf0
-=======
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		ADDED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
-		INJECTED from D:\workspace_android\SX1804\bugly\src\main\AndroidManifest.xml
->>>>>>> 34e90b26031ed7de00fa097e74768401efef421b

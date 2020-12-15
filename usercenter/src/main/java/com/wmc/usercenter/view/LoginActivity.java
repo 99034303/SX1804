@@ -1,5 +1,6 @@
 package com.wmc.usercenter.view;
 
+import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.util.Log;
@@ -10,6 +11,8 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
@@ -49,12 +52,13 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         loginAuto = findViewById(R.id.login_auto);
         loginForget = findViewById(R.id.login_forget);
         usersp = SPUtils.getInstance("user", this);
-        Boolean isAuto = (Boolean) usersp.get("isAuto", false);
-        Boolean isRemember = (Boolean) usersp.get("isRemember", false);
-        if (isAuto){
+        isAutoLogin = (Boolean) usersp.get("isAuto", false);
+        isRememberPwd = (Boolean) usersp.get("isRemember", false);
+        if (isAutoLogin){
             mPresenter.login(new RequestEntity((String) usersp.get("username",""),(String)usersp.get("password","")));
         }
-        if (isRemember){
+        loginRemember.setChecked(isRememberPwd);
+        if (isRememberPwd){
             loginUsername.setText((CharSequence) usersp.get("username",""));
             loginPassword.setText((CharSequence) usersp.get("password",""));
         }
@@ -93,7 +97,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         imgRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ARouter.getInstance().build("/view/RegisterActivity").navigation();
+                startActivityForResult(new Intent(LoginActivity.this,RegisterActivity.class),101);
             }
         });
         //LOGO
@@ -113,6 +117,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
                 }else if (loginPassword.getText().toString().trim().isEmpty()){
                     Toast.makeText(LoginActivity.this, "去骗去偷袭，密码你确定？", Toast.LENGTH_SHORT).show();
                 }else {
+                    loginFinish.setEnabled(false);
                     mPresenter.login(new RequestEntity(loginUsername.getText().toString().trim(),loginPassword.getText().toString().trim()));
                 }
             }
@@ -123,7 +128,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isRememberPwd=isChecked;
                 if (!isChecked){
-                    loginAuto.setChecked(isChecked);
+                    loginAuto.setChecked(false);
                 }
             }
         });
@@ -160,6 +165,16 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         return false;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode==102&&data!=null){
+            loginUsername.setText(data.getStringExtra("username"));
+            loginPassword.setText(data.getStringExtra("password"));
+        }
+
+    }
+
     /**
      * 登录响应
      * @param baseEntity
@@ -187,13 +202,15 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             if (isAutoLogin){
                 usersp.put("isAuto",true);
             }else {
-                usersp.deleteAll();
                 usersp.put("isAuto",false);
             }
             ARouter.getInstance().build("/home/HomeActivity").navigation();
             finish();
         }else if (baseEntity.getCode() == -1){
             showMsg(baseEntity.getMsg());
+            loginUsername.getText().clear();
+            loginPassword.getText().clear();
+            loginFinish.setEnabled(true);
         }
     }
 

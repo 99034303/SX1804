@@ -2,6 +2,7 @@ package com.wmc.usercenter.view;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -9,13 +10,18 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mvp.view.BaseActivity;
+import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.RequestEntity;
+import com.wmc.usercenter.presenter.UserCenterPresenter;
+
 @Route(path = "/view/RegisterActivity")
-public class RegisterActivity extends BaseActivity implements Contract.View {
+public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
     private ImageView registerLogo;
     private EditText registerUsername;
     private EditText registerPassword;
@@ -32,6 +38,11 @@ public class RegisterActivity extends BaseActivity implements Contract.View {
         registerBack = findViewById(R.id.register_back);
         registerParent = findViewById(R.id.register_parent);
 
+    }
+
+    @Override
+    protected void createPresenter() {
+        mPresenter=new UserCenterPresenter(this);
     }
 
     @Override
@@ -70,6 +81,8 @@ public class RegisterActivity extends BaseActivity implements Contract.View {
                     Toast.makeText(RegisterActivity.this, "马家功夫没有套路,只有散手。你的用户名也一样", Toast.LENGTH_SHORT).show();
                 }else if (registerPassword.getText().toString().trim().isEmpty()){
                     Toast.makeText(RegisterActivity.this, "我上来就是一套松果弹抖闪电鞭，这就是你输的密码？", Toast.LENGTH_SHORT).show();
+                }else {
+                    mPresenter.register(new RequestEntity(registerUsername.getText().toString().trim(),registerPassword.getText().toString().trim()));
                 }
                 
             }
@@ -109,6 +122,11 @@ public class RegisterActivity extends BaseActivity implements Contract.View {
      */
     @Override
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
-
+        Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+        intent.putExtra("username",registerUsername.getText().toString().trim());
+        intent.putExtra("password",registerPassword.getText().toString().trim());
+        setResult(102,intent);
+        finish();
     }
 }

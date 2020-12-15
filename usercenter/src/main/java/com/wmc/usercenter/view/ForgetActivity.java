@@ -22,7 +22,7 @@ public class ForgetActivity extends AppCompatActivity {
         forgetParent = findViewById(R.id.forget_parent);
         forgetBackground = findViewById(R.id.forget_background);
 
-        ImageUtils.getInstance(ImageUtils.GLIDE).glideGif(this,"https://c-ssl.duitang.com/uploads/item/202002/17/20200217164045_UTckf.gif",forgetBackground);
+        ImageUtils.getInstance(ImageUtils.GLIDE).glideGif(this,"https://c-ssl.duitang.com/uploads/item/202002/17/20200217164048_AUwJP.thumb.1000_0.gif",forgetBackground);
 
     }
 }
