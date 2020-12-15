@@ -6,21 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-<<<<<<< HEAD
-<<<<<<< HEAD
 8-->D:\1804ASX1\SX1804\umeng\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->D:\1804ASX1\SX1804\umeng\src\main\AndroidManifest.xml
-=======
-8-->D:\bawei\GitHub\SX1804\umeng\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="30" />
-9-->D:\bawei\GitHub\SX1804\umeng\src\main\AndroidManifest.xml
->>>>>>> be3265cd461323a756f3401205086df7e8edbdf0
-=======
-8-->D:\workspace_android\SX1804\umeng\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="30" />
-9-->D:\workspace_android\SX1804\umeng\src\main\AndroidManifest.xml
->>>>>>> 34e90b26031ed7de00fa097e74768401efef421b
 10    /
 11
 12</manifest>

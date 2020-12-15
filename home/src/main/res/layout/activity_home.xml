@@ -13,4 +13,11 @@
         android:layout_marginTop="300dp"
         android:layout_width="200dp"
         android:layout_height="200dp"/>
+    <com.example.view.BottomTabLayout
+        android:layout_width="300dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="150dp">
+    </com.example.view.BottomTabLayout>
 </RelativeLayout>
