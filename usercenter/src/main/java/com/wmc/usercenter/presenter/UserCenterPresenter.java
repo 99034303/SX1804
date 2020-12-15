@@ -1,8 +1,12 @@
 package com.wmc.usercenter.presenter;
 
 import android.annotation.SuppressLint;
+import android.os.SystemClock;
 import android.util.Log;
 
+import com.bw.xmpplibrary.XmppManager;
+import com.bw.xmpplibrary.callback.IMsgCallback;
+import com.bw.xmpplibrary.entity.MsgEntity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.IMManager;
 import com.wmc.usercenter.contract.Contract;
@@ -17,7 +21,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 public class UserCenterPresenter extends Contract.Presenter {
-    private IMManager imManager;
 
     public UserCenterPresenter(Contract.View mView) {
         super(mView);
@@ -27,8 +30,6 @@ public class UserCenterPresenter extends Contract.Presenter {
     @Override
     protected void createModel() {
         mModel = UserCenterModel.getInstance();
-        //实例IM
-        imManager = IMManager.getInstance();
     }
 
 
@@ -53,7 +54,14 @@ public class UserCenterPresenter extends Contract.Presenter {
                     public void onNext(BaseEntity<LoginEntity> loginEntityBaseEntity) {
                         if (mView != null){
                             mView.updateLoginUI(loginEntityBaseEntity);
-                        }
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    XmppManager instance = XmppManager.getInstance();
+                                    instance.getXmppUserManager().login(loginBody.getPhonenumber(),loginBody.getPwd());
+                                }
+                            }).start();
+                          }
                     }
 
                     @Override
@@ -84,7 +92,27 @@ public class UserCenterPresenter extends Contract.Presenter {
                     @Override
                     public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
                         if (mView != null){
-                            mView.updateRegisterUI(booleanBaseEntity);
+                            if (booleanBaseEntity.getCode()==0){
+//                                new Thread(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        XmppManager.getInstance().getXmppUserManager().createAccount(register.getPhonenumber(),register.getPwd());
+//                                        XmppManager.getInstance().addMessageListener(new IMsgCallback() {
+//                                            @Override
+//                                            public void Success(MsgEntity msgEntity) {
+//                                                Log.i("===","成功");
+//                                                mView.updateRegisterUI(booleanBaseEntity);
+//                                            }
+//
+//                                            @Override
+//                                            public void Failed(Throwable throwable) {
+//                                                Log.i("===","失败");
+//                                            }
+//                                        });
+//                                    }
+//                                }).start();
+                                mView.updateRegisterUI(booleanBaseEntity);
+                            }
                         }
                     }
                 });
