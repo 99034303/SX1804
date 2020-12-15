@@ -26,6 +26,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -37,9 +41,9 @@ dependencies {
     implementation project(path: ':imageloader')
     implementation project(path: ':umeng')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation project(path: ':MVP')
+    implementation project(path: ':mvp')
     implementation project(path: ':bugly')
-    implementation project(path: ':UserCenter')
+    implementation project(path: ':usercenter')
     implementation project(path: ':gaode_map')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

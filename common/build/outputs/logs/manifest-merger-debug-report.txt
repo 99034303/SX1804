@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
@@ -35,3 +36,40 @@ INJECTED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml
 		INJECTED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml
 		ADDED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml
 		INJECTED from D:\1804ASX1\SX1804\common\src\main\AndroidManifest.xml
+=======
+ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+	package
+		ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:2:5-33
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:1-5:12
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+		INJECTED from D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
+>>>>>>> be3265cd461323a756f3401205086df7e8edbdf0
