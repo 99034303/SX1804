@@ -55,6 +55,7 @@ public abstract class BaseMVPFragment<P extends BasePresenter> extends Fragment 
     @Override
     public <T extends View> T findViewById(int id) {
         return mView.findViewById(id);
+
     }
 
 

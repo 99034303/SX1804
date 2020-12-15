@@ -23,9 +23,5 @@ public class MainActivity extends AppCompatActivity {
         //加载主题
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
-
-
-
-
     }
 }

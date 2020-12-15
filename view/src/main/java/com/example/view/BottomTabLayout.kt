@@ -7,6 +7,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -159,7 +160,7 @@ class BottomTabLayout :ViewGroup{
             //view的左上右下
             var vLeft=paddingLeft
             var vRight=0
-            vTop=t+((measuredHeight-itemHeight)/2)
+            vTop=(measuredHeight-itemHeight)/2
             vBottom=vTop+itemHeight
             //选中item后的view的计数
             var afterSelectedCount=0

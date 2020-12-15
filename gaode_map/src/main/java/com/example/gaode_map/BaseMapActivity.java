@@ -1,8 +1,6 @@
 package com.example.gaode_map;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
