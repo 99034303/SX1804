@@ -8,12 +8,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.mvp.view.BaseActivity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
-
+@Route(path = "/view/RegisterActivity")
 public class RegisterActivity extends BaseActivity implements Contract.View {
     private ImageView registerLogo;
     private EditText registerUsername;

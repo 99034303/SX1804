@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.wmc.imageloader.ImageUtils;
 import com.wmc.usercenter.R;
-
+@Route(path = "/view/ForgetActivity")
 public class ForgetActivity extends AppCompatActivity {
     private RelativeLayout forgetParent;
     private ImageView forgetBackground;

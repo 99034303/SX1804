@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.bw.xmpplibrary.XmppManager;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.sp.SPUtils;
@@ -53,7 +52,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         Boolean isAuto = (Boolean) usersp.get("isAuto", false);
         Boolean isRemember = (Boolean) usersp.get("isRemember", false);
         if (isAuto){
-            ARouter.getInstance().build("/home/HomeActivity").navigation();
+            mPresenter.login(new RequestEntity((String) usersp.get("username",""),(String)usersp.get("password","")));
         }
         if (isRemember){
             loginUsername.setText((CharSequence) usersp.get("username",""));
@@ -94,7 +93,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         imgRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                ARouter.getInstance().build("/view/RegisterActivity").navigation();
             }
         });
         //LOGO
@@ -110,7 +109,6 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             @Override
             public void onClick(View v) {
                 if (loginUsername.getText().toString().trim().isEmpty()){
-
                     Toast.makeText(LoginActivity.this, "年轻人不讲武德，用户名有问题啊。", Toast.LENGTH_SHORT).show();
                 }else if (loginPassword.getText().toString().trim().isEmpty()){
                     Toast.makeText(LoginActivity.this, "去骗去偷袭，密码你确定？", Toast.LENGTH_SHORT).show();
@@ -124,6 +122,9 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 isRememberPwd=isChecked;
+                if (!isChecked){
+                    loginAuto.setChecked(isChecked);
+                }
             }
         });
         //自动登录
@@ -141,7 +142,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         loginForget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,ForgetActivity.class));
+                ARouter.getInstance().build("/view/ForgetActivity").navigation();
             }
         });
     }
@@ -158,7 +159,6 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         }
         return false;
     }
-
 
     /**
      * 登录响应
@@ -187,9 +187,11 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             if (isAutoLogin){
                 usersp.put("isAuto",true);
             }else {
+                usersp.deleteAll();
                 usersp.put("isAuto",false);
             }
             ARouter.getInstance().build("/home/HomeActivity").navigation();
+            finish();
         }else if (baseEntity.getCode() == -1){
             showMsg(baseEntity.getMsg());
         }
