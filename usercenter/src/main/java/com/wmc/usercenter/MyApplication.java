@@ -3,26 +3,26 @@ package com.wmc.usercenter;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.groupone.common.BaseApplication;
 import com.wmc.sp.SPUtils;
 import com.wmc.sp.SQLiteManager;
 
 
-public class MyApplication extends Application {
-
+public class MyApplication extends BaseApplication {
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        //初始化友盟
+    protected void init() {
+            //初始化友盟
 //        initUMeng();
-        //初始化
-        ARouter.openDebug();
-        ARouter.openLog();
-        ARouter.init(this);
-        //初始化SP
-        SPUtils.getInstance("gisim",this);
-        //初始化数据库
-        SQLiteManager.getInstance(this);
+            //初始化
+            ARouter.openDebug();
+            ARouter.openLog();
+            ARouter.init(this);
+            //初始化SP
+            SPUtils.getInstance("gisim",this);
+            //初始化数据库
+            SQLiteManager.getInstance(this);
+        }
     }
 
 
@@ -59,4 +59,3 @@ public class MyApplication extends Application {
 //            }
 //        });
 //    }
-}
