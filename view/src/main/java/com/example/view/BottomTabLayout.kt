@@ -198,13 +198,16 @@ class BottomTabLayout :ViewGroup{
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
+        return true
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
         if(!isAnimationStarted){
-            if(ev?.action==MotionEvent.ACTION_DOWN){
-                checkedIsSelect(ev)
-                return true
+            if(event?.action==MotionEvent.ACTION_DOWN){
+                checkedIsSelect(event)
             }
         }
-        return false
+        return true
     }
 
     //检查是否选中有效范围
