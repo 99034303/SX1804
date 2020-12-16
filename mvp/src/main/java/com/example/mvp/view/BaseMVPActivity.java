@@ -42,7 +42,6 @@ public abstract class BaseMVPActivity<P extends BasePresenter> extends AppCompat
     protected abstract void initView();
 
     protected abstract int getLayoutId();
-
     //吐司方法
     public void showMsg(String msg){
         Toast.makeText(this, ""+msg, Toast.LENGTH_SHORT).show();

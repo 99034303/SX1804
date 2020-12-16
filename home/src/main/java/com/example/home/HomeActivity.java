@@ -2,6 +2,7 @@ package com.example.home;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import com.amap.api.maps.MapView;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
+import com.example.view.BottomTabLayout;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -27,14 +29,13 @@ public class HomeActivity extends BaseMapActivity {
     private ActiveListView viewHomeMainActiveList;
     private List<String> titles=new ArrayList<>();
     private ActiveListAdapter activeListAdapter;
-
-    private RecyclerView listHomeMainActiveList;
+    private BottomTabLayout bottomLayout;
 
     @Override
     protected void bindView() {
         ARouter.getInstance().inject(this);
-
-
+        bottomLayout = (BottomTabLayout) findViewById(R.id.bottom_layout);
+        viewHomeMainActiveList = (ActiveListView) findViewById(R.id.view_home_main_activeList);
     }
 
     @Override
@@ -44,13 +45,15 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
-
+        bottomLayout.addTab(0,R.drawable.person,0);
+        bottomLayout.addTab(1,R.mipmap.ic_launcher_round,5);
+        bottomLayout.addTab(2,R.mipmap.ic_launcher,2);
+        bottomLayout.addTab(2,R.mipmap.ic_launcher,2);
+        bottomLayout.addTab(3,R.mipmap.ic_launcher_round,3);
     }
 
     @Override
     protected void initView() {
-        initTitles();
-        viewHomeMainActiveList = (ActiveListView) findViewById(R.id.view_home_main_activeList);
         activeListAdapter=new ActiveListAdapter(R.layout.adapter_home_main_active_list,titles);
         viewHomeMainActiveList.setAdapter(activeListAdapter);
     }
@@ -63,14 +66,5 @@ public class HomeActivity extends BaseMapActivity {
     @Override
     protected int getViewId() {
         return R.id.map;
-    }
-
-    private void initTitles() {
-        titles.add("");
-        titles.add("");
-        titles.add("");
-        titles.add("");
-        titles.add("");
-        titles.add("");
     }
 }
