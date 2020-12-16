@@ -1,14 +1,10 @@
 package com.wmc.usercenter.presenter;
 
 import android.annotation.SuppressLint;
-import android.os.SystemClock;
 import android.util.Log;
 
 import com.bw.xmpplibrary.XmppManager;
-import com.bw.xmpplibrary.callback.IMsgCallback;
-import com.bw.xmpplibrary.entity.MsgEntity;
 import com.example.net.BaseEntity;
-import com.wmc.usercenter.IMManager;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
@@ -57,8 +53,7 @@ public class UserCenterPresenter extends Contract.Presenter {
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    XmppManager instance = XmppManager.getInstance();
-                                    instance.getXmppUserManager().login(loginBody.getPhonenumber(),loginBody.getPwd());
+                                    XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(),loginBody.getPwd());
                                 }
                             }).start();
                           }
