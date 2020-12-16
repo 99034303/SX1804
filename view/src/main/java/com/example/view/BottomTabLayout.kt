@@ -137,14 +137,16 @@ class BottomTabLayout :ViewGroup{
         }
         //如果有标题则计算相关位置
         if(isNeedCount()){
-            itemHorizontalSpac=((measuredWidth-paddingLeft-paddingRight)/tabs.size)/2
+            var contentWidth=measuredWidth-paddingLeft-paddingRight
+//            itemHorizontalSpac=30
             //计算选中item的宽高
-            selectedItemWidth=(measuredWidth-paddingLeft-paddingRight)/tabs.size
-            selectedItemWidth+=selectedItemWidth/2-itemHorizontalSpac
+            selectedItemWidth=contentWidth/tabs.size
+            selectedItemWidth+=selectedItemWidth/2
             selectedItemheight=measuredHeight
             //计算每个子view的宽度/高度
             itemWidth=selectedItemWidth/2
             itemHeight=selectedItemheight/2
+            itemHorizontalSpac=(contentWidth-((itemWidth*(tabs.size-1))+selectedItemWidth))/tabs.size
             if(!isClick){
                 //计算选中view的左上位置
                 selectedVLeft=(selectIndex*itemWidth)+(itemHorizontalSpac*selectIndex)+paddingLeft
