@@ -1,6 +1,8 @@
 package com.example.home;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.KeyEvent;
 import android.widget.RelativeLayout;
 
@@ -54,7 +56,7 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initView() {
-        activeListAdapter=new ActiveListAdapter(R.layout.adapter_home_main_active_list,titles);
+        activeListAdapter = new ActiveListAdapter(R.layout.adapter_home_main_active_list, titles);
         viewHomeMainActiveList.setAdapter(activeListAdapter);
     }
 
