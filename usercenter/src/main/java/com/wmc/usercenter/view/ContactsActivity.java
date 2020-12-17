@@ -1,8 +1,11 @@
 package com.wmc.usercenter.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewStub;
 import android.widget.ImageView;
 
@@ -12,8 +15,10 @@ import com.example.net.BaseEntity;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.wmc.usercenter.R;
+import com.wmc.usercenter.adapter.RequestAddFriendListAdapter;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
 import com.wmc.usercenter.entity.TabEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
 
@@ -27,6 +32,9 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
     private ViewStub vsUserCenterContactsFriendReuquest;
     private CommonTabLayout tlUserCenterContactsType;
     private ArrayList<CustomTabEntity> tabs=new ArrayList<>();
+    private List<RequestAddFriendsResponseEntity> requestaddFriendData=new ArrayList<>();
+    private RequestAddFriendListAdapter requestAddFriendListAdapter;
+    private RecyclerView requestAddFriendList;
 
     @Override
     protected void bindView() {
@@ -72,5 +80,25 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
     @Override
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
 
+    }
+
+    /**
+     * 刷新请求添加好友列表
+     */
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<RequestAddFriendsResponseEntity>> result) {
+        List<RequestAddFriendsResponseEntity> data = result.getData();
+        //判断是否有请求数据
+        if(data.size()>0){
+            //显示viewStub
+            vsUserCenterContactsFriendReuquest.inflate();
+            //绑定控件
+            requestAddFriendList=findViewById(R.id.list_userCenter_contacts_friendRequestList);
+            requestAddFriendList.setLayoutManager(new LinearLayoutManager(this));
+            //设置数据
+            requestaddFriendData.addAll(data);
+            requestAddFriendListAdapter=new RequestAddFriendListAdapter(R.layout.adapter_usercenter_contacts_request_add_friend_list,requestaddFriendData);
+            requestAddFriendList.setAdapter(requestAddFriendListAdapter);
+        }
     }
 }

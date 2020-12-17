@@ -20,8 +20,11 @@ import com.wmc.sp.SPUtils;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
     private ConstraintLayout loginParent;
@@ -220,6 +223,11 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
 
     @Override
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
+
+    }
+
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<RequestAddFriendsResponseEntity>> result) {
 
     }
 }

@@ -1,15 +1,22 @@
 package com.wmc.usercenter.presenter;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.util.Log;
 
 import com.bw.xmpplibrary.XmppManager;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.UserCenterModel;
 
+import org.reactivestreams.Subscription;
+
+import java.util.List;
+
+import io.reactivex.FlowableSubscriber;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -111,6 +118,37 @@ public class UserCenterPresenter extends Contract.Presenter {
                         }
                     }
                 });
+    }
+
+    /**
+     * 获取请求添加好友数据
+     * @param userid
+     */
+    @Override
+    public void getRequestAddFriendData(Intent userid) {
+        mModel.getRequestAddFriendData(userid).subscribe(new FlowableSubscriber<BaseEntity<List<RequestAddFriendsResponseEntity>>>() {
+            @Override
+            public void onSubscribe(Subscription s) {
+                s.request(Integer.MAX_VALUE);
+            }
+
+            @Override
+            public void onNext(BaseEntity<List<RequestAddFriendsResponseEntity>> requestAddFriendsResponseEntityBaseEntity) {
+                if(requestAddFriendsResponseEntityBaseEntity.getCode()!=-1){
+                    mView.updateRequestAddFriendUI(requestAddFriendsResponseEntityBaseEntity);
+                }
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
     }
 
 

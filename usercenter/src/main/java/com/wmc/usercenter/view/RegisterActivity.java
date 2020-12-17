@@ -17,8 +17,11 @@ import com.example.net.BaseEntity;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 @Route(path = "/view/RegisterActivity")
 public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
@@ -128,5 +131,10 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
         intent.putExtra("password",registerPassword.getText().toString().trim());
         setResult(102,intent);
         finish();
+    }
+
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<RequestAddFriendsResponseEntity>> result) {
+
     }
 }
