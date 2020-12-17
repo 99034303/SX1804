@@ -113,6 +113,40 @@ public class UserCenterPresenter extends Contract.Presenter {
                 });
     }
 
+    @SuppressLint("CheckResult")
+    @Override
+    public void forgetCode() {
+        mModel.forgetCode().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<BaseEntity<String>>() {
+                    @Override
+                    public void accept(BaseEntity<String> forgetCodeEntityBaseEntity) throws Exception {
+                        if (forgetCodeEntityBaseEntity.getCode()==0){
+                            if (mView!=null) {
+                                mView.ForgetCode(forgetCodeEntityBaseEntity.getData());
+                            }
+                        }
+                    }
+                });
+    }
+
+    @SuppressLint("CheckResult")
+    @Override
+    public void forgetChange(int id, String pwd) {
+        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<BaseEntity<Boolean>>() {
+                    @Override
+                    public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
+                        if (booleanBaseEntity.getCode()==0){
+                            if (mView!=null){
+                                mView.ForgetChange(booleanBaseEntity.getData());
+                            }
+                        }
+                    }
+                });
+    }
+
 
     /**
      * 销毁 P层
