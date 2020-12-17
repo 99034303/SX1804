@@ -47,11 +47,11 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
-        bottomLayout.addTab(0,R.drawable.person,0);
-        bottomLayout.addTab(1,R.mipmap.ic_launcher_round,5);
-        bottomLayout.addTab(2,R.mipmap.ic_launcher,2);
-        bottomLayout.addTab(2,R.mipmap.ic_launcher,2);
-        bottomLayout.addTab(3,R.mipmap.ic_launcher_round,3);
+        bottomLayout.addTab(0,R.mipmap.person,0);
+        bottomLayout.addTab(1,R.mipmap.active,0);
+        bottomLayout.addTab(2,R.mipmap.message,0);
+        bottomLayout.addTab(2,R.mipmap.camera,0);
+        bottomLayout.addTab(3,R.mipmap.friends_space,0);
     }
 
     @Override

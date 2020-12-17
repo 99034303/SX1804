@@ -137,14 +137,16 @@ class BottomTabLayout :ViewGroup{
         }
         //如果有标题则计算相关位置
         if(isNeedCount()){
-            itemHorizontalSpac=measuredWidth/tabs.size/2
+            var contentWidth=measuredWidth-paddingLeft-paddingRight
+//            itemHorizontalSpac=30
             //计算选中item的宽高
-            selectedItemWidth=(measuredWidth-paddingLeft-paddingRight)/tabs.size
-            selectedItemWidth+=selectedItemWidth/2-itemHorizontalSpac
+            selectedItemWidth=contentWidth/tabs.size
+            selectedItemWidth+=selectedItemWidth/2
             selectedItemheight=measuredHeight
             //计算每个子view的宽度/高度
             itemWidth=selectedItemWidth/2
             itemHeight=selectedItemheight/2
+            itemHorizontalSpac=(contentWidth-((itemWidth*(tabs.size-1))+selectedItemWidth))/tabs.size
             if(!isClick){
                 //计算选中view的左上位置
                 selectedVLeft=(selectIndex*itemWidth)+(itemHorizontalSpac*selectIndex)+paddingLeft
@@ -196,13 +198,16 @@ class BottomTabLayout :ViewGroup{
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
+        return true
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
         if(!isAnimationStarted){
-            if(ev?.action==MotionEvent.ACTION_DOWN){
-                checkedIsSelect(ev)
-                return true
+            if(event?.action==MotionEvent.ACTION_DOWN){
+                checkedIsSelect(event)
             }
         }
-        return false
+        return true
     }
 
     //检查是否选中有效范围

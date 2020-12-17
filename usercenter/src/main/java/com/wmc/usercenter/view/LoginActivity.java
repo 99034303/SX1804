@@ -57,7 +57,10 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
         if (isAutoLogin){
             mPresenter.login(new RequestEntity((String) usersp.get("username",""),(String)usersp.get("password","")));
         }
+        //设置上次登录时的状态
         loginRemember.setChecked(isRememberPwd);
+        loginAuto.setChecked(isAutoLogin);
+        //记住密码直接输入用户名和密码
         if (isRememberPwd){
             loginUsername.setText((CharSequence) usersp.get("username",""));
             loginPassword.setText((CharSequence) usersp.get("password",""));
@@ -199,6 +202,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             }else {
                 usersp.deleteAll();
             }
+            //判断是否自动登录
             if (isAutoLogin){
                 usersp.put("isAuto",true);
             }else {
@@ -216,6 +220,16 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
 
     @Override
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
+
+    }
+
+    @Override
+    public void ForgetCode(String code) {
+
+    }
+
+    @Override
+    public void ForgetChange(boolean flag) {
 
     }
 }
