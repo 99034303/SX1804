@@ -1,0 +1,95 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.bw.phonecontact"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml
+10
+11    <!-- 允许程序打开网络套接字 -->
+12    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+12-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-67
+12-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-64
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+13-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
+13-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-78
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+14-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-79
+14-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:22-76
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+15-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:5-76
+15-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:22-73
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+16-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:5-75
+16-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:22-72
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:5-81
+17-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:21:22-78
+18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+18-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:5-79
+18-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:22-76
+19
+20    <application
+20-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:5:5-19:19
+21        android:allowBackup="true"
+21-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:6:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.5.0-alpha05] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\ee902be873527a48b21856397b3c34f9\core-1.5.0-alpha05\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:icon="@mipmap/ic_launcher"
+25-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:7:9-43
+26        android:label="@string/app_name"
+26-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:8:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:9:9-54
+28        android:supportsRtl="true"
+28-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:10:9-35
+29        android:testOnly="true"
+30        android:theme="@style/AppTheme" >
+30-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:11:9-40
+31        <activity android:name="com.bw.phonecontact.MainActivity" >
+31-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:12:9-18:20
+31-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:12:19-47
+32            <intent-filter>
+32-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:13:13-17:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:14:17-69
+33-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:14:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:16:17-77
+35-->E:\sss\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:16:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="com.example.home.HomeActivity" />
+38-->[:home] E:\sss\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-66
+38-->[:home] E:\sss\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-63
+39
+40        <meta-data
+40-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-28:21
+41            android:name="com.amap.api.v2.apikey"
+41-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-50
+42            android:value="53bb4050ca19f098437aa4b8313b2500" >
+42-->[:gaode_map] E:\sss\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-61
+43        </meta-data>
+44
+45        <activity
+45-->[cn.yipianfengye.android:zxing-library:2.2] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\40f743975a4ec80400a9ff9188005276\jetified-zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+46            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+46-->[cn.yipianfengye.android:zxing-library:2.2] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\40f743975a4ec80400a9ff9188005276\jetified-zxing-library-2.2\AndroidManifest.xml:13:13-74
+47            android:configChanges="orientation|keyboardHidden"
+47-->[cn.yipianfengye.android:zxing-library:2.2] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\40f743975a4ec80400a9ff9188005276\jetified-zxing-library-2.2\AndroidManifest.xml:14:13-63
+48            android:screenOrientation="portrait"
+48-->[cn.yipianfengye.android:zxing-library:2.2] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\40f743975a4ec80400a9ff9188005276\jetified-zxing-library-2.2\AndroidManifest.xml:15:13-49
+49            android:theme="@style/Theme.AppCompat.NoActionBar"
+49-->[cn.yipianfengye.android:zxing-library:2.2] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\40f743975a4ec80400a9ff9188005276\jetified-zxing-library-2.2\AndroidManifest.xml:16:13-63
+50            android:windowSoftInputMode="stateAlwaysHidden" />
+50-->[cn.yipianfengye.android:zxing-library:2.2] D:\TSBrowserDownloads\gradle\gradle-6.1.1\caches\transforms-2\files-2.1\40f743975a4ec80400a9ff9188005276\jetified-zxing-library-2.2\AndroidManifest.xml:17:13-60
+51    </application>
+52
+53</manifest>
