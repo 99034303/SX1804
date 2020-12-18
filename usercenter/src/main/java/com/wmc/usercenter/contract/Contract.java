@@ -15,6 +15,8 @@ public interface Contract {
         void updateRegisterUI(BaseEntity<Boolean> baseEntity);
         void ForgetCode(String code);
         void ForgetChange(boolean flag);
+
+
     }
 
     interface Model extends IModel {

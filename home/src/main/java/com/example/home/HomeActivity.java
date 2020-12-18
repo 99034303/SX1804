@@ -1,23 +1,12 @@
 package com.example.home;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.widget.RelativeLayout;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.amap.api.maps.MapView;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +39,9 @@ public class HomeActivity extends BaseMapActivity {
         bottomLayout.addTab(2,R.mipmap.message,0);
         bottomLayout.addTab(2,R.mipmap.camera,0);
         bottomLayout.addTab(3,R.mipmap.friends_space,0);
+
+
+
     }
 
     @Override

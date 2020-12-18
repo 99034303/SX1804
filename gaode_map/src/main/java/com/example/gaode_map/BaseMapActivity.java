@@ -1,13 +1,31 @@
 package com.example.gaode_map;
 
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.provider.Settings;
+import android.util.Log;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.CustomMapStyleOptions;
 import com.example.mvp.view.BaseMVPActivity;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Locale;
 
 public abstract class BaseMapActivity extends BaseMVPActivity {
    protected MapView mMapView = null;
@@ -35,6 +53,44 @@ public abstract class BaseMapActivity extends BaseMVPActivity {
         }
         aMap.setCustomMapStyle(customMapStyleOptions);
 
+        if (!isIgnoringBatteryOptimizations()){
+            requestIgnoreBatteryOptimizations();
+        }else {
+            MyService.enqueueWork(this,MyService.class,8,new Intent());
+        }
+
+    }
+
+
+    private boolean isIgnoringBatteryOptimizations() {
+        boolean isIgnoring = false;
+
+        PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        if (powerManager != null) {
+            isIgnoring = powerManager.isIgnoringBatteryOptimizations(getPackageName());
+        }
+        return isIgnoring;
+    }
+
+
+    public void requestIgnoreBatteryOptimizations() {
+        try {
+            Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+            intent.setData(Uri.parse("package:" + getPackageName()));
+            startActivityForResult(intent,103);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==103){
+            if (!isIgnoringBatteryOptimizations()){
+                Toast.makeText(this, "请允许软件后台运行", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     protected abstract int getViewId();
