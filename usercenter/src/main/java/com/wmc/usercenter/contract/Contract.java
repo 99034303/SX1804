@@ -13,6 +13,8 @@ public interface Contract {
     interface View extends IView {
         void updateLoginUI(BaseEntity<LoginEntity> baseEntity);
         void updateRegisterUI(BaseEntity<Boolean> baseEntity);
+        void ForgetCode(String code);
+        void ForgetChange(boolean flag);
     }
 
     interface Model extends IModel {
@@ -21,6 +23,13 @@ public interface Contract {
 
         //登录
         Observable<BaseEntity<LoginEntity>> login(RequestEntity loginBody);
+
+        //验证码
+        Observable<BaseEntity<String>> forgetCode();
+
+        //修改密码
+        Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd);
+
     }
 
     abstract class Presenter extends BasePresenter<Model,View> {
@@ -43,5 +52,16 @@ public interface Contract {
         public abstract void register(RequestEntity registerBody);
 
 
+<<<<<<< HEAD
+=======
+        /**
+         * 获取验证码
+         */
+        public abstract void forgetCode();
+
+        public abstract void forgetChange(int id,String pwd);
+
+
+>>>>>>> 76a28eebecf3bb78087be422b49cc5f51805fa71
     }
 }

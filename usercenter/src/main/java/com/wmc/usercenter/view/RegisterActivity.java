@@ -129,4 +129,14 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
         setResult(102,intent);
         finish();
     }
+
+    @Override
+    public void ForgetCode(String code) {
+
+    }
+
+    @Override
+    public void ForgetChange(boolean flag) {
+
+    }
 }

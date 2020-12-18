@@ -46,5 +46,16 @@ public class UserCenterModel implements Contract.Model {
         return observable;
     }
 
+    @Override
+    public Observable<BaseEntity<String>> forgetCode() {
+        return RetrofitFactory.getInstance().create(HttpApi.class).code("1");
+    }
+
+    @Override
+    public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
+
+        return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
+    }
+
 
 }

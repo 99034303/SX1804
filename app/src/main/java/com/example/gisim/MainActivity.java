@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.example.view.BottomTabItemView;
 import com.example.view.BottomTabLayout;
 
+import dalvik.system.BaseDexClassLoader;
+import dalvik.system.DexClassLoader;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
@@ -23,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
         //加载主题
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 76a28eebecf3bb78087be422b49cc5f51805fa71
     }
 }

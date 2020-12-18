@@ -222,4 +222,14 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
 
     }
+
+    @Override
+    public void ForgetCode(String code) {
+
+    }
+
+    @Override
+    public void ForgetChange(boolean flag) {
+
+    }
 }

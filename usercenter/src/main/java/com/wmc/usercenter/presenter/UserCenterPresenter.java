@@ -1,14 +1,10 @@
 package com.wmc.usercenter.presenter;
 
 import android.annotation.SuppressLint;
-import android.os.SystemClock;
 import android.util.Log;
 
 import com.bw.xmpplibrary.XmppManager;
-import com.bw.xmpplibrary.callback.IMsgCallback;
-import com.bw.xmpplibrary.entity.MsgEntity;
 import com.example.net.BaseEntity;
-import com.wmc.usercenter.IMManager;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
@@ -57,8 +53,7 @@ public class UserCenterPresenter extends Contract.Presenter {
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    XmppManager instance = XmppManager.getInstance();
-                                    instance.getXmppUserManager().login(loginBody.getPhonenumber(),loginBody.getPwd());
+                                    XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(),loginBody.getPwd());
                                 }
                             }).start();
                           }
@@ -112,6 +107,40 @@ public class UserCenterPresenter extends Contract.Presenter {
 //                                    }
 //                                }).start();
                                 mView.updateRegisterUI(booleanBaseEntity);
+                            }
+                        }
+                    }
+                });
+    }
+
+    @SuppressLint("CheckResult")
+    @Override
+    public void forgetCode() {
+        mModel.forgetCode().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<BaseEntity<String>>() {
+                    @Override
+                    public void accept(BaseEntity<String> forgetCodeEntityBaseEntity) throws Exception {
+                        if (forgetCodeEntityBaseEntity.getCode()==0){
+                            if (mView!=null) {
+                                mView.ForgetCode(forgetCodeEntityBaseEntity.getData());
+                            }
+                        }
+                    }
+                });
+    }
+
+    @SuppressLint("CheckResult")
+    @Override
+    public void forgetChange(int id, String pwd) {
+        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<BaseEntity<Boolean>>() {
+                    @Override
+                    public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
+                        if (booleanBaseEntity.getCode()==0){
+                            if (mView!=null){
+                                mView.ForgetChange(booleanBaseEntity.getData());
                             }
                         }
                     }
