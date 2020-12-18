@@ -1,12 +1,10 @@
 package com.wmc.usercenter.model;
 
-import android.content.Intent;
-
 import com.example.net.BaseEntity;
 import com.example.net.RetrofitFactory;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
-import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.api.HttpApi;
 
@@ -58,7 +56,7 @@ public class UserCenterModel implements Contract.Model {
      * @return
      */
     @Override
-    public Flowable<BaseEntity<List<RequestAddFriendsResponseEntity>>> getRequestAddFriendData(Intent userid) {
+    public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid) {
         return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
     }
 

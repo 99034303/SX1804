@@ -1,14 +1,14 @@
 package com.wmc.usercenter.presenter;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.util.Log;
 
+import com.bw.commonlibrary.LogUtils;
 import com.bw.xmpplibrary.XmppManager;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
-import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.UserCenterModel;
 
@@ -125,30 +125,33 @@ public class UserCenterPresenter extends Contract.Presenter {
      * @param userid
      */
     @Override
-    public void getRequestAddFriendData(Intent userid) {
-        mModel.getRequestAddFriendData(userid).subscribe(new FlowableSubscriber<BaseEntity<List<RequestAddFriendsResponseEntity>>>() {
-            @Override
-            public void onSubscribe(Subscription s) {
-                s.request(Integer.MAX_VALUE);
-            }
+    public void getRequestAddFriendData(Integer userid) {
+        mModel.getRequestAddFriendData(userid)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new FlowableSubscriber<BaseEntity<List<FriendEntity>>>() {
+                    @Override
+                    public void onSubscribe(Subscription s) {
+                        s.request(Integer.MAX_VALUE);
+                    }
 
-            @Override
-            public void onNext(BaseEntity<List<RequestAddFriendsResponseEntity>> requestAddFriendsResponseEntityBaseEntity) {
-                if(requestAddFriendsResponseEntityBaseEntity.getCode()!=-1){
-                    mView.updateRequestAddFriendUI(requestAddFriendsResponseEntityBaseEntity);
-                }
-            }
+                    @Override
+                    public void onNext(BaseEntity<List<FriendEntity>> requestAddFriendsResponseEntityBaseEntity) {
+                        if(requestAddFriendsResponseEntityBaseEntity.getCode()!=-1){
+                            mView.updateRequestAddFriendUI(requestAddFriendsResponseEntityBaseEntity);
+                        }
+                    }
 
-            @Override
-            public void onError(Throwable t) {
+                    @Override
+                    public void onError(Throwable t) {
+                        LogUtils.i(""+t.getMessage());
+                    }
 
-            }
+                    @Override
+                    public void onComplete() {
 
-            @Override
-            public void onComplete() {
-
-            }
-        });
+                    }
+                });
     }
 
 

@@ -1,10 +1,8 @@
 package com.wmc.usercenter.model.api;
 
-import android.content.Intent;
-
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.entity.LoginEntity;
-import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 
 import java.util.List;
@@ -41,5 +39,5 @@ public interface HttpApi {
      * @return
      */
     @GET("/gisim/friend/findReqFriends")
-    Flowable<BaseEntity<List<RequestAddFriendsResponseEntity>>> getRequestAddFriendData(@Query("userid")Intent userid);
+    Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(@Query("userid")Integer userid);
 }

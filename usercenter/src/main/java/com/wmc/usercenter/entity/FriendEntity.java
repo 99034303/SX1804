@@ -1,6 +1,6 @@
 package com.wmc.usercenter.entity;
 
-public class RequestAddFriendsResponseEntity {
+public class FriendEntity {
     /**
      * addtype : 0
      * alias :

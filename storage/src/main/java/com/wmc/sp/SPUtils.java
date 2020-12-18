@@ -16,6 +16,11 @@ public class SPUtils {
     private final SharedPreferences.Editor edit;
     private Context context;
 
+    /**
+     * sp文件名
+     */
+    public static final String GISIM="gisim";
+
     public static SPUtils getInstance(String name, Context context){
         if (spUtils == null){
             spUtils = new SPUtils(name,context);

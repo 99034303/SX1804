@@ -1,24 +1,25 @@
 package com.wmc.usercenter.view;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.ImageView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
+import com.flyco.tablayout.listener.OnTabSelectListener;
+import com.wmc.sp.SPUtils;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.adapter.RequestAddFriendListAdapter;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
-import com.wmc.usercenter.entity.RequestAddFriendsResponseEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.TabEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
 
@@ -32,7 +33,7 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
     private ViewStub vsUserCenterContactsFriendReuquest;
     private CommonTabLayout tlUserCenterContactsType;
     private ArrayList<CustomTabEntity> tabs=new ArrayList<>();
-    private List<RequestAddFriendsResponseEntity> requestaddFriendData=new ArrayList<>();
+    private List<FriendEntity> requestaddFriendData=new ArrayList<>();
     private RequestAddFriendListAdapter requestAddFriendListAdapter;
     private RecyclerView requestAddFriendList;
 
@@ -52,11 +53,37 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
     @Override
     protected void initData() {
         initTabs();
+        //网络获取是否有好友请求
+        mPresenter.getRequestAddFriendData((Integer) SPUtils.getInstance(SPUtils.GISIM,this).get("uid",-1));
     }
 
     @Override
     protected void initView() {
+        imgUserCenterContactsBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        //tabLayout切换事件
+        tlUserCenterContactsType.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelect(int position) {
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                }
+            }
 
+            @Override
+            public void onTabReselect(int position) {
+
+            }
+        });
     }
 
     //初始化标题栏
@@ -86,8 +113,8 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
      * 刷新请求添加好友列表
      */
     @Override
-    public void updateRequestAddFriendUI(BaseEntity<List<RequestAddFriendsResponseEntity>> result) {
-        List<RequestAddFriendsResponseEntity> data = result.getData();
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+        List<FriendEntity> data = result.getData();
         //判断是否有请求数据
         if(data.size()>0){
             //显示viewStub
@@ -98,6 +125,13 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
             //设置数据
             requestaddFriendData.addAll(data);
             requestAddFriendListAdapter=new RequestAddFriendListAdapter(R.layout.adapter_usercenter_contacts_request_add_friend_list,requestaddFriendData);
+            //同意添加为好友点击事件
+            requestAddFriendListAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+                @Override
+                public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+
+                }
+            });
             requestAddFriendList.setAdapter(requestAddFriendListAdapter);
         }
     }
