@@ -41,5 +41,7 @@ public interface Contract {
          * @param registerBody
          */
         public abstract void register(RequestEntity registerBody);
+
+
     }
 }

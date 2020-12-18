@@ -43,7 +43,10 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':mvp')
     implementation project(path: ':bugly')
-    implementation project(path: ':usercenter')
+    if(!isUserCenter.toBoolean()){
+        implementation project(path: ':usercenter')
+    }
+
     implementation project(path: ':gaode_map')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
@@ -54,6 +57,7 @@ dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" //step2
 }
+
 repositories {
     mavenCentral()
 }

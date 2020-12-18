@@ -10,6 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/MVP" />
+            <option value="$PROJECT_DIR$/Net" />
+            <option value="$PROJECT_DIR$/UserCenter" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bugly" />
             <option value="$PROJECT_DIR$/common" />
@@ -19,12 +22,10 @@
             <option value="$PROJECT_DIR$/imageloader" />
             <option value="$PROJECT_DIR$/interface" />
             <option value="$PROJECT_DIR$/log" />
-            <option value="$PROJECT_DIR$/mvp" />
-            <option value="$PROJECT_DIR$/net" />
+            <option value="$PROJECT_DIR$/phonecontact" />
             <option value="$PROJECT_DIR$/storage" />
             <option value="$PROJECT_DIR$/tinker" />
             <option value="$PROJECT_DIR$/umeng" />
-            <option value="$PROJECT_DIR$/usercenter" />
             <option value="$PROJECT_DIR$/view" />
             <option value="$PROJECT_DIR$/xmpplibrary" />
           </set>

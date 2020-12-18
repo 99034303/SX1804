@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="1"
+        android:textSize="22sp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_contact_letter"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/iv_contact_view_head"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张飞"
+            android:layout_centerVertical="true"
+            android:textColor="#111111"
+            android:id="@+id/tv_contact_name"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/iv_contact_view_head"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/add_black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="50dp"
+            android:id="@+id/iv_contact_add"/>
+    </RelativeLayout>
+    
+</LinearLayout>
