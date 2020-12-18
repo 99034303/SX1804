@@ -17,7 +17,7 @@ public class RequestAddFriendListAdapter extends BaseQuickAdapter<FriendEntity, 
 
     @Override
     protected void convert(BaseViewHolder helper, FriendEntity item) {
-        ImageUtils.getInstance(1).glideCircle(mContext,item.getHeadimg(),helper.getView(R.id.img_adapter_userCenter_contacts_requestAddFriendList_head));
+        ImageUtils.getInstance(ImageUtils.GLIDE).glideCircle(mContext,item.getHeadimg(),helper.getView(R.id.img_adapter_userCenter_contacts_requestAddFriendList_head));
         helper.setText(R.id.tv_adapter_userCenter_contacts_requestAddFriendList_nickName,item.getNick());
         helper.addOnClickListener(R.id.tv_adapter_userCenter_contacts_requestAddFriendList_agreement);
     }

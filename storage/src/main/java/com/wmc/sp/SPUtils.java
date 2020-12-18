@@ -19,7 +19,7 @@ public class SPUtils {
     /**
      * sp文件名
      */
-    public static final String GISIM="gisim";
+    public static final String FILE_GISIM="gisim";
 
     public static SPUtils getInstance(String name, Context context){
         if (spUtils == null){

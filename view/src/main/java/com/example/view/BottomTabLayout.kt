@@ -138,7 +138,6 @@ class BottomTabLayout :ViewGroup{
         //如果有标题则计算相关位置
         if(isNeedCount()){
             var contentWidth=measuredWidth-paddingLeft-paddingRight
-//            itemHorizontalSpac=30
             //计算选中item的宽高
             selectedItemWidth=contentWidth/tabs.size
             selectedItemWidth+=selectedItemWidth/2

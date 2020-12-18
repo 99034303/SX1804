@@ -1,5 +1,6 @@
 package com.wmc.usercenter.view;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +22,7 @@ import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.TabEntity;
+import com.wmc.usercenter.fragment.ContactsListFragment;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
 
 import java.util.ArrayList;
@@ -36,6 +38,8 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
     private List<FriendEntity> requestaddFriendData=new ArrayList<>();
     private RequestAddFriendListAdapter requestAddFriendListAdapter;
     private RecyclerView requestAddFriendList;
+    private FragmentManager manager;
+    private final ContactsListFragment contactsListFragment=new ContactsListFragment();
 
     @Override
     protected void bindView() {
@@ -54,11 +58,14 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
     protected void initData() {
         initTabs();
         //网络获取是否有好友请求
-        mPresenter.getRequestAddFriendData((Integer) SPUtils.getInstance(SPUtils.GISIM,this).get("uid",-1));
+        mPresenter.getRequestAddFriendData((Integer) SPUtils.getInstance(SPUtils.FILE_GISIM,this).get("uid",-1));
     }
 
     @Override
     protected void initView() {
+        //初始化fragment
+        manager=getSupportFragmentManager();
+        manager.beginTransaction().add(R.id.placeHolder_userCenter_contacts_type,contactsListFragment).commit();
         imgUserCenterContactsBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
