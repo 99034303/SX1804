@@ -16,9 +16,12 @@ import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 @Route(path = "/view/RegisterActivity")
 public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
@@ -137,6 +140,11 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
 
     @Override
     public void ForgetChange(boolean flag) {
+
+    }
+
+    @Override
+    public void getFriend(List<FriendEntity> friendEntity) {
 
     }
 }

@@ -3,11 +3,15 @@ package com.wmc.usercenter.model;
 import com.example.net.BaseEntity;
 import com.example.net.RetrofitFactory;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.api.HttpApi;
 
+import java.util.List;
+
 import io.reactivex.Observable;
+import retrofit2.http.Query;
 
 public class UserCenterModel implements Contract.Model {
     /**
@@ -55,6 +59,14 @@ public class UserCenterModel implements Contract.Model {
     public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
 
         return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
+    }
+
+    /**
+     * 获取好友，搜索好友
+     */
+    @Override
+    public Observable<BaseEntity<List<FriendEntity>>> getFriend(String keyword) {
+        return RetrofitFactory.getInstance().create(HttpApi.class).getFriend(keyword);
     }
 
 

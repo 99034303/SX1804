@@ -26,6 +26,8 @@ public abstract class BaseMVPFragment<P extends BasePresenter> extends Fragment 
         super.onActivityCreated(savedInstanceState);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(new String[]{
+                    "android.permission.CAMERA",
+                    "android.permission.VIBRATE",
                     "android.permission.WRITE_EXTERNAL_STORAGE",
                     "android.permission.ACCESS_NETWORK_STATE",
                     "android.permission.ACCESS_WIFI_STATE",

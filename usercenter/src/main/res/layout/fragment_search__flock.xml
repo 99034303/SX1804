@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".fragment.Search_Flock_Fragment">
+
+    <EditText
+        android:id="@+id/searchflock_ed"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/searchpeople"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:hint="搜索群账号/群名称"
+        android:paddingLeft="20dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/searchflock_tv_addflock"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/searchpeople"
+        android:drawableLeft="@drawable/ic_baseline_add_box_24"
+        android:gravity="center|left"
+        android:paddingLeft="30dp"
+        android:text="创建群"
+        android:textColor="#969696"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/searchflock_tv_zxing"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/searchpeople"
+        android:drawableLeft="@drawable/ic_baseline_crop_free_24"
+        android:gravity="center|left"
+        android:paddingLeft="30dp"
+        android:text="扫码进群"
+        android:textColor="#969696"
+        android:textSize="30dp" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/searchflock_tab"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/searchflock_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp" />
+</LinearLayout>

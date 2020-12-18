@@ -19,9 +19,12 @@ import com.example.net.BaseEntity;
 import com.wmc.sp.SPUtils;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
     private ConstraintLayout loginParent;
@@ -230,6 +233,11 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
 
     @Override
     public void ForgetChange(boolean flag) {
+
+    }
+
+    @Override
+    public void getFriend(List<FriendEntity> friendEntity) {
 
     }
 }

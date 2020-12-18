@@ -1,5 +1,7 @@
 package com.example.net;
 
+import android.util.Log;
+
 import com.example.net.converter.CustomGsonConverterFactory;
 import com.google.gson.Gson;
 import com.wmc.sp.SPUtils;
@@ -74,9 +76,8 @@ public class RetrofitFactory {
                         .addHeader("server", "Apache-Coyote/1.1")
                         .addHeader("transfer-encoding", "chunked")
                         .addHeader("content-type", "application/json")
-                        .addHeader("token", (String) SPUtils.getInstance("gisim",null).get("token",""))
+                        .addHeader("token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMjMxMjMifQ.b6uazVmPZO9TgkGVwPTnbl19HhEW8fdvqx3GVtDCtvo")
                         .build();
-
                 return chain.proceed(newRequest);
             }
         };

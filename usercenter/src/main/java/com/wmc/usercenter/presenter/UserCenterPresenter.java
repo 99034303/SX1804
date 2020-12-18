@@ -5,11 +5,17 @@ import android.util.Log;
 
 import com.bw.xmpplibrary.XmppManager;
 import com.example.net.BaseEntity;
+import com.example.net.RetrofitFactory;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.UserCenterModel;
+import com.wmc.usercenter.model.api.HttpApi;
 
+import java.util.List;
+
+import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -62,6 +68,38 @@ public class UserCenterPresenter extends Contract.Presenter {
                     @Override
                     public void onError(Throwable e) {
                         Log.e("zqy",e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    /**
+     * 获取好友，搜索好友
+     */
+    @SuppressLint("CheckResult")
+    @Override
+    public void getFriend(String keyword) {
+        mModel.getFriend(keyword)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseEntity<List<FriendEntity>>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseEntity<List<FriendEntity>> friendEntityBaseEntity) {
+                        mView.getFriend(friendEntityBaseEntity.getData());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.e("wt",e.getMessage());
                     }
 
                     @Override

@@ -1,8 +1,11 @@
 package com.wmc.usercenter.model.api;
 
 import com.example.net.BaseEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
+
+import java.util.List;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
@@ -29,6 +32,13 @@ public interface HttpApi {
      */
     @POST("/gisim/user/login")
     Observable<BaseEntity<LoginEntity>> login(@Body RequestEntity loginBody);
+
+    /**
+     * 获取好友
+     */
+    @GET("/gisim/friend/queryUser")
+    Observable<BaseEntity<List<FriendEntity>>> getFriend(@Query(value = "keyword") String keyword);
+
 
     /**
      * 获取验证码
