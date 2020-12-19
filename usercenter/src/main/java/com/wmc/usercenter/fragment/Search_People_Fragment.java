@@ -25,6 +25,7 @@ import com.uuzuche.lib_zxing.activity.CodeUtils;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.adapter.FriendAdapter;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.AddEntity;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
@@ -66,7 +67,8 @@ public class Search_People_Fragment extends BaseMVPFragment<UserCenterPresenter>
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                 if (view.getId()==R.id.friend_add){
                     FriendEntity friendEntity = friendEntitylist.get(position);
-
+                    AddEntity addEntity = new AddEntity(0,"",friendEntity.getId(),0,0);
+                    mPresenter.AddFriend(addEntity);
                 }
             }
         });
@@ -143,5 +145,20 @@ public class Search_People_Fragment extends BaseMVPFragment<UserCenterPresenter>
         friendEntitylist .addAll(friendEntity);
         //刷新适配器，显示搜索到的好友信息
         friendAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+        
+    }
+
+    @Override
+    public void AddFriend(BaseEntity<Boolean> baseEntity) {
+        Boolean data = baseEntity.getData();
+        if (data){
+            Toast.makeText(getActivity(), "添加成功", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(getActivity(), "添加失败", Toast.LENGTH_SHORT).show();
+        }
     }
 }

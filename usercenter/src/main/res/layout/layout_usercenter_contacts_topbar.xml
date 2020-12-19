@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#33999B">
+    <ImageView
+        android:id="@+id/img_userCenter_contacts_back"
+        android:src="@drawable/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:text="联系人"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginLeft="140dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/img_userCenter_contacts_toAddFriend"
+        android:src="@drawable/ic_add_friend"
+        android:layout_marginLeft="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+</LinearLayout>

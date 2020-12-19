@@ -4,12 +4,15 @@ import com.example.mvp.model.IModel;
 import com.example.mvp.presenter.BasePresenter;
 import com.example.mvp.view.IView;
 import com.example.net.BaseEntity;
+import com.wmc.usercenter.entity.AddEntity;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 
 public interface Contract {
@@ -19,6 +22,8 @@ public interface Contract {
         void ForgetCode(String code);
         void ForgetChange(boolean flag);
         void getFriend(List<FriendEntity> friendEntity);
+        void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result);
+        void AddFriend(BaseEntity<Boolean> baseEntity);
     }
 
     interface Model extends IModel {
@@ -36,6 +41,12 @@ public interface Contract {
 
         //获取好友
         Observable<BaseEntity<List<FriendEntity>>> getFriend(String keyword);
+
+        //添加好友
+        Observable<BaseEntity<Boolean>> AddFriend(AddEntity addEntity);
+
+        //获取请求添加好友数据
+        Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid);
     }
 
     abstract class Presenter extends BasePresenter<Model,View> {
@@ -56,6 +67,11 @@ public interface Contract {
         public abstract void getFriend(String keyword);
 
         /**
+         * 添加好友
+         */
+        public abstract void AddFriend(AddEntity addEntity);
+
+        /**
          * 注册
          * @param registerBody
          */
@@ -70,5 +86,10 @@ public interface Contract {
         public abstract void forgetChange(int id,String pwd);
 
 
+        /**
+         * 获取请求添加好友数据
+         * @param userid
+         */
+        public abstract void getRequestAddFriendData(Integer userid);
     }
 }

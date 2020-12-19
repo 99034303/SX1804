@@ -3,13 +3,16 @@ package com.wmc.usercenter.model;
 import com.example.net.BaseEntity;
 import com.example.net.RetrofitFactory;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.AddEntity;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.api.HttpApi;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import retrofit2.http.Query;
 
@@ -69,5 +72,24 @@ public class UserCenterModel implements Contract.Model {
         return RetrofitFactory.getInstance().create(HttpApi.class).getFriend(keyword);
     }
 
+    /**
+     * 添加好友
+     * @param addEntity
+     * @return
+     */
+    @Override
+    public Observable<BaseEntity<Boolean>> AddFriend(AddEntity addEntity) {
+        return RetrofitFactory.getInstance().create(HttpApi.class).AddFriend(addEntity);
+    }
 
+
+    /**
+ * 获取请求添加好友数据
+ * @param userid
+ * @return
+ */
+        @Override
+        public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid) {
+            return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
+        }
 }

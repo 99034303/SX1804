@@ -3,7 +3,6 @@ package com.wmc.usercenter.view;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
@@ -21,6 +19,7 @@ import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
 
@@ -238,6 +237,14 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
 
     @Override
     public void getFriend(List<FriendEntity> friendEntity) {
+
+    }
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
+    }
+
+    @Override
+    public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
 }

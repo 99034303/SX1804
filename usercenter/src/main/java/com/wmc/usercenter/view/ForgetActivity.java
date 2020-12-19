@@ -136,4 +136,14 @@ public class ForgetActivity extends BaseMVPActivity<UserCenterPresenter> impleme
     public void getFriend(List<FriendEntity> friendEntity) {
 
     }
+
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
+    }
+
+    @Override
+    public void AddFriend(BaseEntity<Boolean> baseEntity) {
+
+    }
 }
