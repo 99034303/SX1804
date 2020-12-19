@@ -12,7 +12,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/MVP" />
             <option value="$PROJECT_DIR$/Net" />
-            <option value="$PROJECT_DIR$/UserCenter" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bugly" />
             <option value="$PROJECT_DIR$/common" />
@@ -25,6 +24,7 @@
             <option value="$PROJECT_DIR$/storage" />
             <option value="$PROJECT_DIR$/tinker" />
             <option value="$PROJECT_DIR$/umeng" />
+            <option value="$PROJECT_DIR$/userCenter" />
             <option value="$PROJECT_DIR$/view" />
             <option value="$PROJECT_DIR$/xmpplibrary" />
           </set>
