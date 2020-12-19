@@ -52,8 +52,6 @@ public interface Contract {
         public abstract void register(RequestEntity registerBody);
 
 
-<<<<<<< HEAD
-=======
         /**
          * 获取验证码
          */
@@ -62,6 +60,5 @@ public interface Contract {
         public abstract void forgetChange(int id,String pwd);
 
 
->>>>>>> 76a28eebecf3bb78087be422b49cc5f51805fa71
     }
 }

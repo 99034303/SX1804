@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseSectionQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.ArrayList;
@@ -29,7 +30,6 @@ public class ContactView extends RelativeLayout {
     private LetterAdapter letterAdapter;
     //联系人布局
     RecyclerView contactView;
-
 
 
     public ContactView(Context context) {
@@ -63,17 +63,17 @@ public class ContactView extends RelativeLayout {
 
         //字母布局的数据源
         for (int i = 0; i < 26; i++) {
-            datas.add((char)(i+65)+"");
+            datas.add((char) (i + 65) + "");
         }
         //字母布局
-        letterAdapter = new LetterAdapter(R.layout.letter_view,datas);
+        letterAdapter = new LetterAdapter(R.layout.letter_view, datas);
         recyclerView.setAdapter(letterAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         //字母点击事件
         letterAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                Toast.makeText(context, ""+datas.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "" + datas.get(position), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -82,12 +82,36 @@ public class ContactView extends RelativeLayout {
     }
 
 
+
     /**
-     * 为联系人布局添加适配器
+     * 返回 Recycler布局
+     * @return
+     */
+    public RecyclerView getRecycler(){
+        return contactView;
+    }
+
+
+    /**
+     * 为联系人布局添加适配器(分组布局)
+     *
      * @param adapter
      * @param context
      */
-    public void setContactAdapter(BaseMultiItemQuickAdapter adapter, Context context){
+    public void setContactAdapter(BaseSectionQuickAdapter adapter, Context context) {
+        contactView.setAdapter(adapter);
+        contactView.setLayoutManager(new LinearLayoutManager(context));
+
+        //刷新适配器
+        adapter.notifyDataSetChanged();
+    }
+
+    /**
+     * 为联系人布局添加适配器(多布局)
+     * @param adapter
+     * @param context
+     */
+    public void setContactAdapter(BaseMultiItemQuickAdapter adapter, Context context) {
         contactView.setAdapter(adapter);
         contactView.setLayoutManager(new LinearLayoutManager(context));
 
@@ -97,7 +121,7 @@ public class ContactView extends RelativeLayout {
 
 
     //字母适配器
-    class LetterAdapter extends BaseQuickAdapter<String, BaseViewHolder>{
+    class LetterAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
         public LetterAdapter(int layoutResId, @Nullable List<String> data) {
             super(layoutResId, data);
@@ -105,7 +129,7 @@ public class ContactView extends RelativeLayout {
 
         @Override
         protected void convert(BaseViewHolder helper, String item) {
-            helper.setText(R.id.tv_letter,item);
+            helper.setText(R.id.tv_letter, item);
         }
     }
 }

@@ -4,7 +4,7 @@
 
     <application
         android:name=".MyApplication">
-        <activity android:name=".view.PhoneContactActivity">
+        <activity android:name="com.bw.phonecontact.PhoneContactActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -25,10 +25,5 @@ public class MainActivity extends AppCompatActivity {
         //加载主题
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 76a28eebecf3bb78087be422b49cc5f51805fa71
     }
 }

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "E:\\sss\\SX1804\\phonecontact\\build\\intermediates\\res\\merged\\debug\\layout_activity_phone_contract.xml.flat",
+        "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\layout\\activity_phone_contract.xml"
+    },
+    {
         "merged": "E:\\sss\\SX1804\\phonecontact\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
@@ -44,6 +48,10 @@
         "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "E:\\sss\\SX1804\\phonecontact\\build\\intermediates\\res\\merged\\debug\\layout_contact_view2.xml.flat",
+        "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\layout\\contact_view2.xml"
+    },
+    {
         "merged": "E:\\sss\\SX1804\\phonecontact\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
@@ -58,5 +66,9 @@
     {
         "merged": "E:\\sss\\SX1804\\phonecontact\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\sss\\SX1804\\phonecontact\\build\\intermediates\\res\\merged\\debug\\layout_contact_view1.xml.flat",
+        "source": "E:\\sss\\SX1804\\phonecontact\\src\\main\\res\\layout\\contact_view1.xml"
     }
 ]

@@ -6,15 +6,9 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-<<<<<<< HEAD
 8-->E:\sss\SX1804\common\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->E:\sss\SX1804\common\src\main\AndroidManifest.xml
-=======
-8-->D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
-9        android:targetSdkVersion="30" />
-9-->D:\bawei\GitHub\SX1804\common\src\main\AndroidManifest.xml
->>>>>>> 76a28eebecf3bb78087be422b49cc5f51805fa71
 10    /
 11
 12</manifest>
