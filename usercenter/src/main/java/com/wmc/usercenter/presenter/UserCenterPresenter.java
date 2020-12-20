@@ -67,20 +67,9 @@ public class UserCenterPresenter extends Contract.Presenter {
                     @Override
                     public void onNext(BaseEntity<LoginEntity> loginEntityBaseEntity) {
                         if (mView != null){
-                            new Thread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    if(XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(), loginBody.getPwd())){
-                                        handler.post(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                mView.updateLoginUI(loginEntityBaseEntity);
-                                            }
-                                        });
-                                    }
-                                }
-                            }).start();
-                          }
+                            mView.updateLoginUI(loginEntityBaseEntity);
+
+                        }
                     }
 
                     @Override

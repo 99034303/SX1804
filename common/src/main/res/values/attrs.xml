@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomMenuLayout">
+        <attr name="hideDirection" format="integer">
+            <flag name="left" value="0"/>
+            <flag name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
