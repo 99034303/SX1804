@@ -53,7 +53,6 @@ public class UserCenterModel implements Contract.Model {
         return observable;
     }
 
-<<<<<<< HEAD
     @Override
     public Observable<BaseEntity<String>> forgetCode() {
         return RetrofitFactory.getInstance().create(HttpApi.class).code("1");
@@ -61,18 +60,10 @@ public class UserCenterModel implements Contract.Model {
 
     @Override
     public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
-=======
-    /**
-     * 获取请求添加好友数据
-     * @param userid
-     * @return
-     */
-    @Override
-    public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid) {
-        return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
-    }
 
->>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
+
+
+
 
         return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
     }

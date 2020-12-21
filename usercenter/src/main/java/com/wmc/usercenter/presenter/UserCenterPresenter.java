@@ -19,12 +19,8 @@ import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.UserCenterModel;
 import com.wmc.usercenter.model.api.HttpApi;
 
-<<<<<<< HEAD
 import java.util.List;
 
-import io.reactivex.Observable;
-=======
->>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
 import org.reactivestreams.Subscription;
 
 import java.util.List;
@@ -70,11 +66,9 @@ public class UserCenterPresenter extends Contract.Presenter {
                     @Override
                     public void onNext(BaseEntity<LoginEntity> loginEntityBaseEntity) {
                         if (mView != null){
-<<<<<<< HEAD
                             mView.updateLoginUI(loginEntityBaseEntity);
 
                         }
-=======
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -89,12 +83,10 @@ public class UserCenterPresenter extends Contract.Presenter {
                                 }
                             }).start();
                           }
->>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
-                    }
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("zqy",e.getMessage());
+
                     }
 
                     @Override
@@ -195,40 +187,6 @@ public class UserCenterPresenter extends Contract.Presenter {
                                 mView.updateRegisterUI(booleanBaseEntity);
                             }
                         }
-                    }
-                });
-    }
-
-    /**
-     * 获取请求添加好友数据
-     * @param userid
-     */
-    @Override
-    public void getRequestAddFriendData(Integer userid) {
-        mModel.getRequestAddFriendData(userid)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new FlowableSubscriber<BaseEntity<List<FriendEntity>>>() {
-                    @Override
-                    public void onSubscribe(Subscription s) {
-                        s.request(Integer.MAX_VALUE);
-                    }
-
-                    @Override
-                    public void onNext(BaseEntity<List<FriendEntity>> requestAddFriendsResponseEntityBaseEntity) {
-                        if(requestAddFriendsResponseEntityBaseEntity.getCode()!=-1){
-                            mView.updateRequestAddFriendUI(requestAddFriendsResponseEntityBaseEntity);
-                        }
-                    }
-
-                    @Override
-                    public void onError(Throwable t) {
-                        LogUtils.i(""+t.getMessage());
-                    }
-
-                    @Override
-                    public void onComplete() {
-
                     }
                 });
     }

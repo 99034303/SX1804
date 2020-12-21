@@ -116,7 +116,6 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
 
     }
 
-<<<<<<< HEAD
     @Override
     public void ForgetCode(String code) {
 
@@ -132,8 +131,6 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
 
     }
 
-=======
->>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
     /**
      * 刷新请求添加好友列表
      */
@@ -160,12 +157,10 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
             requestAddFriendList.setAdapter(requestAddFriendListAdapter);
         }
     }
-<<<<<<< HEAD
+
 
     @Override
     public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
-=======
->>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
 }
