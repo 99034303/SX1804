@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
@@ -20,8 +19,11 @@ import com.wmc.sp.SPUtils;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
     private ConstraintLayout loginParent;
@@ -193,6 +195,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             spUtils.put("username",loginEntity.getPhonenumber());
             //存入token值
             spUtils.put("token",loginEntity.getToken());
+            spUtils.putToken(loginEntity.getToken());
             showMsg("登录成功");
             //判断是否需要记住密码
             if (isRememberPwd){
@@ -220,6 +223,20 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
 
     @Override
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
+
+    }
+    @Override
+    public void ForgetCode(String code) {
+
+    }
+
+    @Override
+    public void ForgetChange(boolean flag) {
+
+
+    }
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity < List < FriendEntity >> result) {
 
     }
 }

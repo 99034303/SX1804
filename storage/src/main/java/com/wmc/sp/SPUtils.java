@@ -3,6 +3,8 @@ package com.wmc.sp;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Environment;
+import android.util.Log;
 
 import java.util.Map;
 
@@ -10,11 +12,20 @@ import java.util.Map;
  * @author 魏铭池
  */
 public class SPUtils {
+    static {
+        System.loadLibrary("native-lib");
+    }
 
     private static SPUtils spUtils;
     private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor edit;
     private Context context;
+    private final String TOKEN_PATH="/storage/emulated/0/data/token.txt";
+
+    /**
+     * sp文件名
+     */
+    public static final String FILE_GISIM="gisim";
 
     public static SPUtils getInstance(String name, Context context){
         if (spUtils == null){
@@ -100,4 +111,14 @@ public class SPUtils {
         edit.remove(key).apply();
     }
 
+    public void putToken(String token){
+        putToken(TOKEN_PATH,token);
+    }
+
+    public String getToken(){
+        return getToken(TOKEN_PATH);
+    }
+
+    private native void putToken(String path,String token);
+    private native String getToken(String path);
 }

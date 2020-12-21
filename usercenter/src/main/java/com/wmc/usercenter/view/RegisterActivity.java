@@ -10,15 +10,16 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
-import com.example.mvp.view.BaseActivity;
 import com.example.mvp.view.BaseMVPActivity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 @Route(path = "/view/RegisterActivity")
 public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
@@ -128,5 +129,19 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
         intent.putExtra("password",registerPassword.getText().toString().trim());
         setResult(102,intent);
         finish();
+    }
+    @Override
+    public void ForgetCode(String code) {
+
+    }
+
+    @Override
+    public void ForgetChange(boolean flag) {
+
+    }
+
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
     }
 }

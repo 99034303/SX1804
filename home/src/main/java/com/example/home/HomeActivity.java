@@ -1,26 +1,21 @@
 package com.example.home;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.widget.RelativeLayout;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
+import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.amap.api.maps.MapView;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.wmc.sp.SPUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
 /**
  * @author Administrator
  */
@@ -33,7 +28,6 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void bindView() {
-        ARouter.getInstance().inject(this);
         bottomLayout = (BottomTabLayout) findViewById(R.id.bottom_layout);
         viewHomeMainActiveList = (ActiveListView) findViewById(R.id.view_home_main_activeList);
     }
@@ -45,15 +39,30 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
+        //添加底部标题
         bottomLayout.addTab(0,R.mipmap.person,0);
         bottomLayout.addTab(1,R.mipmap.active,0);
         bottomLayout.addTab(2,R.mipmap.message,0);
         bottomLayout.addTab(2,R.mipmap.camera,0);
         bottomLayout.addTab(3,R.mipmap.friends_space,0);
+
+        bottomLayout.setOnItemClickListener(new Function1<Integer, Unit>() {
+            @Override
+            public Unit invoke(Integer id) {
+                switch (id){
+                    case 0:
+                        ARouter.getInstance().build("/userCenter/ContactsActivity").navigation();
+                        break;
+                }
+                return null;
+            }
+        });
+
     }
 
     @Override
     protected void initView() {
+        ARouter.getInstance().inject(this);
         activeListAdapter=new ActiveListAdapter(R.layout.adapter_home_main_active_list,titles);
         viewHomeMainActiveList.setAdapter(activeListAdapter);
     }
