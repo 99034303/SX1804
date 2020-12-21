@@ -13,7 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
 
-class UCPresenter(mView: IView) : UserCenter.UserCenterPresenter(mView) {
+class UCPresenter(mView: UserCenter.UserCenterView) : UserCenter.UserCenterPresenter(mView) {
 
     @SuppressLint("CheckResult")
     override fun sendSingleMessage(singleEntity: SingleEntity): Flowable<Entity<SingleEntity>> {

@@ -9,13 +9,14 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.mvp.view.BaseMVPActivity;
+import com.wmc.messagecenter.mvp.contract.UserCenter;
 import com.wmc.messagecenter.mvp.model.entity.Entity;
 import com.wmc.messagecenter.mvp.model.entity.SingleEntity;
 import com.wmc.messagecenter.mvp.presenter.UCPresenter;
 
 import io.reactivex.functions.Consumer;
 
-public class MessageActivity extends BaseMVPActivity<UCPresenter> {
+public class MessageActivity extends BaseMVPActivity<UCPresenter> implements UserCenter.UserCenterView {
     @Override
     protected void bindView() {
 
