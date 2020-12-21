@@ -51,8 +51,6 @@ public class PhoneContactActivity extends BaseActivity {
                 finish();
             }
         });
-
-
     }
 
     @Override
