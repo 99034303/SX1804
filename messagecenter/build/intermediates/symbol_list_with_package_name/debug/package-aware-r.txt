@@ -1843,6 +1843,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_x
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2482,7 +2483,6 @@ mipmap btn_register
 mipmap camera
 mipmap edit_password
 mipmap edit_username
-mipmap forget_background
 mipmap forget_title
 mipmap friends_space
 mipmap ic_launcher
