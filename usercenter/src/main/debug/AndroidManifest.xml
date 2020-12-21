@@ -14,12 +14,10 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
 
-
-
-
     <application android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:name=".MyApplication">
-        <activity android:name=".view.ForgetActivity"></activity>
+        <activity android:name=".view.ContactsActivity"></activity>
+        <activity android:name=".view.ForgetActivity" />
         <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.RegisterActivity"></activity>
+        <activity android:name=".view.RegisterActivity" />
     </application>
 
 </manifest>

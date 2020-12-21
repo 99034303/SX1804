@@ -4,15 +4,12 @@
 
     <application
         android:name=".MyApplication">
-        <activity android:name="com.bw.phonecontact.PhoneContactActivity">
+        <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".view.LoginActivity">
-
         </activity>
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.ForgetActivity" />

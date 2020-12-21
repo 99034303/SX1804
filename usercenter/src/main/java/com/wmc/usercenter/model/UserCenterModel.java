@@ -4,9 +4,13 @@ import com.example.net.BaseEntity;
 import com.example.net.RetrofitFactory;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.api.HttpApi;
 
+import java.util.List;
+
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 
 public class UserCenterModel implements Contract.Model {
@@ -53,9 +57,17 @@ public class UserCenterModel implements Contract.Model {
 
     @Override
     public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
-
         return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
     }
 
+    /**
+     * 获取请求添加好友数据
+     * @param userid
+     * @return
+     */
+    @Override
+    public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid) {
+        return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
+    }
 
 }

@@ -2,8 +2,12 @@ package com.wmc.usercenter.model.api;
 
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 
+import java.util.List;
+
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -39,4 +43,13 @@ public interface HttpApi {
 
     @PUT("/gisim/user/modifyPwd")
     Observable<BaseEntity<Boolean>> Change(@Query("id") int id,@Query(value = "pwd") String pwd);
+
+
+     /**
+     * 获取请求添加好友数据
+     * @param userid
+     * @return
+     */
+    @GET("/gisim/friend/findReqFriends")
+    Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(@Query("userid")Integer userid);
 }

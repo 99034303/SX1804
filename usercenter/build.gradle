@@ -1,9 +1,11 @@
-if (isUserCenter.toBoolean())
+if (isUserCenter.toBoolean()){
     apply plugin: 'com.android.application'
-else
+} else{
     apply plugin: 'com.android.library'
+}
 
 def version=rootProject.ext.gradleVersion
+
 android {
     compileSdkVersion version.compileSdkVersion
     buildToolsVersion version.buildToolsVersion

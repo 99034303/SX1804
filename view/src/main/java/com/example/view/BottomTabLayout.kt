@@ -138,7 +138,6 @@ class BottomTabLayout :ViewGroup{
         //如果有标题则计算相关位置
         if(isNeedCount()){
             var contentWidth=measuredWidth-paddingLeft-paddingRight
-//            itemHorizontalSpac=30
             //计算选中item的宽高
             selectedItemWidth=contentWidth/tabs.size
             selectedItemWidth+=selectedItemWidth/2
@@ -221,12 +220,8 @@ class BottomTabLayout :ViewGroup{
             //判断是否选中有效范围
             if(x>=view.left&&x<=view.right&&y>=view.top&&y<=view.bottom){
                 isClick=true
-                //执行外部重写的点击事件
-                if(onItemClickListener!=null){
-                    onItemClickListener!!(view.getMId())
-                }
                 //判断是否需要执行动画等后续事件
-                if(i!==selectIndex){
+                if(i!=selectIndex){
                     clickIndex=i
                     //判断左移还是右移执行后续事件(动画),如果选中的是已经被选中的则不做任何事情
                     if(i<selectIndex){//右移
@@ -239,7 +234,10 @@ class BottomTabLayout :ViewGroup{
                         pxBymm=needMovePX/50
                     }
                     executeAnimationAndReLayout(pxBymm)
-                }else{
+                }else{//如已经选中直接触发点击事件
+                    if(onItemClickListener!=null){
+                        onItemClickListener!!(view.getMId())
+                    }
                     isClick=false
                 }
                 break
@@ -302,6 +300,10 @@ class BottomTabLayout :ViewGroup{
             }
             //更新ui
             uiThread {
+                //动画结束执行外部重写的点击事件
+                if(onItemClickListener!=null){
+                    onItemClickListener!!(tabs.get(clickIndex).getMId())
+                }
                 reSort()
                 requestLayout()
                 scrollX=0
