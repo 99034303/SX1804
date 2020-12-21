@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F7F7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".fragment.Search_People_Fragment">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <EditText
+           android:id="@+id/searchpeople_ed"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:layout_margin="20dp"
+           android:background="@drawable/searchpeople"
+           android:drawableLeft="@drawable/ic_baseline_search_24"
+           android:hint="搜索账号/手机号码/昵称"
+           android:paddingLeft="20dp" />
+       <Button
+           android:layout_below="@+id/searchpeople_ed"
+           android:layout_width="wrap_content"
+           android:layout_alignParentRight="true"
+           android:text="搜索"
+           android:visibility="gone"
+           android:id="@+id/btn_search_person"
+           android:layout_height="wrap_content">
+       </Button>
+   </RelativeLayout>
+
+    <TextView
+        android:id="@+id/searchpeople_tv_adduser"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/searchpeople"
+        android:drawableLeft="@drawable/ic_baseline_phone_android_24"
+        android:gravity="center|left"
+        android:paddingLeft="30dp"
+        android:text="添加手机联系人"
+        android:textColor="#969696"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/searchpeople_tv_zxing"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/searchpeople"
+        android:drawableLeft="@drawable/ic_baseline_crop_free_24"
+        android:gravity="center|left"
+        android:paddingLeft="30dp"
+        android:text="面对面加好友"
+        android:textColor="#969696"
+        android:textSize="30dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchpeople_rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp" />
+</LinearLayout>

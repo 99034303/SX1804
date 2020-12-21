@@ -1,5 +1,95 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
+ADDED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
+	package
+		ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:2:5-34
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+	android:minSdkVersion
+<<<<<<< HEAD
+		INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
+=======
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from D:\1804ASX1\SX1804\interface\src\main\AndroidManifest.xml
+=======
+ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+	package
+		ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:2:5-34
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		ADDED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+		INJECTED from D:\bawei\GitHub\SX1804\interface\src\main\AndroidManifest.xml
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
+=======
 ADDED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
 INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml:1:1-5:12
@@ -35,3 +125,5 @@ INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
 		INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
 		ADDED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
 		INJECTED from E:\sss\SX1804\interface\src\main\AndroidManifest.xml
+>>>>>>> 57dd8bd7ad68fd3093dca08cbd2246d7e5373682
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff

@@ -1,4 +1,8 @@
+<<<<<<< HEAD:messagecenter/src/test/java/com/wmc/messagecenter/ExampleUnitTest.java
 package com.wmc.messagecenter;
+=======
+package com.bw.phonecontact;
+>>>>>>> 57dd8bd7ad68fd3093dca08cbd2246d7e5373682:phonecontact/src/test/java/com/bw/phonecontact/ExampleUnitTest.java
 
 import org.junit.Test;
 

@@ -37,6 +37,7 @@ dependencies {
     api needs.dagger
     api needs.zxing
     api needs.design
+    api needs.flycoTabLayout
     api needs.designMaterial
     api needs.stuxuhai
     implementation fileTree(dir: "libs", include: ["*.jar"])

@@ -68,7 +68,17 @@ public class ContactsListFragment extends BaseMVPFragment<UserCenterPresenter> i
     }
 
     @Override
+    public void getFriend(List<FriendEntity> friendEntity) {
+
+    }
+
+    @Override
     public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
+    }
+
+    @Override
+    public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
 }

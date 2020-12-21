@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wmc.usercenter">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
 
     <application
         android:name=".MyApplication">
@@ -16,6 +19,7 @@
         <activity android:name=".view.ContactsActivity">
 
         </activity>
+        <activity android:name=".view.AddFriendActivity"></activity>
     </application>
 
 </manifest>

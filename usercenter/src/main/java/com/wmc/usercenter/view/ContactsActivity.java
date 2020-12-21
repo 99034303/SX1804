@@ -127,6 +127,11 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
 
     }
 
+    @Override
+    public void getFriend(List<FriendEntity> friendEntity) {
+
+    }
+
     /**
      * 刷新请求添加好友列表
      */
@@ -152,5 +157,11 @@ public class ContactsActivity extends BaseMVPActivity<UserCenterPresenter> imple
             });
             requestAddFriendList.setAdapter(requestAddFriendListAdapter);
         }
+    }
+
+
+    @Override
+    public void AddFriend(BaseEntity<Boolean> baseEntity) {
+
     }
 }

@@ -4,6 +4,9 @@ if (isUserCenter.toBoolean()){
     apply plugin: 'com.android.library'
 }
 
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 def version=rootProject.ext.gradleVersion
 
 android {
@@ -51,6 +54,8 @@ android {
 dependencies {
 
     implementation rootProject.ext.implementation.arouter
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':view')
     annotationProcessor rootProject.ext.implementation.arouterCompiler
     implementation project(path: ':view')
     implementation fileTree(dir: "libs", include: ["*.jar"])

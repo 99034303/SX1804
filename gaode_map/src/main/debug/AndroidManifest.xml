@@ -24,11 +24,14 @@
         android:theme="@style/AppTheme">
         <meta-data android:name="com.amap.api.v2.apikey" android:value="a851b6adca8315ef84b418cfc92377df">
         </meta-data>
+<<<<<<< HEAD
+=======
         <service
             android:name=".MyService"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE"/>
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
 
     </application>
 

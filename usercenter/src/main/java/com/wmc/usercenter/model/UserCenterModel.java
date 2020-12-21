@@ -3,6 +3,8 @@ package com.wmc.usercenter.model;
 import com.example.net.BaseEntity;
 import com.example.net.RetrofitFactory;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.AddEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
@@ -12,6 +14,7 @@ import java.util.List;
 
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
+import retrofit2.http.Query;
 
 public class UserCenterModel implements Contract.Model {
     /**
@@ -57,12 +60,39 @@ public class UserCenterModel implements Contract.Model {
         return RetrofitFactory.getInstance().create(HttpApi.class).code("1");
     }
 
+<<<<<<< HEAD
     @Override
+=======
+
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
     public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
         return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
     }
 
+<<<<<<< HEAD
 
+=======
+    /**
+     * 获取好友，搜索好友
+     */
+    @Override
+    public Observable<BaseEntity<List<FriendEntity>>> getFriend(String keyword) {
+        return RetrofitFactory.getInstance().create(HttpApi.class).getFriend(keyword);
+    }
+
+    /**
+     * 添加好友
+     * @param addEntity
+     * @return
+     */
+    @Override
+    public Observable<BaseEntity<Boolean>> AddFriend(AddEntity addEntity) {
+        return RetrofitFactory.getInstance().create(HttpApi.class).AddFriend(addEntity);
+    }
+
+
+
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
         /**
          * 获取请求添加好友数据
          * @param userid
@@ -72,4 +102,8 @@ public class UserCenterModel implements Contract.Model {
         public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData (Integer userid){
             return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
 }

@@ -24,4 +24,33 @@
         android:layout_centerHorizontal="true"
         android:layout_height="70dp">
     </com.example.view.BottomTabLayout>
+    <com.example.view.CustomMenuLayout
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/friend_group_layout"
+        app:hideDirection="left"
+        android:background="@drawable/friend_item"
+        android:layout_height="300dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/friend_group_rv"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </com.example.view.CustomMenuLayout>
+    <com.example.view.CustomMenuLayout
+        android:layout_width="50dp"
+        app:hideDirection="left"
+        android:id="@+id/friend_layout"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/friend_group_layout"
+        android:background="@drawable/friend_item"
+        android:layout_height="300dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/friend_rv"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </com.example.view.CustomMenuLayout>
 </RelativeLayout>

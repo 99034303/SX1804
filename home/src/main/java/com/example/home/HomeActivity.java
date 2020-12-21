@@ -1,5 +1,4 @@
 package com.example.home;
-import android.content.Intent;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -61,7 +60,7 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initView() {
-        activeListAdapter=new ActiveListAdapter(R.layout.adapter_home_main_active_list,titles);
+        activeListAdapter = new ActiveListAdapter(R.layout.adapter_home_main_active_list, titles);
         viewHomeMainActiveList.setAdapter(activeListAdapter);
     }
 

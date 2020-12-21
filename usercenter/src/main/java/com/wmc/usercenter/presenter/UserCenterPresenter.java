@@ -8,14 +8,15 @@ import com.bw.commonlibrary.LogUtils;
 import com.bw.xmpplibrary.XmppManager;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.contract.Contract;
-import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.AddEntity;
 import com.wmc.usercenter.entity.FriendEntity;
+import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.model.UserCenterModel;
 
-import org.reactivestreams.Subscription;
-
 import java.util.List;
+
+import org.reactivestreams.Subscription;
 
 import io.reactivex.FlowableSubscriber;
 import io.reactivex.Observer;
@@ -58,27 +59,30 @@ public class UserCenterPresenter extends Contract.Presenter {
 
                     @Override
                     public void onNext(BaseEntity<LoginEntity> loginEntityBaseEntity) {
-                        if (mView != null) {
-//                            new Thread(new Runnable() {
-//                                @Override
-//                                public void run() {
-//                                    if (XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(), loginBody.getPwd())) {
-//                                        handler.post(new Runnable() {
-//                                            @Override
-//                                            public void run() {
-//                                                mView.updateLoginUI(loginEntityBaseEntity);
-//                                            }
-//                                        });
-//                                    }
-//                                }
-//                            }).start();
+                        if (mView != null){
                             mView.updateLoginUI(loginEntityBaseEntity);
+
+                        }else {
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if(XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(), loginBody.getPwd())){
+                                        handler.post(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                mView.updateLoginUI(loginEntityBaseEntity);
+                                            }
+                                        });
+                                    }
+                                }
+                            }).start();
                         }
-                    }
+                        }
+
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("zqy", e.getMessage());
+
                     }
 
                     @Override
@@ -88,10 +92,77 @@ public class UserCenterPresenter extends Contract.Presenter {
                 });
     }
 
+    /**
+     * 获取好友，搜索好友
+     */
+    @SuppressLint("CheckResult")
+    @Override
+    public void getFriend(String keyword) {
+        mModel.getFriend(keyword)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseEntity<List<FriendEntity>>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseEntity<List<FriendEntity>> friendEntityBaseEntity) {
+                        mView.getFriend(friendEntityBaseEntity.getData());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.e("wt",e.getMessage());
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+    /**
+     * 添加好友
+     */
+    @SuppressLint("CheckResult")
+    @Override
+    public void AddFriend(AddEntity addEntity) {
+        mModel.AddFriend(addEntity)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseEntity<Boolean>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(BaseEntity<Boolean> booleanBaseEntity) {
+                        if (mView!=null) {
+                            mView.AddFriend(booleanBaseEntity);
+                        }if (mView != null) {
+                            mView.AddFriend(booleanBaseEntity);
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.e("wt",e.getMessage());
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+        });
+    }
 
     /**
      * 注册
-     *
      * @param register
      */
     @SuppressLint("CheckResult")
@@ -151,6 +222,22 @@ public class UserCenterPresenter extends Contract.Presenter {
                     }
                 });
     }
+
+//    @Override
+//    public void forgetChange(int id, String pwd) {
+//        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Consumer<BaseEntity<Boolean>>() {
+//                    @Override
+//                    public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
+//                        if (booleanBaseEntity.getCode() == 0) {
+//                            if (mView != null) {
+//                                mView.ForgetChange(booleanBaseEntity.getData());
+//                            }
+//                        }
+//                    }
+//                });
+//    }
 
     /**
      * 获取请求添加好友数据

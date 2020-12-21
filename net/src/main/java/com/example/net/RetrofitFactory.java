@@ -1,5 +1,7 @@
 package com.example.net;
 
+import android.util.Log;
+
 import com.example.net.converter.CustomGsonConverterFactory;
 import com.google.gson.Gson;
 import com.wmc.sp.SPUtils;
@@ -76,7 +78,6 @@ public class RetrofitFactory {
                         .addHeader("content-type", "application/json")
                         .addHeader("token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMjMifQ.xKPoMpjMrGHF2iDgqhXrvyypo8HGEZtqDcnND2tQyPo")
                         .build();
-
                 return chain.proceed(newRequest);
             }
         };
