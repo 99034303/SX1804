@@ -1,4 +1,6 @@
+
 include ':messagecenter'
+include ':phonecontact'
 include ':commonlibrary'
 include ':xmpplibrary'
 include ':home'

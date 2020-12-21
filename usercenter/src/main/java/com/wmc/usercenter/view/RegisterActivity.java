@@ -153,4 +153,6 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
     public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
+
+
 }

@@ -60,15 +60,9 @@ public class UserCenterModel implements Contract.Model {
         return RetrofitFactory.getInstance().create(HttpApi.class).code("1");
     }
 
-    @Override
-    public Observable<BaseEntity<Boolean>> forgetChange(int id, String pwd) {
 
-
-
-
-
+    public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
         return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
-
     }
 
     /**
@@ -100,4 +94,5 @@ public class UserCenterModel implements Contract.Model {
         public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData (Integer userid){
             return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
         }
+
 }

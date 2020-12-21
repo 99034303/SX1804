@@ -39,6 +39,7 @@ dependencies {
     api needs.design
     api needs.flycoTabLayout
     api needs.designMaterial
+    api needs.stuxuhai
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     testImplementation 'junit:junit:4.12'

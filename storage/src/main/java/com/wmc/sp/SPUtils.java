@@ -31,6 +31,7 @@ public class SPUtils {
         }
         return spUtils;
     }
+
     @SuppressLint("CommitPrefEdits")
     private SPUtils(String name, Context context) {
         if (context!=null){

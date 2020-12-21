@@ -31,6 +31,14 @@ public abstract class BaseMVPActivity<P extends BasePresenter> extends AppCompat
         initData();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mPresenter != null){
+            mPresenter = null;
+        }
+    }
+
     protected abstract void bindView();
 
     protected abstract void createPresenter();

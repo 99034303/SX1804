@@ -78,6 +78,7 @@ public class ForgetActivity extends BaseMVPActivity<UserCenterPresenter> impleme
                 }
             }
         });
+
         //获取验证码
         forgetCodeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +86,7 @@ public class ForgetActivity extends BaseMVPActivity<UserCenterPresenter> impleme
                 mPresenter.forgetCode();
             }
         });
+
 //        //完成按钮
 //        forgetFinish.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -146,4 +148,6 @@ public class ForgetActivity extends BaseMVPActivity<UserCenterPresenter> impleme
     public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
+
+
 }

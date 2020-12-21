@@ -3,7 +3,10 @@
     package="com.wmc.usercenter">
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <application android:name=".MyApplication">
+
+
+    <application
+        android:name=".MyApplication">
         <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

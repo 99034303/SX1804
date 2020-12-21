@@ -16,7 +16,8 @@ ext{
             glide:"4.11.0",
             arouter:"1.4.1",
             arouterCompiler:"1.2.2",
-            daggerAnnotationProcessor:"2.16"
+            daggerAnnotationProcessor:"2.16",
+            jpinyin:"1.1.8"
     ]
 
     implementation=[
@@ -36,6 +37,7 @@ ext{
             glide:"com.github.bumptech.glide:glide:$implementationVersion.glide",
             arouter:"com.alibaba:arouter-api:$implementationVersion.arouter",
             arouterCompiler:"com.alibaba:arouter-compiler:$implementationVersion.arouterCompiler",
-            daggerAnnotationProcessor:"com.google.dagger:dagger-compiler:$implementationVersion.daggerAnnotationProcessor"
+            daggerAnnotationProcessor:"com.google.dagger:dagger-compiler:$implementationVersion.daggerAnnotationProcessor",
+            stuxuhai:"com.github.stuxuhai:jpinyin:$implementationVersion.jpinyin"
     ]
 }

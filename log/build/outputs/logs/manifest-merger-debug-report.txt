@@ -1,6 +1,7 @@
 -- Merging decision tree log ---
 manifest
 <<<<<<< HEAD
+<<<<<<< HEAD
 ADDED from D:\1804ASX1\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
 INJECTED from D:\1804ASX1\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
 INJECTED from D:\1804ASX1\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
@@ -97,3 +98,52 @@ INJECTED from D:\bawei\GitHub\SX1804\log\src\main\AndroidManifest.xml
 		ADDED from D:\bawei\GitHub\SX1804\log\src\main\AndroidManifest.xml
 		INJECTED from D:\bawei\GitHub\SX1804\log\src\main\AndroidManifest.xml
 >>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
+=======
+ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:2:5-26
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:1-7:12
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:3:5-80
+	android:name
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:3:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:4:22-77
+application
+ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:5:5-50
+	android:name
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml:5:18-48
+uses-sdk
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		ADDED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+		INJECTED from E:\sss\SX1804\log\src\main\AndroidManifest.xml
+>>>>>>> 57dd8bd7ad68fd3093dca08cbd2246d7e5373682

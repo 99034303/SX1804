@@ -7,6 +7,7 @@
 7    <uses-sdk
 8        android:minSdkVersion="24"
 <<<<<<< HEAD
+<<<<<<< HEAD
 8-->D:\1804ASX1\SX1804\log\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->D:\1804ASX1\SX1804\log\src\main\AndroidManifest.xml
@@ -37,5 +38,21 @@
 14-->D:\bawei\GitHub\SX1804\log\src\main\AndroidManifest.xml:5:5-50
 14-->D:\bawei\GitHub\SX1804\log\src\main\AndroidManifest.xml:5:18-48
 >>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
+=======
+8-->E:\sss\SX1804\log\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->E:\sss\SX1804\log\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->E:\sss\SX1804\log\src\main\AndroidManifest.xml:3:5-80
+11-->E:\sss\SX1804\log\src\main\AndroidManifest.xml:3:22-78
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->E:\sss\SX1804\log\src\main\AndroidManifest.xml:4:5-79
+12-->E:\sss\SX1804\log\src\main\AndroidManifest.xml:4:22-77
+13    /
+14    <application android:name="com.wmc.log.LogApplication" />
+14-->E:\sss\SX1804\log\src\main\AndroidManifest.xml:5:5-50
+14-->E:\sss\SX1804\log\src\main\AndroidManifest.xml:5:18-48
+>>>>>>> 57dd8bd7ad68fd3093dca08cbd2246d7e5373682
 15
 16</manifest>

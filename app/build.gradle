@@ -42,9 +42,12 @@ dependencies {
     implementation project(path: ':umeng')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':mvp')
+
     if(!isUserCenter.toBoolean()){
         implementation project(path: ':usercenter')
     }
+
+
     implementation project(path: ':gaode_map')
     if(!isNeedHomeModel.toBoolean()){
         implementation project(path: ':home')
@@ -58,6 +61,7 @@ dependencies {
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version" //step2
 }
+
 repositories {
     mavenCentral()
 }

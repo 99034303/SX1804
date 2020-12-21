@@ -189,7 +189,6 @@ public class UserCenterPresenter extends Contract.Presenter {
                 });
     }
 
-
     @SuppressLint("CheckResult")
     @Override
     public void forgetCode() {
@@ -223,6 +222,22 @@ public class UserCenterPresenter extends Contract.Presenter {
                     }
                 });
          }
+//    @Override
+//    public void forgetChange(int id, String pwd) {
+//        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Consumer<BaseEntity<Boolean>>() {
+//                    @Override
+//                    public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
+//                        if (booleanBaseEntity.getCode() == 0) {
+//                            if (mView != null) {
+//                                mView.ForgetChange(booleanBaseEntity.getData());
+//                            }
+//                        }
+//                    }
+//                });
+//    }
+
     /**
      * 获取请求添加好友数据
      *
@@ -257,7 +272,6 @@ public class UserCenterPresenter extends Contract.Presenter {
                     }
                 });
     }
-
 
     /**
      * 销毁 P层

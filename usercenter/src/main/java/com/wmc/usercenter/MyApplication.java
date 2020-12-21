@@ -1,7 +1,5 @@
 package com.wmc.usercenter;
 
-import android.app.Application;
-
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.groupone.common.BaseApplication;
 import com.wmc.sp.SPUtils;
@@ -22,7 +20,8 @@ public class MyApplication extends BaseApplication {
             SPUtils.getInstance("gisim",this);
             //初始化数据库
             SQLiteManager.getInstance(this);
-        }
+    }
+
     }
 
 
