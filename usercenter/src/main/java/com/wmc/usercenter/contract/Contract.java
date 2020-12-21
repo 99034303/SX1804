@@ -19,11 +19,15 @@ public interface Contract {
     interface View extends IView {
         void updateLoginUI(BaseEntity<LoginEntity> baseEntity);
         void updateRegisterUI(BaseEntity<Boolean> baseEntity);
+<<<<<<< HEAD
         void ForgetCode(String code);
         void ForgetChange(boolean flag);
         void getFriend(List<FriendEntity> friendEntity);
         void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result);
         void AddFriend(BaseEntity<Boolean> baseEntity);
+=======
+        void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result);
+>>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
     }
 
     interface Model extends IModel {
@@ -33,6 +37,7 @@ public interface Contract {
         //登录
         Observable<BaseEntity<LoginEntity>> login(RequestEntity loginBody);
 
+<<<<<<< HEAD
         //验证码
         Observable<BaseEntity<String>> forgetCode();
 
@@ -45,6 +50,8 @@ public interface Contract {
         //添加好友
         Observable<BaseEntity<Boolean>> AddFriend(AddEntity addEntity);
 
+=======
+>>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
         //获取请求添加好友数据
         Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid);
     }
@@ -77,6 +84,7 @@ public interface Contract {
          */
         public abstract void register(RequestEntity registerBody);
 
+<<<<<<< HEAD
 
         /**
          * 获取验证码
@@ -86,6 +94,8 @@ public interface Contract {
         public abstract void forgetChange(int id,String pwd);
 
 
+=======
+>>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
         /**
          * 获取请求添加好友数据
          * @param userid

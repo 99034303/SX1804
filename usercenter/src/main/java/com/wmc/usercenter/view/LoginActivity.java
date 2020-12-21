@@ -226,6 +226,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     }
 
     @Override
+<<<<<<< HEAD
     public void ForgetCode(String code) {
 
     }
@@ -247,4 +248,9 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
+=======
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
+    }
+>>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
 }

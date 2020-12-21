@@ -58,6 +58,7 @@ public class ContactsListFragment extends BaseMVPFragment<UserCenterPresenter> i
     }
 
     @Override
+<<<<<<< HEAD
     public void ForgetCode(String code) {
 
     }
@@ -81,4 +82,9 @@ public class ContactsListFragment extends BaseMVPFragment<UserCenterPresenter> i
     public void AddFriend(BaseEntity<Boolean> baseEntity) {
 
     }
+=======
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
+    }
+>>>>>>> 0bac76145c6ce72afad76f76dc8d6fffab2950af
 }
