@@ -451,6 +451,7 @@ attr helperText
 attr helperTextEnabled
 attr helperTextTextAppearance
 attr helperTextTextColor
+attr hideDirection
 attr hideMotionSpec
 attr hideOnContentScroll
 attr hideOnScroll
@@ -1819,6 +1820,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable check_box
+drawable check_box_right
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1829,9 +1832,21 @@ drawable forget_edit_false
 drawable forget_edit_true
 drawable forget_finish
 drawable forget_yzm
+drawable friend_item
 drawable gray_radius
+drawable ic_add_friend
 drawable ic_back
+drawable ic_back_jiantou
+drawable ic_baseline_add_24
+drawable ic_baseline_add_box_24
+drawable ic_baseline_arrow_back_ios_24
+drawable ic_baseline_arrow_forward_ios_24
+drawable ic_baseline_crop_free_24
+drawable ic_baseline_phone_android_24
+drawable ic_baseline_search_24
 drawable ic_clock_black_24dp
+drawable ic_friend
+drawable ic_friend_group
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1878,6 +1893,7 @@ drawable round_home_main_activelist
 drawable sample_footer_loading
 drawable sample_footer_loading_progress
 drawable scan_light
+drawable searchpeople
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2085,6 +2101,10 @@ id fl_zxing_container
 id flip
 id floating
 id forever
+id friend_group_layout
+id friend_group_rv
+id friend_layout
+id friend_rv
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -2115,6 +2135,7 @@ id italic
 id item_touch_helper_previous_elevation
 id iv_contact_add2
 id iv_contact_view_head2
+id iv_friend
 id iv_phone_contact_back_view
 id iv_tab_icon
 id jumpToEnd
@@ -2431,6 +2452,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
 layout activity_main
+layout activity_message
 layout activity_phone_contract
 layout adapter_home_main_active_list
 layout banner
@@ -2455,6 +2477,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_capture
+layout friend_item
 layout layout_home_main_activity_list
 layout layout_tab
 layout layout_tab_bottom
@@ -3465,6 +3488,7 @@ styleable ConstraintSet android_orientation android_id android_visibility androi
 styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable CustomAttribute attributeName customBoolean customColorDrawableValue customColorValue customDimension customFloatValue customIntegerValue customPixelDimension customStringValue
+styleable CustomMenuLayout hideDirection
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable DropBoxHeader dhDrawable1 dhDrawable2 dhDrawable3
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec hideMotionSpec showMotionSpec shrinkMotionSpec

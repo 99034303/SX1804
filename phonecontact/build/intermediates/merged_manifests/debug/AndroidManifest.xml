@@ -21,6 +21,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
         android:name="com.bw.phonecontact.MyApplication"
@@ -42,11 +43,18 @@
         </activity>
         <activity android:name="com.example.home.HomeActivity" />
 
+        <service
+            android:name="com.example.gaode_map.MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="53bb4050ca19f098437aa4b8313b2500" >
-        </meta-data>
+            android:value="a851b6adca8315ef84b418cfc92377df" />
 
+        <activity android:name="com.wmc.messagecenter.MessageActivity" >
+        </activity>
         <activity
             android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
             android:configChanges="orientation|keyboardHidden"

@@ -28,6 +28,7 @@ android {
 dependencies {
     api needs.json
     api needs.gson
+    api needs.glide
     api needs.recyClerView
     api needs.recyClerViewAdapter
     api needs.smartRefreshLayout
