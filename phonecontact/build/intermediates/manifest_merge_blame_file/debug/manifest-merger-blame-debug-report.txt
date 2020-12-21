@@ -46,78 +46,367 @@
 24    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 24-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:5-95
 24-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:19:22-92
-25
-26    <application
-26-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:16:5-31:19
-27        android:name="com.bw.phonecontact.MyApplication"
-27-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:18:9-38
-28        android:allowBackup="true"
-28-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:11:18-44
-29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.5.0-alpha05] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ee902be873527a48b21856397b3c34f9\core-1.5.0-alpha05\AndroidManifest.xml:24:18-86
-30        android:debuggable="true"
-31        android:extractNativeLibs="false"
-32        android:supportsRtl="true"
-32-->[com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\21b2b704f19456504258907fdfac563b\jetified-FlycoTabLayout_Lib-2.0.2\AndroidManifest.xml:13:9-35
-33        android:testOnly="true"
-34        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-34-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:17:9-65
-35        <activity android:name="com.bw.phonecontact.PhoneContactActivity" >
-35-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:20:9-26:20
-35-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:20:19-55
-36            <intent-filter>
-36-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:21:13-25:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:22:17-69
-37-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:22:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:24:17-77
-39-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:24:27-74
-40            </intent-filter>
-41        </activity>
-42        <activity android:name="com.bw.phonecontact.MainActivity" >
-42-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:28:9-30:20
-42-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:28:19-47
-43        </activity>
-44        <activity android:name="com.example.home.HomeActivity" />
-44-->[:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-66
-44-->[:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-63
-45
-46        <service
-46-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-26:72
-47            android:name="com.example.gaode_map.MyService"
-47-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-59
-48            android:enabled="true"
-48-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-35
-49            android:exported="true"
-49-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-36
-50            android:permission="android.permission.BIND_JOB_SERVICE" />
-50-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-69
-51
-52        <meta-data
-52-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:9-30:64
-53            android:name="com.amap.api.v2.apikey"
-53-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-50
-54            android:value="a851b6adca8315ef84b418cfc92377df" />
-54-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-61
-55
-56        <activity android:name="com.wmc.messagecenter.MessageActivity" >
-56-->[:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-13:20
-56-->[:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-71
-57        </activity>
-58        <activity
-58-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:12:9-17:63
-59            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
-59-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:13:13-74
-60            android:configChanges="orientation|keyboardHidden"
-60-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:14:13-63
-61            android:screenOrientation="portrait"
-61-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:15:13-49
-62            android:theme="@style/Theme.AppCompat.NoActionBar"
-62-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:16:13-63
-63            android:windowSoftInputMode="stateAlwaysHidden" />
-63-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:17:13-60
-64    </application>
-65
-66</manifest>
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:15:5-68
+25-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:15:22-65
+26    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+26-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:17:5-82
+26-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:17:22-79
+27    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+27-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:18:5-84
+27-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:18:22-81
+28    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+28-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:19:5-84
+28-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:19:22-81
+29    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+29-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:20:5-85
+29-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:20:22-82
+30    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+30-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:21:5-75
+30-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:21:22-72
+31    <uses-permission android:name="android.permission.GET_TASKS" />
+31-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:22:5-68
+31-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:22:22-65
+32    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+32-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:23:5-81
+32-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:23:22-78
+33    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+33-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:24:5-79
+33-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:24:22-76
+34    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+34-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:25:5-76
+34-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:25:22-73
+35
+36    <application
+36-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:16:5-31:19
+37        android:name="com.bw.phonecontact.MyApplication"
+37-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:18:9-38
+38        android:allowBackup="true"
+38-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:11:18-44
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.5.0-alpha05] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ee902be873527a48b21856397b3c34f9\core-1.5.0-alpha05\AndroidManifest.xml:24:18-86
+40        android:debuggable="true"
+41        android:extractNativeLibs="false"
+42        android:supportsRtl="true"
+42-->[com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\21b2b704f19456504258907fdfac563b\jetified-FlycoTabLayout_Lib-2.0.2\AndroidManifest.xml:13:9-35
+43        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+43-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:17:9-65
+44        <activity android:name="com.bw.phonecontact.PhoneContactActivity" >
+44-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:20:9-26:20
+44-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:20:19-55
+45            <intent-filter>
+45-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:21:13-25:29
+46                <action android:name="android.intent.action.MAIN" />
+46-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:22:17-69
+46-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:22:25-66
+47
+48                <category android:name="android.intent.category.LAUNCHER" />
+48-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:24:17-77
+48-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:24:27-74
+49            </intent-filter>
+50        </activity>
+51        <activity android:name="com.bw.phonecontact.MainActivity" >
+51-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:28:9-30:20
+51-->D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:28:19-47
+52        </activity>
+53        <activity android:name="com.example.home.HomeActivity" />
+53-->[:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-66
+53-->[:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-63
+54
+55        <service
+55-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:22:9-26:72
+56            android:name="com.example.gaode_map.MyService"
+56-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:23:13-59
+57            android:enabled="true"
+57-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:13-35
+58            android:exported="true"
+58-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-36
+59            android:permission="android.permission.BIND_JOB_SERVICE" />
+59-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-69
+60
+61        <meta-data
+61-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:9-30:64
+62            android:name="com.amap.api.v2.apikey"
+62-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-50
+63            android:value="a851b6adca8315ef84b418cfc92377df" />
+63-->[:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-61
+64
+65        <activity android:name="com.wmc.messagecenter.MessageActivity" />
+65-->[:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-74
+65-->[:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-71
+66        <activity android:name="com.wmc.messagecenter.ChatActivity" />
+66-->[:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-71
+66-->[:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-68
+67        <activity
+67-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:12:9-17:63
+68            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+68-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:13:13-74
+69            android:configChanges="orientation|keyboardHidden"
+69-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:14:13-63
+70            android:screenOrientation="portrait"
+70-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:15:13-49
+71            android:theme="@style/Theme.AppCompat.NoActionBar"
+71-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:16:13-63
+72            android:windowSoftInputMode="stateAlwaysHidden" />
+72-->[cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:17:13-60
+73
+74        <service
+74-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:28:9-38:19
+75            android:name="com.taobao.accs.ChannelService"
+75-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:29:13-58
+76            android:exported="true"
+76-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:30:13-36
+77            android:process=":channel" >
+77-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:31:13-39
+78            <intent-filter>
+78-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:32:13-34:29
+79                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+79-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:33:17-80
+79-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:33:25-77
+80            </intent-filter>
+81            <intent-filter>
+81-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:35:13-37:29
+82                <action android:name="com.taobao.accs.intent.action.ELECTION" />
+82-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:36:17-81
+82-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:36:25-78
+83            </intent-filter>
+84        </service>
+85        <service
+85-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:39:9-45:19
+86            android:name="com.taobao.accs.data.MsgDistributeService"
+86-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:40:13-69
+87            android:exported="true" >
+87-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:41:13-36
+88            <intent-filter>
+88-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:42:13-44:29
+89                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+89-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:43:17-80
+89-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:43:25-77
+90            </intent-filter>
+91        </service>
+92
+93        <receiver
+93-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:47:9-64:20
+94            android:name="com.taobao.accs.EventReceiver"
+94-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:48:13-57
+95            android:process=":channel" >
+95-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:49:13-39
+96            <intent-filter>
+96-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:50:13-52:29
+97                <action android:name="android.intent.action.BOOT_COMPLETED" />
+97-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:51:17-79
+97-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:51:25-76
+98            </intent-filter>
+99            <intent-filter>
+99-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:53:13-55:29
+100                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+100-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:54:17-79
+100-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:54:25-76
+101            </intent-filter>
+102            <intent-filter>
+102-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:56:13-60:29
+103                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+103-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:57:17-80
+103-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:57:25-77
+104
+105                <data android:scheme="package" />
+105-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:59:17-50
+105-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:59:23-47
+106            </intent-filter>
+107            <intent-filter>
+107-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:61:13-63:29
+108                <action android:name="android.intent.action.USER_PRESENT" />
+108-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:62:17-77
+108-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:62:25-74
+109            </intent-filter>
+110        </receiver>
+111        <receiver
+111-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:65:9-74:20
+112            android:name="com.taobao.accs.ServiceReceiver"
+112-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:66:13-59
+113            android:process=":channel" >
+113-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:67:13-39
+114            <intent-filter>
+114-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:68:13-70:29
+115                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+115-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:69:17-80
+115-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:69:25-77
+116            </intent-filter>
+117            <intent-filter>
+117-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:71:13-73:29
+118                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+118-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:72:17-88
+118-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:72:25-85
+119            </intent-filter>
+120        </receiver>
+121
+122        <service
+122-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:76:9-79:42
+123            android:name="com.taobao.accs.internal.AccsJobService"
+123-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:77:13-67
+124            android:permission="android.permission.BIND_JOB_SERVICE"
+124-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:78:13-69
+125            android:process=":channel" />
+125-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:79:13-39
+126        <service
+126-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:80:9-82:42
+127            android:name="com.taobao.accs.ChannelService$KernelService"
+127-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:81:13-72
+128            android:process=":channel" />
+128-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:82:13-39
+129        <service
+129-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:83:9-89:19
+130            android:name="org.android.agoo.accs.AgooService"
+130-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:84:13-61
+131            android:exported="true" >
+131-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:85:13-36
+132            <intent-filter>
+132-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:42:13-44:29
+133                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+133-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:43:17-80
+133-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:43:25-77
+134            </intent-filter>
+135        </service>
+136        <service
+136-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:90:9-97:19
+137            android:name="com.umeng.message.UmengIntentService"
+137-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:91:13-64
+138            android:exported="true"
+138-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:92:13-36
+139            android:process=":channel" >
+139-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:93:13-39
+140            <intent-filter>
+140-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:94:13-96:29
+141                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+141-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:95:17-81
+141-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:95:25-78
+142            </intent-filter>
+143        </service>
+144        <service
+144-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:98:9-105:19
+145            android:name="com.umeng.message.XiaomiIntentService"
+145-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:99:13-65
+146            android:exported="true"
+146-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:100:13-36
+147            android:process=":channel" >
+147-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:101:13-39
+148            <intent-filter>
+148-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:94:13-96:29
+149                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+149-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:95:17-81
+149-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:95:25-78
+150            </intent-filter>
+151        </service>
+152
+153        <receiver
+153-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:107:9-119:20
+154            android:name="com.taobao.agoo.AgooCommondReceiver"
+154-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:108:13-63
+155            android:exported="true"
+155-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:109:13-36
+156            android:process=":channel" >
+156-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:110:13-39
+157            <intent-filter>
+157-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:111:13-113:29
+158                <action android:name="com.bw.phonecontact.intent.action.COMMAND" />
+158-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:112:17-81
+158-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:112:25-78
+159            </intent-filter>
+160            <intent-filter>
+160-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:56:13-60:29
+161                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+161-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:57:17-80
+161-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:57:25-77
+162
+163                <data android:scheme="package" />
+163-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:59:17-50
+163-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:59:23-47
+164            </intent-filter>
+165        </receiver>
+166
+167        <service
+167-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:121:9-128:19
+168            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+168-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:122:13-79
+169            android:exported="true"
+169-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:123:13-36
+170            android:process=":channel" >
+170-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:124:13-39
+171            <intent-filter>
+171-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:125:13-127:29
+172                <action android:name="org.android.agoo.client.MessageReceiverService" />
+172-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:126:17-89
+172-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:126:25-86
+173            </intent-filter>
+174        </service>
+175
+176        <receiver
+176-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:130:9-132:40
+177            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+177-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:131:13-80
+178            android:exported="false" />
+178-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:132:13-37
+179
+180        <service
+180-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:134:9-153:19
+181            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+181-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:135:13-80
+182            android:exported="false"
+182-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:136:13-37
+183            android:permission="android.permission.BIND_JOB_SERVICE" >
+183-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:137:13-69
+184            <intent-filter>
+184-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:138:13-140:29
+185                <action android:name="com.umeng.messge.registercallback.action" />
+185-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:139:17-83
+185-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:139:25-80
+186            </intent-filter>
+187            <intent-filter>
+187-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:141:13-143:29
+188                <action android:name="com.umeng.message.enablecallback.action" />
+188-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:142:17-82
+188-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:142:25-79
+189            </intent-filter>
+190            <intent-filter>
+190-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:144:13-146:29
+191                <action android:name="com.umeng.message.disablecallback.action" />
+191-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:145:17-83
+191-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:145:25-80
+192            </intent-filter>
+193            <intent-filter>
+193-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:147:13-149:29
+194                <action android:name="com.umeng.message.message.handler.action" />
+194-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:148:17-83
+194-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:148:25-80
+195            </intent-filter>
+196            <intent-filter>
+196-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:150:13-152:29
+197                <action android:name="com.umeng.message.message.sendmessage.action" />
+197-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:151:17-87
+197-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:151:25-84
+198            </intent-filter>
+199        </service>
+200        <service
+200-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:154:9-157:72
+201            android:name="com.umeng.message.UmengDownloadResourceService"
+201-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:155:13-74
+202            android:exported="false"
+202-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:156:13-37
+203            android:permission="android.permission.BIND_JOB_SERVICE" />
+203-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:157:13-69
+204
+205        <provider
+205-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:159:9-164:20
+206            android:name="com.umeng.message.provider.MessageProvider"
+206-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:160:13-70
+207            android:authorities="com.bw.phonecontact.umeng.message"
+207-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:161:13-65
+208            android:exported="false" >
+208-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:162:13-37
+209            <grant-uri-permission android:pathPattern=".*" />
+209-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:163:13-62
+209-->[com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:163:35-59
+210        </provider>
+211    </application>
+212
+213</manifest>

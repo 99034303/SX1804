@@ -221,7 +221,8 @@ public class UserCenterPresenter extends Contract.Presenter {
                         }
                     }
                 });
-         }
+    }
+
 //    @Override
 //    public void forgetChange(int id, String pwd) {
 //        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())

@@ -60,11 +60,18 @@ public class UserCenterModel implements Contract.Model {
         return RetrofitFactory.getInstance().create(HttpApi.class).code("1");
     }
 
+<<<<<<< HEAD
+    @Override
+=======
 
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
     public Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd) {
         return RetrofitFactory.getInstance().create(HttpApi.class).Change(id, pwd);
     }
 
+<<<<<<< HEAD
+
+=======
     /**
      * 获取好友，搜索好友
      */
@@ -85,6 +92,7 @@ public class UserCenterModel implements Contract.Model {
 
 
 
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
         /**
          * 获取请求添加好友数据
          * @param userid
@@ -94,5 +102,8 @@ public class UserCenterModel implements Contract.Model {
         public Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData (Integer userid){
             return RetrofitFactory.getInstance().create(HttpApi.class).getRequestAddFriendData(userid);
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9ab9c89bbe41f562f344ef9dddf68a82917ac0ff
 }

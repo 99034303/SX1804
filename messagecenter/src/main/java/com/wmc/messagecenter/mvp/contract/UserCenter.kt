@@ -8,7 +8,7 @@ import com.wmc.messagecenter.mvp.model.entity.SingleEntity
 import io.reactivex.Flowable
 
 interface UserCenter {
-    abstract interface UserCenterView : IView{
+    interface UserCenterView : IView{
 
     }
     abstract class UserCenterModel : IModel{

@@ -43,8 +43,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':mvp')
 
-    if(!isUserCenter.toBoolean()){
-        implementation project(path: ':usercenter')
+    if(!isMessageCenter.toBoolean()){
+        implementation project(path: ':messagecenter')
     }
 
 

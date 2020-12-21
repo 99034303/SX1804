@@ -6,19 +6,21 @@ INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml
 INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:2:1-33:12
 MERGED from [:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-33:12
-MERGED from [:view] D:\1804ASX1\SX1804\view\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-16:12
+MERGED from [:view] D:\1804ASX1\SX1804\view\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:common] D:\1804ASX1\SX1804\common\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\338f19765f6a344b9628486a8187a170\material-1.3.0-alpha03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ba0ed6b90ecdbadb94c34186e81cdf42\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [:xmpplibrary] D:\1804ASX1\SX1804\xmpplibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:commonlibrary] D:\1804ASX1\SX1804\commonlibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:imageloader] D:\1804ASX1\SX1804\imageloader\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [:interface] D:\1804ASX1\SX1804\interface\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:net] D:\1804ASX1\SX1804\net\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:storage] D:\1804ASX1\SX1804\storage\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:mvp] D:\1804ASX1\SX1804\mvp\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:2:1-20:12
+MERGED from [:umeng] D:\1804ASX1\SX1804\umeng\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\4e039017508058e03141616af225b4eb\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.alibaba:arouter-api:1.4.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\c043a640a2562cf224b75b50778cc63c\jetified-arouter-api-1.4.1\AndroidManifest.xml:2:1-10:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\bf8b737aa06780ce71e42516cac8efab\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -67,6 +69,9 @@ MERGED from [com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2] C:\Users\ASUS\.gradle
 MERGED from [com.youth.banner:banner:1.4.10] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\28910e674fb732a5a9d963d62965de57\jetified-banner-1.4.10\AndroidManifest.xml:2:1-11:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\a8812d66db62e9b26d6c1f501a43308f\jetified-rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\541c09a69b824cc7c223abe4277f4942\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:2:1-167:12
+MERGED from [com.umeng.umsdk:asms:1.1.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\dd03395cce535f078c1316e86722bb5b\jetified-asms-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [com.umeng.umsdk:crash:0.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7a3cc15f19db377b1dfa9eb286cf274a\jetified-crash-0.0.4\AndroidManifest.xml:2:1-11:12
 INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:2:1-33:12
 INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:2:1-33:12
 INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:2:1-33:12
@@ -90,18 +95,24 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:6:5-78
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-79
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-79
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:12:5-79
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:12:5-79
 	android:name
 		ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:7:5-75
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-76
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:5-76
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:13:5-76
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:13:5-76
 	android:name
 		ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:7:22-73
 uses-permission#android.permission.INTERNET
 ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:8:5-66
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-67
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:11:5-67
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.READ_LOGS
@@ -112,12 +123,18 @@ ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:9:
 		ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:9:22-65
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:11:5-79
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-80
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-80
 	android:name
 		ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:11:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:12:5-80
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-81
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:14:5-81
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:14:5-81
 	android:name
 		ADDED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.READ_CONTACTS
@@ -152,6 +169,8 @@ MERGED from [com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-28] C:\Users
 MERGED from [com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-28] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\88f5c0c992669254a9e452ecb79f035c\jetified-SmartRefreshHeader-1.1.0-alpha-28\AndroidManifest.xml:11:5-15:19
 MERGED from [com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\21b2b704f19456504258907fdfac563b\jetified-FlycoTabLayout_Lib-2.0.2\AndroidManifest.xml:11:5-14:19
 MERGED from [com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\21b2b704f19456504258907fdfac563b\jetified-FlycoTabLayout_Lib-2.0.2\AndroidManifest.xml:11:5-14:19
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:27:5-165:19
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:27:5-165:19
 	android:supportsRtl
 		ADDED from [com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\21b2b704f19456504258907fdfac563b\jetified-FlycoTabLayout_Lib-2.0.2\AndroidManifest.xml:13:9-35
 	android:appComponentFactory
@@ -188,10 +207,10 @@ MERGED from [:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest
 MERGED from [:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:view] D:\1804ASX1\SX1804\view\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:view] D:\1804ASX1\SX1804\view\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:view] D:\1804ASX1\SX1804\view\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:view] D:\1804ASX1\SX1804\view\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:common] D:\1804ASX1\SX1804\common\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:common] D:\1804ASX1\SX1804\common\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\338f19765f6a344b9628486a8187a170\material-1.3.0-alpha03\AndroidManifest.xml:20:5-44
@@ -204,6 +223,8 @@ MERGED from [:commonlibrary] D:\1804ASX1\SX1804\commonlibrary\build\intermediate
 MERGED from [:commonlibrary] D:\1804ASX1\SX1804\commonlibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:imageloader] D:\1804ASX1\SX1804\imageloader\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:imageloader] D:\1804ASX1\SX1804\imageloader\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:log] D:\1804ASX1\SX1804\log\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:interface] D:\1804ASX1\SX1804\interface\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:interface] D:\1804ASX1\SX1804\interface\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:net] D:\1804ASX1\SX1804\net\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
@@ -214,6 +235,8 @@ MERGED from [:mvp] D:\1804ASX1\SX1804\mvp\build\intermediates\library_manifest\d
 MERGED from [:mvp] D:\1804ASX1\SX1804\mvp\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:7:5-9:41
 MERGED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:7:5-9:41
+MERGED from [:umeng] D:\1804ASX1\SX1804\umeng\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:umeng] D:\1804ASX1\SX1804\umeng\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\4e039017508058e03141616af225b4eb\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\4e039017508058e03141616af225b4eb\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.alibaba:arouter-api:1.4.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\c043a640a2562cf224b75b50778cc63c\jetified-arouter-api-1.4.1\AndroidManifest.xml:6:5-8:41
@@ -310,6 +333,12 @@ MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\ASUS\.gradle\caches\
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\a8812d66db62e9b26d6c1f501a43308f\jetified-rxandroid-2.1.1\AndroidManifest.xml:18:5-43
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\541c09a69b824cc7c223abe4277f4942\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\541c09a69b824cc7c223abe4277f4942\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.umeng.umsdk:asms:1.1.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\dd03395cce535f078c1316e86722bb5b\jetified-asms-1.1.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.umeng.umsdk:asms:1.1.3] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\dd03395cce535f078c1316e86722bb5b\jetified-asms-1.1.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.umeng.umsdk:crash:0.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7a3cc15f19db377b1dfa9eb286cf274a\jetified-crash-0.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.umeng.umsdk:crash:0.0.4] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\7a3cc15f19db377b1dfa9eb286cf274a\jetified-crash-0.0.4\AndroidManifest.xml:7:5-9:41
 INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml
 INJECTED from D:\1804ASX1\SX1804\phonecontact\src\main\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -326,6 +355,8 @@ ADDED from [:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\
 		ADDED from [:home] D:\1804ASX1\SX1804\home\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-63
 uses-permission#android.permission.READ_PHONE_STATE
 ADDED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:5-75
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:16:5-75
+MERGED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:16:5-75
 	android:name
 		ADDED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:22-72
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -357,9 +388,13 @@ ADDED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library
 	android:name
 		ADDED from [:gaode_map] D:\1804ASX1\SX1804\gaode_map\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-50
 activity#com.wmc.messagecenter.MessageActivity
-ADDED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-13:20
+ADDED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-74
 	android:name
 		ADDED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-71
+activity#com.wmc.messagecenter.ChatActivity
+ADDED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-71
+	android:name
+		ADDED from [:messagecenter] D:\1804ASX1\SX1804\messagecenter\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-68
 activity#com.uuzuche.lib_zxing.activity.CaptureActivity
 ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:12:9-17:63
 	android:screenOrientation
@@ -372,3 +407,267 @@ ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\cac
 		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:16:13-63
 	android:name
 		ADDED from [cn.yipianfengye.android:zxing-library:2.2] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7da342cfdee5f71ffe54854a3c555af\jetified-zxing-library-2.2\AndroidManifest.xml:13:13-74
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:15:5-68
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:15:22-65
+uses-permission#android.permission.BROADCAST_PACKAGE_ADDED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:17:5-82
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:17:22-79
+uses-permission#android.permission.BROADCAST_PACKAGE_CHANGED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:18:5-84
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:18:22-81
+uses-permission#android.permission.BROADCAST_PACKAGE_INSTALL
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:19:5-84
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:19:22-81
+uses-permission#android.permission.BROADCAST_PACKAGE_REPLACED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:20:5-85
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:20:22-82
+uses-permission#android.permission.RESTART_PACKAGES
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:21:5-75
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:21:22-72
+uses-permission#android.permission.GET_TASKS
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:22:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:23:22-78
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:24:22-76
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:25:5-76
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:25:22-73
+service#com.taobao.accs.ChannelService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:28:9-38:19
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:31:13-39
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:29:13-58
+intent-filter#action:name:com.taobao.accs.intent.action.SERVICE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:32:13-34:29
+action#com.taobao.accs.intent.action.SERVICE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:33:17-80
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:33:25-77
+intent-filter#action:name:com.taobao.accs.intent.action.ELECTION
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:35:13-37:29
+action#com.taobao.accs.intent.action.ELECTION
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:36:17-81
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:36:25-78
+service#com.taobao.accs.data.MsgDistributeService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:39:9-45:19
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:41:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:40:13-69
+intent-filter#action:name:com.taobao.accs.intent.action.RECEIVE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:42:13-44:29
+action#com.taobao.accs.intent.action.RECEIVE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:43:17-80
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:43:25-77
+receiver#com.taobao.accs.EventReceiver
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:47:9-64:20
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:49:13-39
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:48:13-57
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:50:13-52:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:51:17-79
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:51:25-76
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:53:13-55:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:54:17-79
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:54:25-76
+intent-filter#action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:56:13-60:29
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:57:17-80
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:57:25-77
+data
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:59:17-50
+	android:scheme
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:59:23-47
+intent-filter#action:name:android.intent.action.USER_PRESENT
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:61:13-63:29
+action#android.intent.action.USER_PRESENT
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:62:17-77
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:62:25-74
+receiver#com.taobao.accs.ServiceReceiver
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:65:9-74:20
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:67:13-39
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:66:13-59
+intent-filter#action:name:com.taobao.accs.intent.action.COMMAND
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:68:13-70:29
+action#com.taobao.accs.intent.action.COMMAND
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:69:17-80
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:69:25-77
+intent-filter#action:name:com.taobao.accs.intent.action.START_FROM_AGOO
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:71:13-73:29
+action#com.taobao.accs.intent.action.START_FROM_AGOO
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:72:17-88
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:72:25-85
+service#com.taobao.accs.internal.AccsJobService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:76:9-79:42
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:79:13-39
+	android:permission
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:78:13-69
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:77:13-67
+service#com.taobao.accs.ChannelService$KernelService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:80:9-82:42
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:82:13-39
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:81:13-72
+service#org.android.agoo.accs.AgooService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:83:9-89:19
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:85:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:84:13-61
+service#com.umeng.message.UmengIntentService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:90:9-97:19
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:93:13-39
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:92:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:91:13-64
+intent-filter#action:name:org.agoo.android.intent.action.RECEIVE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:94:13-96:29
+action#org.agoo.android.intent.action.RECEIVE
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:95:17-81
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:95:25-78
+service#com.umeng.message.XiaomiIntentService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:98:9-105:19
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:101:13-39
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:100:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:99:13-65
+receiver#com.taobao.agoo.AgooCommondReceiver
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:107:9-119:20
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:110:13-39
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:109:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:108:13-63
+intent-filter#action:name:${applicationId}.intent.action.COMMAND
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:111:13-113:29
+intent-filter#action:name:com.bw.phonecontact.intent.action.COMMAND
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:111:13-113:29
+action#${applicationId}.intent.action.COMMAND
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:112:17-81
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:112:25-78
+action#com.bw.phonecontact.intent.action.COMMAND
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:112:17-81
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:112:25-78
+service#com.umeng.message.UmengMessageIntentReceiverService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:121:9-128:19
+	android:process
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:124:13-39
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:123:13-36
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:122:13-79
+intent-filter#action:name:org.android.agoo.client.MessageReceiverService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:125:13-127:29
+action#org.android.agoo.client.MessageReceiverService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:126:17-89
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:126:25-86
+receiver#com.umeng.message.NotificationProxyBroadcastReceiver
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:130:9-132:40
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:132:13-37
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:131:13-80
+service#com.umeng.message.UmengMessageCallbackHandlerService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:134:9-153:19
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:136:13-37
+	android:permission
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:137:13-69
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:135:13-80
+intent-filter#action:name:com.umeng.messge.registercallback.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:138:13-140:29
+action#com.umeng.messge.registercallback.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:139:17-83
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:139:25-80
+intent-filter#action:name:com.umeng.message.enablecallback.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:141:13-143:29
+action#com.umeng.message.enablecallback.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:142:17-82
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:142:25-79
+intent-filter#action:name:com.umeng.message.disablecallback.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:144:13-146:29
+action#com.umeng.message.disablecallback.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:145:17-83
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:145:25-80
+intent-filter#action:name:com.umeng.message.message.handler.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:147:13-149:29
+action#com.umeng.message.message.handler.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:148:17-83
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:148:25-80
+intent-filter#action:name:com.umeng.message.message.sendmessage.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:150:13-152:29
+action#com.umeng.message.message.sendmessage.action
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:151:17-87
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:151:25-84
+service#com.umeng.message.UmengDownloadResourceService
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:154:9-157:72
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:156:13-37
+	android:permission
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:157:13-69
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:155:13-74
+provider#com.umeng.message.provider.MessageProvider
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:159:9-164:20
+	android:authorities
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:161:13-65
+	android:exported
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:162:13-37
+	android:name
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:160:13-70
+grant-uri-permission
+ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:163:13-62
+	android:pathPattern
+		ADDED from [com.umeng.umsdk:push:6.0.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\6e30872c8ed228a173a8145177651746\jetified-push-6.0.1\AndroidManifest.xml:163:35-59

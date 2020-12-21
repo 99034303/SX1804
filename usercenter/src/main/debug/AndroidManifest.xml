@@ -2,13 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wmc.usercenter">
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
-    <application
-        android:name=".MyApplication"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-=======
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -22,7 +16,6 @@
 
     <application android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:name=".MyApplication">
->>>>>>> 57dd8bd7ad68fd3093dca08cbd2246d7e5373682
         <activity android:name=".view.ContactsActivity"></activity>
         <activity android:name=".view.ForgetActivity" />
         <activity android:name=".view.LoginActivity">

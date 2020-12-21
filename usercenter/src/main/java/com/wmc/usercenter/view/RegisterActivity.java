@@ -16,7 +16,6 @@ import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
-import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
 
@@ -138,16 +137,14 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
 
     @Override
     public void ForgetChange(boolean flag) {
-
     }
+
 
     @Override
     public void getFriend(List<FriendEntity> friendEntity) {
 
     }
-    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
 
-    }
 
     @Override
     public void AddFriend(BaseEntity<Boolean> baseEntity) {

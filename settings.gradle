@@ -1,3 +1,5 @@
+include ':phonecontact'
+include ':messagecenter'
 
 include ':messagecenter'
 include ':phonecontact'
