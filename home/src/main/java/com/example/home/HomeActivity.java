@@ -10,6 +10,7 @@ import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
+import com.groupone.common.utils.ZipUitls;
 import com.wmc.imageloader.ImageUtils;
 
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
+        ZipUitls.executeZip("/storage/emulated/0/data/token.txt","/storage/emulated/0/data/myToken.zip");
         //添加底部标题
         bottomLayout.addTab(0,R.mipmap.person,0);
         bottomLayout.addTab(1,R.mipmap.active,0);
