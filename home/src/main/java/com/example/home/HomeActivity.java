@@ -10,6 +10,10 @@ import com.example.view.BottomTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
 /**
  * @author Administrator
  */
@@ -34,13 +38,24 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
+        //添加底部标题
         bottomLayout.addTab(0,R.mipmap.person,0);
         bottomLayout.addTab(1,R.mipmap.active,0);
         bottomLayout.addTab(2,R.mipmap.message,0);
         bottomLayout.addTab(2,R.mipmap.camera,0);
         bottomLayout.addTab(3,R.mipmap.friends_space,0);
 
-
+        bottomLayout.setOnItemClickListener(new Function1<Integer, Unit>() {
+            @Override
+            public Unit invoke(Integer id) {
+                switch (id){
+                    case 0:
+                        ARouter.getInstance().build("/userCenter/ContactsActivity").navigation();
+                        break;
+                }
+                return null;
+            }
+        });
 
     }
 

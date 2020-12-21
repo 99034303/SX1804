@@ -5,17 +5,25 @@ import com.example.mvp.presenter.BasePresenter;
 import com.example.mvp.view.IView;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.entity.LoginEntity;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.RequestEntity;
 
+import java.util.List;
+
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 
 public interface Contract {
     interface View extends IView {
         void updateLoginUI(BaseEntity<LoginEntity> baseEntity);
         void updateRegisterUI(BaseEntity<Boolean> baseEntity);
+
         void ForgetCode(String code);
         void ForgetChange(boolean flag);
 
+
+
+        void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result);
 
     }
 
@@ -26,11 +34,16 @@ public interface Contract {
         //登录
         Observable<BaseEntity<LoginEntity>> login(RequestEntity loginBody);
 
+
         //验证码
         Observable<BaseEntity<String>> forgetCode();
 
         //修改密码
         Observable<BaseEntity<Boolean>> forgetChange(int id,String pwd);
+
+
+        //获取请求添加好友数据
+        Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(Integer userid);
 
     }
 
@@ -54,6 +67,7 @@ public interface Contract {
         public abstract void register(RequestEntity registerBody);
 
 
+
         /**
          * 获取验证码
          */
@@ -61,6 +75,13 @@ public interface Contract {
 
         public abstract void forgetChange(int id,String pwd);
 
+
+
+        /**
+         * 获取请求添加好友数据
+         * @param userid
+         */
+        public abstract void getRequestAddFriendData(Integer userid);
 
     }
 }

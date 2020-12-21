@@ -16,8 +16,11 @@ import com.example.net.BaseEntity;
 import com.wmc.imageloader.ImageUtils;
 import com.wmc.usercenter.R;
 import com.wmc.usercenter.contract.Contract;
+import com.wmc.usercenter.entity.FriendEntity;
 import com.wmc.usercenter.entity.LoginEntity;
 import com.wmc.usercenter.presenter.UserCenterPresenter;
+
+import java.util.List;
 
 @Route(path = "/view/ForgetActivity")
 public class ForgetActivity extends BaseMVPActivity<UserCenterPresenter> implements Contract.View {
@@ -127,5 +130,10 @@ public class ForgetActivity extends BaseMVPActivity<UserCenterPresenter> impleme
         }
         //恢复可点击事件
         forgetFinish.setEnabled(true);
+    }
+
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+
     }
 }
