@@ -195,6 +195,7 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
             spUtils.put("username",loginEntity.getPhonenumber());
             //存入token值
             spUtils.put("token",loginEntity.getToken());
+            spUtils.putToken(loginEntity.getToken());
             showMsg("登录成功");
             //判断是否需要记住密码
             if (isRememberPwd){

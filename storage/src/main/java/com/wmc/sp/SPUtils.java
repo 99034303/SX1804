@@ -3,6 +3,8 @@ package com.wmc.sp;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Environment;
+import android.util.Log;
 
 import java.util.Map;
 
@@ -18,6 +20,7 @@ public class SPUtils {
     private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor edit;
     private Context context;
+    private final String TOKEN_PATH="/storage/emulated/0/data/token.txt";
 
     /**
      * sp文件名
@@ -108,5 +111,14 @@ public class SPUtils {
         edit.remove(key).apply();
     }
 
+    public void putToken(String token){
+        putToken(TOKEN_PATH,token);
+    }
 
+    public String getToken(){
+        return getToken(TOKEN_PATH);
+    }
+
+    private native void putToken(String path,String token);
+    private native String getToken(String path);
 }

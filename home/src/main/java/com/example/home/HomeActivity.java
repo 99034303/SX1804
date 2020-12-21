@@ -1,5 +1,6 @@
 package com.example.home;
 import android.content.Intent;
+import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -7,6 +8,7 @@ import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
+import com.wmc.sp.SPUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,6 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void bindView() {
-        ARouter.getInstance().inject(this);
         bottomLayout = (BottomTabLayout) findViewById(R.id.bottom_layout);
         viewHomeMainActiveList = (ActiveListView) findViewById(R.id.view_home_main_activeList);
     }
@@ -61,6 +62,7 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initView() {
+        ARouter.getInstance().inject(this);
         activeListAdapter=new ActiveListAdapter(R.layout.adapter_home_main_active_list,titles);
         viewHomeMainActiveList.setAdapter(activeListAdapter);
     }
