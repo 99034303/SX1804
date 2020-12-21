@@ -11,7 +11,6 @@ import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
 import com.groupone.common.utils.ZipUitls;
-import com.wmc.imageloader.ImageUtils;
 
 import java.util.ArrayList;
 import java.util.List;
