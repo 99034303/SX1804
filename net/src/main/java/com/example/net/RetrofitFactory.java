@@ -74,9 +74,8 @@ public class RetrofitFactory {
                         .addHeader("server", "Apache-Coyote/1.1")
                         .addHeader("transfer-encoding", "chunked")
                         .addHeader("content-type", "application/json")
-                        .addHeader("token", (String) SPUtils.getInstance("gisim",null).get("token",""))
+                        .addHeader("token",SPUtils.getInstance(SPUtils.FILE_GISIM,null).getToken())
                         .build();
-
                 return chain.proceed(newRequest);
             }
         };

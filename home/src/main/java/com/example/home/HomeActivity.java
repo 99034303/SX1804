@@ -1,11 +1,16 @@
 package com.example.home;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
+import com.wmc.imageloader.ImageUtils;
 
 import java.util.ArrayList;
 import java.util.List;

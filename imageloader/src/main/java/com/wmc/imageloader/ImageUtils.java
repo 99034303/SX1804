@@ -1,7 +1,10 @@
 package com.wmc.imageloader;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -9,6 +12,9 @@ import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.squareup.picasso.Picasso;
+
+import java.io.File;
+import java.io.InputStream;
 
 /**
  * @author 魏铭池
@@ -73,6 +79,45 @@ public class ImageUtils {
             default:
                 break;
         }
+    }
+
+    /**
+     * 图片二次采样
+     * @param path 图片的路径
+     * @param scaleSize 缩放比例
+     * @return
+     */
+    public Bitmap scaleImageByPath(String path,int scaleSize){
+        //设置缩放尺寸
+        BitmapFactory.Options options=new BitmapFactory.Options();
+        options.inSampleSize=scaleSize;
+        return BitmapFactory.decodeFile(path,options);
+    }
+
+    /**
+     * 图片二次采样重载
+     * @param id 图片的资源id
+     * @param scaleSize 缩放比例
+     * @return
+     */
+    public Bitmap scaleImageById(Context context,int id,int scaleSize){
+        //设置缩放尺寸
+        BitmapFactory.Options options=new BitmapFactory.Options();
+        options.inSampleSize=scaleSize;
+        return BitmapFactory.decodeResource(context.getResources(),id,options);
+    }
+
+    /**
+     * 图片二次采样重载
+     * @param stream 流
+     * @param scaleSize 缩放比例
+     * @return
+     */
+    public Bitmap scaleImageByStream(InputStream stream, int scaleSize){
+        //设置缩放尺寸
+        BitmapFactory.Options options=new BitmapFactory.Options();
+        options.inSampleSize=scaleSize;
+        return BitmapFactory.decodeStream(stream,null,options);
     }
 }
 
