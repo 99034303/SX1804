@@ -20,6 +20,7 @@ public interface Contract {
         void ForgetCode(String code);
         void ForgetChange(boolean flag);
         void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result);
+
     }
 
     interface Model extends IModel {
@@ -65,7 +66,7 @@ public interface Contract {
         public abstract void forgetCode();
 
 
-//        public abstract void forgetChange(int id,String pwd);
+        public abstract void forgetChange(int id,String pwd);
 
 
         /**

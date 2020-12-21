@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.READ_LOGS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -13,6 +14,9 @@
 <!--    访问联系人权限-->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
+=======
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
     <application
 
         android:allowBackup="true"

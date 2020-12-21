@@ -3,6 +3,7 @@ package com.wmc.usercenter.view;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.CheckBox;
@@ -223,7 +224,6 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     public void updateRegisterUI(BaseEntity<Boolean> baseEntity) {
 
     }
-
     @Override
     public void ForgetCode(String code) {
 
@@ -232,9 +232,16 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     @Override
     public void ForgetChange(boolean flag) {
 
+<<<<<<< HEAD
     }
 
     public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
+=======
+
+    }
+    @Override
+    public void updateRequestAddFriendUI(BaseEntity < List < FriendEntity >> result) {
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
 
     }
 }

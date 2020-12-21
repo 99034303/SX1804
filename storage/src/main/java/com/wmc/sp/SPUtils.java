@@ -10,6 +10,9 @@ import java.util.Map;
  * @author 魏铭池
  */
 public class SPUtils {
+    static {
+        System.loadLibrary("native-lib");
+    }
 
     private static SPUtils spUtils;
     private final SharedPreferences sharedPreferences;
@@ -105,5 +108,6 @@ public class SPUtils {
     public void delete(String key){
         edit.remove(key).apply();
     }
+
 
 }

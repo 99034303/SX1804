@@ -6,8 +6,6 @@ import android.util.Log;
 
 import com.bw.commonlibrary.LogUtils;
 import com.bw.xmpplibrary.XmppManager;
-import com.bw.xmpplibrary.callback.IMsgCallback;
-import com.bw.xmpplibrary.entity.MsgEntity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
@@ -27,7 +25,7 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 public class UserCenterPresenter extends Contract.Presenter {
-    private Handler handler=new Handler();
+    private Handler handler = new Handler();
 
     public UserCenterPresenter(Contract.View mView) {
         super(mView);
@@ -42,6 +40,7 @@ public class UserCenterPresenter extends Contract.Presenter {
 
     /**
      * 登录
+     *
      * @param loginBody
      */
     @SuppressLint("CheckResult")
@@ -59,26 +58,27 @@ public class UserCenterPresenter extends Contract.Presenter {
 
                     @Override
                     public void onNext(BaseEntity<LoginEntity> loginEntityBaseEntity) {
-                        if (mView != null){
-                            new Thread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    if(XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(), loginBody.getPwd())){
-                                        handler.post(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                mView.updateLoginUI(loginEntityBaseEntity);
-                                            }
-                                        });
-                                    }
-                                }
-                            }).start();
-                          }
+                        if (mView != null) {
+//                            new Thread(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    if (XmppManager.getInstance().getXmppUserManager().login(loginBody.getPhonenumber(), loginBody.getPwd())) {
+//                                        handler.post(new Runnable() {
+//                                            @Override
+//                                            public void run() {
+//                                                mView.updateLoginUI(loginEntityBaseEntity);
+//                                            }
+//                                        });
+//                                    }
+//                                }
+//                            }).start();
+                            mView.updateLoginUI(loginEntityBaseEntity);
+                        }
                     }
 
                     @Override
                     public void onError(Throwable e) {
-                        Log.e("zqy",e.getMessage());
+                        Log.e("zqy", e.getMessage());
                     }
 
                     @Override
@@ -91,6 +91,7 @@ public class UserCenterPresenter extends Contract.Presenter {
 
     /**
      * 注册
+     *
      * @param register
      */
     @SuppressLint("CheckResult")
@@ -102,12 +103,12 @@ public class UserCenterPresenter extends Contract.Presenter {
                 .subscribe(new Consumer<BaseEntity<Boolean>>() {
                     @Override
                     public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
-                        if (mView != null){
-                            if (booleanBaseEntity.getCode()==0){
+                        if (mView != null) {
+                            if (booleanBaseEntity.getCode() == 0) {
                                 new Thread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        XmppManager.getInstance().getXmppUserManager().createAccount(register.getPhonenumber(),register.getPwd());
+                                        XmppManager.getInstance().getXmppUserManager().createAccount(register.getPhonenumber(), register.getPwd());
                                     }
                                 }).start();
                                 mView.updateRegisterUI(booleanBaseEntity);
@@ -125,8 +126,8 @@ public class UserCenterPresenter extends Contract.Presenter {
                 .subscribe(new Consumer<BaseEntity<String>>() {
                     @Override
                     public void accept(BaseEntity<String> forgetCodeEntityBaseEntity) throws Exception {
-                        if (forgetCodeEntityBaseEntity.getCode()==0){
-                            if (mView!=null) {
+                        if (forgetCodeEntityBaseEntity.getCode() == 0) {
+                            if (mView != null) {
                                 mView.ForgetCode(forgetCodeEntityBaseEntity.getData());
                             }
                         }
@@ -134,22 +135,22 @@ public class UserCenterPresenter extends Contract.Presenter {
                 });
     }
 
-//    @Override
-//    public void forgetChange(int id, String pwd) {
-//        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(new Consumer<BaseEntity<Boolean>>() {
-//                    @Override
-//                    public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
-//                        if (booleanBaseEntity.getCode() == 0) {
-//                            if (mView != null) {
-//                                mView.ForgetChange(booleanBaseEntity.getData());
-//                            }
-//                        }
-//                    }
-//                });
-//    }
-
+    @SuppressLint("CheckResult")
+    @Override
+    public void forgetChange(int id, String pwd) {
+        mModel.forgetChange(id, pwd).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<BaseEntity<Boolean>>() {
+                    @Override
+                    public void accept(BaseEntity<Boolean> booleanBaseEntity) throws Exception {
+                        if (booleanBaseEntity.getCode() == 0) {
+                            if (mView != null) {
+                                mView.ForgetChange(booleanBaseEntity.getData());
+                            }
+                        }
+                    }
+                });
+    }
 
     /**
      * 获取请求添加好友数据

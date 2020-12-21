@@ -13,6 +13,9 @@
         </activity>
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.ForgetActivity" />
+        <activity android:name=".view.ContactsActivity">
+
+        </activity>
     </application>
 
 </manifest>

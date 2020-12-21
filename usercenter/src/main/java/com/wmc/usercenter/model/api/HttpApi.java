@@ -12,7 +12,13 @@ import io.reactivex.Observable;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+<<<<<<< HEAD
 import retrofit2.http.PUT;
+=======
+
+import retrofit2.http.PUT;
+
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
 import retrofit2.http.Query;
 
 public interface HttpApi {
@@ -44,6 +50,7 @@ public interface HttpApi {
     @PUT("/gisim/user/modifyPwd")
     Observable<BaseEntity<Boolean>> Change(@Query("id") int id,@Query(value = "pwd") String pwd);
 
+<<<<<<< HEAD
 
      /**
      * 获取请求添加好友数据
@@ -52,4 +59,9 @@ public interface HttpApi {
      */
     @GET("/gisim/friend/findReqFriends")
     Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(@Query("userid")Integer userid);
+=======
+    @GET("/gisim/friend/findReqFriends")
+    Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(@Query("userid")Integer userid);
+
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
 }
