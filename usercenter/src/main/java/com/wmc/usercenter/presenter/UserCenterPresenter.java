@@ -62,7 +62,7 @@ public class UserCenterPresenter extends Contract.Presenter {
                         if (mView != null){
                             mView.updateLoginUI(loginEntityBaseEntity);
 
-                        }
+                        }else {
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
@@ -76,7 +76,9 @@ public class UserCenterPresenter extends Contract.Presenter {
                                     }
                                 }
                             }).start();
-                          }
+                        }
+                        }
+
 
                     @Override
                     public void onError(Throwable e) {
