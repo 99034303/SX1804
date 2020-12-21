@@ -239,10 +239,6 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
 
     }
 
-    @Override
-    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
-
-    }
 
 
     @Override

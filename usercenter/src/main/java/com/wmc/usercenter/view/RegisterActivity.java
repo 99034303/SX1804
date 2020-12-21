@@ -139,19 +139,9 @@ public class RegisterActivity extends BaseMVPActivity<UserCenterPresenter> imple
     public void ForgetChange(boolean flag) {
     }
 
-    @Override
-    public <HEAD> void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
-
-    }
-
 
     @Override
     public void getFriend(List<FriendEntity> friendEntity) {
-
-    }
-
-    @Override
-    public void updateRequestAddFriendUI(BaseEntity<List<FriendEntity>> result) {
 
     }
 
