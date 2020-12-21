@@ -42,7 +42,6 @@ dependencies {
     implementation project(path: ':umeng')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':mvp')
-    implementation project(path: ':bugly')
     if(!isUserCenter.toBoolean()){
         implementation project(path: ':usercenter')
     }
