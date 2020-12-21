@@ -1,12 +1,16 @@
 package com.example.home;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Log;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.gaode_map.BaseMapActivity;
 import com.example.home.adapter.ActiveListAdapter;
 import com.example.home.view.ActiveListView;
 import com.example.view.BottomTabLayout;
-import com.wmc.sp.SPUtils;
+import com.groupone.common.utils.ZipUitls;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +41,7 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
+        ZipUitls.executeZip("/storage/emulated/0/data/token.txt","/storage/emulated/0/data/myToken.zip");
         //添加底部标题
         bottomLayout.addTab(0,R.mipmap.person,0);
         bottomLayout.addTab(1,R.mipmap.active,0);
