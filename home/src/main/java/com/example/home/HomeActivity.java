@@ -1,6 +1,4 @@
 package com.example.home;
-import android.content.Intent;
-import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
