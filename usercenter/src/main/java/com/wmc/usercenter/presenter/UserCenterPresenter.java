@@ -6,8 +6,6 @@ import android.util.Log;
 
 import com.bw.commonlibrary.LogUtils;
 import com.bw.xmpplibrary.XmppManager;
-import com.bw.xmpplibrary.callback.IMsgCallback;
-import com.bw.xmpplibrary.entity.MsgEntity;
 import com.example.net.BaseEntity;
 import com.wmc.usercenter.contract.Contract;
 import com.wmc.usercenter.entity.LoginEntity;
