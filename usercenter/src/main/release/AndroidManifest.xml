@@ -3,8 +3,7 @@
     package="com.wmc.usercenter">
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <application>
-        <activity android:name=".view.AddFriendActivity"></activity>
+    <application android:name=".MyApplication">
         <activity android:name=".view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -12,8 +11,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.AddFriendActivity"></activity>
+
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.ForgetActivity" />
+        <activity android:name=".view.ContactsActivity"></activity>
     </application>
 
 </manifest>

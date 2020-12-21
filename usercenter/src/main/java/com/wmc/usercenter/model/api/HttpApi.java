@@ -15,6 +15,9 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+
+import retrofit2.http.PUT;
+
 import retrofit2.http.Query;
 
 public interface HttpApi {
@@ -38,6 +41,7 @@ public interface HttpApi {
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * 获取好友
      */
     @GET("/gisim/friend/queryUser")
@@ -50,6 +54,8 @@ public interface HttpApi {
     Observable<BaseEntity<Boolean>> AddFriend(@Body AddEntity addEntity);
 
     /**
+=======
+>>>>>>> a56e93eb5630da1bf520a375fc091e9388b91c27
      * 获取验证码
      * @return
      */

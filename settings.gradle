@@ -1,3 +1,4 @@
+include ':messagecenter'
 include ':commonlibrary'
 include ':xmpplibrary'
 include ':home'
@@ -13,7 +14,6 @@ include ':app'
 include ':net'
 include ':mvp'
 include ':umeng'
-include ':tinker'
 include ':log'
 include ':interface'
 rootProject.name = "GISIM"
