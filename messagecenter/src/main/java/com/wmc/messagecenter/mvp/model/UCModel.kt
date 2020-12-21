@@ -1,4 +1,4 @@
-package com.wmc.messagecenter.mvp.model.service
+package com.wmc.messagecenter.mvp.model
 
 import com.example.net.RetrofitFactory
 import com.wmc.messagecenter.mvp.contract.UserCenter

@@ -46,27 +46,27 @@ public class MessageActivity extends BaseMVPActivity<UCPresenter> implements Use
     @SuppressLint("CheckResult")
     @Override
     protected void initData() {
-//        for (int i = 0; i < 10; i++) {
-//            datas.add("好友"+i);
-//        }
-//
-//        adapter = new MessageFriendAdapter(R.layout.message_view_item,datas);
-//        messageRecycler.setAdapter(adapter);
-//        messageRecycler.setLayoutManager(new LinearLayoutManager(this));
-//
-//        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-//                startActivity(new Intent(MessageActivity.this,ChatActivity.class));
-//            }
-//        });
+        for (int i = 0; i < 10; i++) {
+            datas.add("好友"+i);
+        }
 
-        mPresenter.getSingleMessage(new SingleEntity()).subscribe(new Consumer<Entity<SingleEntity>>() {
+        adapter = new MessageFriendAdapter(R.layout.message_view_item,datas);
+        messageRecycler.setAdapter(adapter);
+        messageRecycler.setLayoutManager(new LinearLayoutManager(this));
+
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
-            public void accept(Entity<SingleEntity> singleEntityEntity) throws Exception {
-
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(new Intent(MessageActivity.this,ChatActivity.class));
             }
         });
+
+//        mPresenter.getSingleMessage(new SingleEntity()).subscribe(new Consumer<Entity<SingleEntity>>() {
+//            @Override
+//            public void accept(Entity<SingleEntity> singleEntityEntity) throws Exception {
+//
+//            }
+//        });
     }
 
     @Override
