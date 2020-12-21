@@ -1,0 +1,21 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.wmc.messagecenter"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->D:\workspace_android\SX1804\messagecenter\src\main\release\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\workspace_android\SX1804\messagecenter\src\main\release\AndroidManifest.xml
+10
+11    <application>
+11-->D:\workspace_android\SX1804\messagecenter\src\main\release\AndroidManifest.xml:5:5-8:19
+12        <activity android:name="com.wmc.messagecenter.MessageActivity" >
+12-->D:\workspace_android\SX1804\messagecenter\src\main\release\AndroidManifest.xml:6:9-7:20
+12-->D:\workspace_android\SX1804\messagecenter\src\main\release\AndroidManifest.xml:6:19-50
+13        </activity>
+14    </application>
+15
+16</manifest>
