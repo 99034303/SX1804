@@ -1,10 +1,15 @@
-if (isMessageCenter.toBoolean())
+if (isMessageCenter.toBoolean()){
     apply plugin: 'com.android.application'
-else apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.library'
+}
+
 def version=rootProject.ext.gradleVersion
+
 android {
     compileSdkVersion version.compileSdkVersion
     buildToolsVersion version.buildToolsVersion
+
     defaultConfig {
         minSdkVersion version.minSdkVersion
         targetSdkVersion version.targetSdkVersion
@@ -27,6 +32,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     sourceSets{
         main{
             if (isMessageCenter.toBoolean())
@@ -36,6 +42,10 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -45,13 +55,28 @@ dependencies {
     implementation project(path: ':common')
     implementation project(path: ':mvp')
     implementation project(path: ':net')
+    implementation project(path: ':commonlibrary')
+    implementation project(path: ':interface')
+//    implementation project(path: ':usercenter')
+    implementation project(path: ':log')
+//    implementation project(path: ':phonecontact')
+    implementation project(path: ':view')
+    implementation project(path: ':xmpplibrary')
+//    implementation project(path: ':home')
+    implementation project(path: ':imageloader')
+    implementation project(path: ':storage')
+    implementation project(path: ':umeng')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation rootProject.ext.implementation.arouter
+    annotationProcessor rootProject.ext.implementation.arouterCompiler
+
 }
+
 apply plugin: 'kotlin-android'
 repositories {
     mavenCentral()

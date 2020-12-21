@@ -46,8 +46,8 @@ dependencies {
         implementation project(path: ':usercenter')
     }
 
-    if(!isUserCenter.toBoolean()){
-        implementation project(path: ':usercenter')
+    if(!isMessageCenter.toBoolean()){
+        implementation project(path: ':messagecenter')
     }
     implementation project(path: ':gaode_map')
     if(!isNeedHomeModel.toBoolean()){
