@@ -38,6 +38,7 @@ public class GisimSQLite extends SQLiteOpenHelper {
      */
 
     public void insert(int uid,String username,String context,long time,String headpath){
+        contentValues.put("uid",uid);
         contentValues.put("username",username);
         contentValues.put("context",context);
         contentValues.put("time",time);

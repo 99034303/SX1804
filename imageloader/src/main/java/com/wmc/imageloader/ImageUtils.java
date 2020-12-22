@@ -37,7 +37,6 @@ public class ImageUtils {
         return imageUtils;
     }
 
-
     /**
      * 加载一张朴实无华的照片
      */
@@ -50,10 +49,10 @@ public class ImageUtils {
     public void glideCircle(Context context,String url,ImageView imageView){
         load(context,url,imageView,true,false);
     }
-    public void glideGifAndCircle(Context context,String url,ImageView imageView){
-        load(context,url,imageView,true,true);
-    }
 
+    public void glideGifAndCircle(Context context,int drawable,ImageView imageView){
+        load(context,drawable,imageView,true,true);
+    }
     private void load(Context context,String url,ImageView imageView,boolean circle,boolean gif){
         switch (mode){
             case 1:
@@ -69,6 +68,40 @@ public class ImageUtils {
                 break;
             case 2:
                 Picasso.with(context).load(url).into(imageView);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void single(Context context,int drawable,ImageView imageView){
+        load(context,drawable,imageView,false,false);
+    }
+    public void glideGif(Context context, int drawable, ImageView imageView){
+        load(context,drawable,imageView,false,true);
+    }
+    public void glideCircle(Context context,int drawable,ImageView imageView){
+        load(context,drawable,imageView,true,false);
+    }
+    public void glideGifAndCircle(Context context,String url,ImageView imageView){
+        load(context,url,imageView,true,true);
+    }
+
+    private void load(Context context,int drawable,ImageView imageView,boolean circle,boolean gif){
+        switch (mode){
+            case 1:
+                if (circle&&!gif){
+                    Glide.with(context).load(drawable).circleCrop().into(imageView);
+                }else if (!circle&&gif){
+                    Glide.with(context).asGif().load(drawable).into(imageView);
+                }else if (circle&&gif){
+                    Glide.with(context).asGif().load(drawable).circleCrop().into(imageView);
+                }else {
+                    Glide.with(context).load(drawable).into(imageView);
+                }
+                break;
+            case 2:
+                Picasso.with(context).load(drawable).into(imageView);
                 break;
             default:
                 break;
