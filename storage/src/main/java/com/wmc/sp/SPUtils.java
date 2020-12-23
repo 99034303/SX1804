@@ -112,11 +112,16 @@ public class SPUtils {
     }
 
     public void putToken(String token){
-        putToken(TOKEN_PATH,token);
+        putToken(TOKEN_PATH,token.trim());
     }
 
     public String getToken(){
-        return getToken(TOKEN_PATH);
+        String token=getToken(TOKEN_PATH).trim();
+        if(token==null){
+            return "";
+        }else{
+            return token;
+        }
     }
 
     private native void putToken(String path,String token);

@@ -1,5 +1,7 @@
 package com.example.net;
 
+import android.util.Log;
+
 import com.example.net.converter.CustomGsonConverterFactory;
 import com.google.gson.Gson;
 import com.wmc.sp.SPUtils;

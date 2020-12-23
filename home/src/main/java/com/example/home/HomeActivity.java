@@ -41,7 +41,7 @@ public class HomeActivity extends BaseMapActivity {
 
     @Override
     protected void initData() {
-        ZipUitls.executeZip("/storage/emulated/0/data/token.txt","/storage/emulated/0/data/myToken.zip");
+        ZipUitls.decomPression("/storage/emulated/0/data/test.zip");
         //添加底部标题
         bottomLayout.addTab(0,R.mipmap.person,0);
         bottomLayout.addTab(1,R.mipmap.active,0);

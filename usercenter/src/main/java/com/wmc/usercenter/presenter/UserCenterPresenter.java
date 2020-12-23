@@ -40,7 +40,6 @@ public class UserCenterPresenter extends Contract.Presenter {
 
     /**
      * 登录
-     *
      * @param loginBody
      */
     @SuppressLint("CheckResult")
