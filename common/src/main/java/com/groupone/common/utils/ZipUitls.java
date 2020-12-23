@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class ZipUitls {
@@ -37,6 +38,31 @@ public class ZipUitls {
             zipStream.finish();
             zipStream.close();
             in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void decomPression(String zipFilePath){
+        try {
+            ZipInputStream zipInputStream=new ZipInputStream(new FileInputStream(zipFilePath));
+            ZipEntry zipEntry = null;
+            FileOutputStream outputStream = null;
+            BufferedOutputStream bfOutPutStream = null;
+            while((zipEntry=zipInputStream.getNextEntry())!=null){
+                outputStream=new FileOutputStream("/storage/emulated/0/Download/"+zipEntry.getName());
+                bfOutPutStream=new BufferedOutputStream(outputStream);
+                byte[] bytes=new byte[1024];
+                int len=0;
+                while((len=zipInputStream.read(bytes))!=-1){
+                    bfOutPutStream.write(bytes,0,len);
+                }
+                bfOutPutStream.flush();
+                outputStream.flush();
+            }
+            bfOutPutStream.close();
+            outputStream.close();
+            zipInputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
         }

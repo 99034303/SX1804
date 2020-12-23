@@ -188,13 +188,12 @@ public class LoginActivity extends BaseMVPActivity<UserCenterPresenter> implemen
     public void updateLoginUI(BaseEntity<LoginEntity> baseEntity) {
         if (baseEntity.getCode() == 0){
             LoginEntity loginEntity = baseEntity.getData();
-            SPUtils spUtils = SPUtils.getInstance("gisim",this);
+            SPUtils spUtils = SPUtils.getInstance(SPUtils.FILE_GISIM,this);
             //存入用户id，用于后续的密码修改
             spUtils.put("uid",loginEntity.getId());
             //存入用户名
             spUtils.put("username",loginEntity.getPhonenumber());
             //存入token值
-            spUtils.put("token",loginEntity.getToken());
             spUtils.putToken(loginEntity.getToken());
             showMsg("登录成功");
             //判断是否需要记住密码
