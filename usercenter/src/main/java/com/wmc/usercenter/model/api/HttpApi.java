@@ -44,7 +44,7 @@ public interface HttpApi {
     Observable<BaseEntity<String>> code(@Query(value = "phoneNumber") String phoneNumber);
 
     @PUT("/gisim/user/modifyPwd")
-    Observable<BaseEntity<Boolean>> Change(@Query("id") int id,@Query(value = "pwd") String pwd);
+    Observable<BaseEntity<Boolean>> Change(@Query("id") int id,@Query("pwd") String pwd);
 
     @GET("/gisim/friend/findReqFriends")
     Flowable<BaseEntity<List<FriendEntity>>> getRequestAddFriendData(@Query("userid")Integer userid);
