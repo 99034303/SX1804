@@ -16,6 +16,16 @@ public class SingleEntity {
     public SingleEntity() {
     }
 
+    public SingleEntity(String blltime, String content, int fromuser, int isread, int msgtype2, int msgtypeid, int touser) {
+        this.blltime = blltime;
+        this.content = content;
+        this.fromuser = fromuser;
+        this.isread = isread;
+        this.msgtype2 = msgtype2;
+        this.msgtypeid = msgtypeid;
+        this.touser = touser;
+    }
+
     public String getBlltime() {
         return blltime;
     }
