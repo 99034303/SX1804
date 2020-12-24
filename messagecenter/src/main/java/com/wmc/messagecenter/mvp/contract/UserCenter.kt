@@ -26,6 +26,7 @@ interface UserCenter {
         abstract fun getHisMessage(): MutableMap<String, MutableList<HashMap<String, String>>>?
 
         abstract fun sendVideo(user: String, filePath: String)
+        abstract fun sendImage(user: String, o: Any)
     }
 
 }

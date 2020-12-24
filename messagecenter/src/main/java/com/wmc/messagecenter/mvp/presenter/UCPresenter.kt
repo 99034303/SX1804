@@ -2,9 +2,14 @@ package com.wmc.messagecenter.mvp.presenter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.BitmapFactory.*
 import android.os.SystemClock
 import androidx.lifecycle.MutableLiveData
 import com.bw.xmpplibrary.XmppManager
+import com.bw.xmpplibrary.utils.BitmapUtils
 import com.example.mvp.presenter.BasePresenter
 import com.example.mvp.view.IView
 import com.wmc.messagecenter.mvp.contract.UserCenter
@@ -17,7 +22,11 @@ import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
 import org.jivesoftware.smack.chat2.Chat
 import org.jivesoftware.smackx.muc.MultiUserChat
-import java.util.HashMap
+import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
+import java.io.InputStreamReader
+import java.util.*
 
 class UCPresenter(mView: UserCenter.UserCenterView) : UserCenter.UserCenterPresenter(mView) {
     lateinit var singleEntity: SingleEntity
@@ -42,6 +51,27 @@ class UCPresenter(mView: UserCenter.UserCenterView) : UserCenter.UserCenterPrese
 
     override fun getHisMessage(): MutableMap<String, MutableList<HashMap<String, String>>>? {
         return XmppManager.getInstance().xmppMsgManager.hisMessage
+    }
+
+    override fun sendImage(user:String,o: Any) {
+        var bitmap:Bitmap
+        when(o){
+            o is String->{
+                 bitmap = decodeFile(o as String?)
+            }
+            o is Int->{
+                 bitmap = decodeResource(Resources.getSystem(), o as Int)
+            }
+            o is ByteArray->{
+                 bitmap= decodeByteArray(o as ByteArray?, 0, o.size)
+            }
+            o is InputStream->{
+                 bitmap = decodeStream(o as InputStream?)
+            }
+        }
+
+
+
     }
 
     override fun sendVideo(user:String,filePath:String) {
