@@ -8,11 +8,11 @@ import com.wmc.messagecenter.mvp.model.protocol.Api
 import io.reactivex.Flowable
 
 class UCModel: UserCenter.UserCenterModel() {
-    override fun sendSingleMessage(singleEntity: SingleEntity): Flowable<Entity<SingleEntity>> {
+    override fun sendSingleMessage(singleEntity: SingleEntity): Flowable<Entity<Boolean>> {
         return RetrofitFactory.getInstance().create(Api::class.java).sendSingleMessage(singleEntity)
     }
 
-    override fun getSingleMessage(singleEntity: SingleEntity): Flowable<Entity<SingleEntity>> {
+    override fun getSingleMessage(singleEntity: SingleEntity): Flowable<Entity<Boolean>> {
         return RetrofitFactory.getInstance().create(Api::class.java).getSingleMessage(singleEntity)
     }
 }
